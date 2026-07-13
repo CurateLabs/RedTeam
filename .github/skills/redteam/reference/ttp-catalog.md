@@ -1,8 +1,8 @@
-# TTP Catalog
+# TTP Catalog — Handbook v10
 
-Tools, techniques, and practices adapted from the UFMCS *Red Team Handbook* v9. Most support **ACT** (Applied Critical Thinking), **GTM** (Groupthink Mitigation), or both. See [lineage.md](lineage.md) for source attribution.
+Tools, techniques, and practices from ***The Red Team Handbook*, Version 10**. Most support **ACT**, **GTM**, or both. See [lineage.md](lineage.md).
 
-**Canonical inventory:** [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md) — full chapter-by-chapter concept map. This file is the facilitation-oriented subset with command mappings. RedTeam supersedes and modifies the source; we do not stay verbatim to v9.
+**Canonical inventory:** [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md) — full chapter-by-chapter concept map. This file is the facilitation-oriented subset with command mappings.
 
 **Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation
 
@@ -306,4 +306,4 @@ Reference: [bias-catalog.md](bias-catalog.md) · [ai-anti-patterns.md](ai-anti-p
 
 ## Lineage
 
-Adapted from the UFMCS *Red Team Handbook* v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md). RedTeam supersedes and extends — see [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md).
+Part of [*The Red Team Handbook*, Version 10](../../docs/HANDBOOK.md). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md).

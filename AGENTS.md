@@ -38,5 +38,5 @@ npm run build:dist   # dist/ only
 ## Do not
 
 - Add penetration testing or exploit content
-- Copy the full source handbook verbatim into the repo
+- Copy the full UFMCS v9 handbook verbatim into the repo
 - Block scoped reviews when CONTEXT.md is missing

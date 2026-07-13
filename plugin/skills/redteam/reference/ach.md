@@ -1,6 +1,6 @@
 # ACH Flow (Analysis of Competing Hypotheses)
 
-From the source handbook: identify alternative explanations and systematically evaluate evidence against each hypothesis. Guards against confirmation bias and premature closure.
+From Handbook v10: identify alternative explanations and systematically evaluate evidence against each hypothesis. Guards against confirmation bias and premature closure.
 
 ## When to use
 

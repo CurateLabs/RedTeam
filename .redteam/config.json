@@ -1,7 +1,8 @@
 {
   "version": "0.1.0",
   "skill": "redteam",
-  "description": "Applied critical thinking and red teaming based on the U.S. Army Red Team Handbook v9",
+  "handbook": "The Red Team Handbook, Version 10",
+  "description": "RedTeam skill — implements The Red Team Handbook v10 (successor to UFMCS v9)",
   "defaults": {
     "persistReviews": true,
     "reviewsDir": ".redteam/reviews",

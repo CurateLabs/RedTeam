@@ -17,7 +17,7 @@ Block red team time before approval gates. Ban decision in the same meeting that
 
 ## RedTeam notes
 
-Civilian adaptation of source-handbook techniques. We update and extend over time — not verbatim doctrine.
+Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.
 
 ## Related
 
@@ -25,4 +25,4 @@ Civilian adaptation of source-handbook techniques. We update and extend over tim
 
 ## Lineage
 
-Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.
+Part of [*The Red Team Handbook, Version 10*](../../HANDBOOK.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md).

@@ -1,6 +1,6 @@
 # Product
 
-RedTeam is a skills-only AI plugin for **applied critical thinking** — U.S. Army Red Team Handbook v9 core plus decision-science and product extensions (v0.2: 29 commands).
+RedTeam is a skills-only AI plugin for **applied critical thinking**. It implements ***The Red Team Handbook*, Version 10** — successor to UFMCS v9 — with decision-science and product extensions (29 commands).
 
 ## Problem
 
@@ -18,7 +18,7 @@ Applied critical thinking becomes as easy as `/redteam challenge` — in chat or
 
 ## Goals
 
-- Handbook v9 command flows plus RedTeam superset (outside-view, incentives, ai-check, launch, rfc, record, …)
+- Handbook v10 command flows plus v10-native extensions (outside-view, incentives, ai-check, launch, rfc, record, …)
 - Work in pure chat with no setup
 - Support `.redteam/` for persistent CONTEXT.md and review artifacts
 - Install into Claude, Cursor, Codex, ChatGPT, and GitHub Copilot harnesses

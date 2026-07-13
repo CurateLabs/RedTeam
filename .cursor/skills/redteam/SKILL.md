@@ -8,7 +8,7 @@ description: >-
   strategies, policies, designs, or arguments; run premortems, ACH, assumptions checks,
   frame audits, groupthink mitigation, base-rate forecasting, incentive gaming analysis,
   or AI output quality review. Works in chat or with a `.redteam/` directory.
-  Not penetration testing. Techniques trace to UFMCS Red Team Handbook — see lineage.md.
+  Not penetration testing. Implements The Red Team Handbook v10 — see lineage.md.
 version: 0.2.0
 argument-hint: "[command] [target]"
 user-invocable: true
@@ -19,7 +19,7 @@ license: Apache-2.0
 
 Red teaming as applied critical thinking: challenge assumptions, surface hidden risks, and improve decisions before commitment.
 
-Techniques trace to the UFMCS *Red Team Handbook* v9, **extended** with decision science, product red teaming, and AI-quality checks. See [reference/lineage.md](reference/lineage.md) for source history. Red teaming here means **applied critical thinking and groupthink mitigation** — not cybersecurity penetration testing.
+**RedTeam** is the skill. It implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work, extended with decision science, product red teaming, and AI-quality checks. See [reference/lineage.md](reference/lineage.md). Not cybersecurity penetration testing.
 
 Superset catalog: [reference/extensions-catalog.md](reference/extensions-catalog.md)
 
@@ -59,7 +59,7 @@ You MUST do these steps before proceeding:
 | `groupthink [target]` | Facilitate | Design a groupthink-mitigation session | [reference/groupthink.md](reference/groupthink.md) |
 | `ideate [target]` | Facilitate | Divergent thinking: generate alternatives | [reference/ideate.md](reference/ideate.md) |
 | `converge [target]` | Facilitate | Convergent decision support: narrow options | [reference/converge.md](reference/converge.md) |
-| `tools` | Reference | Browse technique catalog (source handbook + extensions) | [reference/tools.md](reference/tools.md) |
+| `tools` | Reference | Browse Handbook v10 technique catalog + extensions | [reference/tools.md](reference/tools.md) |
 | **Extensions** | | | |
 | `outside-view [target]` | Extension | Base rates and reference class forecasting | [reference/outside-view.md](reference/outside-view.md) |
 | `invert [target]` | Extension | Inversion — what would guarantee failure? | [reference/invert.md](reference/invert.md) |

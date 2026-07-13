@@ -8,6 +8,9 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const HANDBOOK = path.join(ROOT, 'docs', 'HANDBOOK');
+const HANDBOOK_FULL = 'The Red Team Handbook, Version 10';
+const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../../HANDBOOK.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
+const DEFAULT_REDTEAM_NOTE = 'Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.';
 
 function slug(name) {
   return name
@@ -50,11 +53,11 @@ ${method}
 
 ## RedTeam notes
 
-${redteamNote || 'Civilian adaptation of source-handbook techniques. We update and extend over time — not verbatim doctrine.'}
+${redteamNote || DEFAULT_REDTEAM_NOTE}
 ${relatedSection}
 ## Lineage
 
-Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.
+${LINEAGE_FOOTER}
 `;
 }
 
@@ -94,7 +97,7 @@ const chapters = [
     summary:
       'Defines red teaming, the four core principles, and how techniques are organized in RedTeam.',
     redteamNote:
-      'UFMCS history lives in docs/SOURCE.md. ACT and GTM remain useful technique labels; military org names stay in attribution docs only.',
+      'UFMCS v9 history lives in docs/SOURCE.md. The RedTeam skill implements Handbook v10. ACT and GTM remain useful technique labels.',
     commands: ['challenge', 'critique', 'review', 'init'],
     concepts: [
       {
@@ -112,14 +115,14 @@ const chapters = [
         ],
       },
       {
-        title: 'UFMCS (historical)',
+        title: 'UFMCS & Handbook v9 (historical)',
         slug: 'ufmcs-historical',
         summary:
-          'University of Foreign Military and Cultural Studies — the U.S. Army program that developed and taught the source handbook curriculum.',
+          'University of Foreign Military and Cultural Studies — the defunct U.S. Army program that published *The Red Team Handbook* v9.0, the predecessor to Handbook v10.',
         whenToUse: 'Attribution, training history, tracing technique lineage — not operational framing.',
         method:
-          'Reference only. See docs/SOURCE.md. RedTeam is an independent civilian adaptation.',
-        redteamNote: 'Historical acknowledgment only. Do not use UFMCS as live product branding.',
+          'Reference only. See docs/SOURCE.md. RedTeam maintains Handbook v10 as an independent successor.',
+        redteamNote: 'Historical acknowledgment only. The skill is RedTeam; the handbook is v10.',
       },
       {
         title: 'Four Core Principles',
@@ -1049,9 +1052,9 @@ const chapterLinks = [
 writeDoc(
   HANDBOOK,
   'README.md',
-  `# Handbook documentation
+  `# Handbook documentation — Version 10
 
-RedTeam's superset reference adapted from the UFMCS *Red Team Handbook* v9.0. **We update and modify** — not verbatim reproduction. See [SOURCE.md](../SOURCE.md) for attribution.
+*${HANDBOOK_FULL}* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../SOURCE.md).
 
 ## Chapters
 

@@ -1,6 +1,6 @@
 # Operating Landscape Map
 
-Multi-domain map of the operating environment. RedTeam's plain-language generalization of the source handbook operating-environment framework (formerly taught as PMESII-PT in military contexts).
+Multi-domain map of the operating environment. RedTeam's plain-language generalization of the Handbook v10 operating-environment framework (formerly taught as PMESII-PT in military contexts).
 
 ## Domains
 

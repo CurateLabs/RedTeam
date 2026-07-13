@@ -1,6 +1,6 @@
 # Tools Command
 
-Browse and recommend techniques from the source handbook catalog and RedTeam extensions.
+Browse and recommend techniques from Handbook v10 and RedTeam extensions.
 
 ## When invoked
 
@@ -8,7 +8,7 @@ Browse and recommend techniques from the source handbook catalog and RedTeam ext
 2. If user described a situation → recommend 2–3 tools with rationale
 3. If no argument → show categorized summary + extensions
 
-## Recommendation logic (source handbook)
+## Recommendation logic (Handbook v10)
 
 | Situation | Primary tools |
 |-----------|---------------|

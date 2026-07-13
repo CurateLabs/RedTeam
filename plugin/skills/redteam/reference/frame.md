@@ -1,6 +1,6 @@
 # Frame Audit Flow
 
-From the source handbook: examine the lens through which a problem, decision, or situation is being viewed.
+From Handbook v10: examine the lens through which a problem, decision, or situation is being viewed.
 
 ## When to use
 
@@ -18,7 +18,7 @@ From the source handbook: examine the lens through which a problem, decision, or
    - **Time horizon** — now vs. long-term?
    - **Causal story** — who/what is the protagonist?
    - **Values** — what trade-offs are pre-decided?
-3. **Alternative frames** — generate ≥3 reframes. Use "4 Ways of Seeing" (source handbook):
+3. **Alternative frames** — generate ≥3 reframes. Use "4 Ways of Seeing" (Handbook v10):
    - As a **problem to solve**
    - As a **polarity to manage** (not either/or)
    - As a **pattern** (recurring dynamic)

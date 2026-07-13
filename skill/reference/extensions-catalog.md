@@ -1,10 +1,10 @@
 # RedTeam Extensions Catalog
 
-Techniques and commands **beyond** the source UFMCS handbook catalog. Full docs: [`docs/HANDBOOK/chapters/08-redteam-extensions.md`](../../docs/HANDBOOK/chapters/08-redteam-extensions.md).
+Techniques and commands **native to Handbook v10** (beyond what v9 carried). Full docs: [`docs/HANDBOOK/chapters/08-redteam-extensions.md`](../../docs/HANDBOOK/chapters/08-redteam-extensions.md).
 
-## Commands (superset)
+## Commands (v10 extensions)
 
-| Command | Source tradition | In source handbook? |
+| Command | Source tradition | In UFMCS v9? |
 |---------|------------------|--------------|
 | `outside-view` | Kahneman, Tetlock — base rates | No |
 | `invert` | Munger — inversion | Partial (premortem) |

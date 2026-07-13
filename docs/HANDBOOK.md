@@ -1,12 +1,14 @@
-# Handbook Reference
+# The Red Team Handbook — Version 10
 
-RedTeam's **working inventory** of red teaming concepts and techniques — a superset that **updates, extends, and modifies** the original source. We do not reproduce handbook text verbatim and we do not commit to staying faithful to the source wording or structure over time.
+***The Red Team Handbook*, Version 10** — maintained by the **RedTeam** project. Successor to the defunct UFMCS v9.0 work. The `redteam` skill implements this handbook in AI harnesses.
 
-**Scope:** Applied critical thinking, cultural empathy, and organizational decision support. **Not** cybersecurity penetration testing. "Techniques" means structured tools and practices for improving individual and group decision-making.
+This is a **living inventory** of red teaming concepts and techniques. We update, extend, and modify over time — not a verbatim reproduction of v9.
+
+**Scope:** Applied critical thinking, cultural empathy, and organizational decision support. **Not** cybersecurity penetration testing.
 
 > **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
 
-**Lineage:** Techniques trace primarily to the UFMCS *Red Team Handbook* v9.0. Military program history and attribution live in [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md) — not in day-to-day product language.
+**Predecessor:** UFMCS *Red Team Handbook* v9.0 — attribution and history in [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md).
 
 The skill implementation lives in [`skill/reference/`](../skill/reference/). This doc is the canonical concept map; the skill catalog adds command mappings and facilitation detail.
 
@@ -17,7 +19,7 @@ The skill implementation lives in [`skill/reference/`](../skill/reference/). Thi
 | Term | One-line definition |
 |------|---------------------|
 | **Red Teaming** | A structured cognitive approach that challenges plans and decisions to surface hidden risks, unseen options, and flawed assumptions before commitment. |
-| **UFMCS (historical)** | University of Foreign Military and Cultural Studies — the program that developed the source handbook curriculum. Attribution only. |
+| **UFMCS & Handbook v9 (historical)** | Defunct Army program that published v9.0 — predecessor to Handbook v10. Attribution only. |
 | **Four Core Principles** | The organizing frame for all RedTeam commands (see below). |
 
 ### Four Core Principles
@@ -223,7 +225,7 @@ We explicitly reserve the right to:
 | **Sequencing** | Publish recommended tool chains (e.g. Frame Audit → Assumptions → Premortem → Review) independent of handbook chapter order. |
 | **Fidelity** | Update definitions and methods as we learn what works in AI-assisted facilitation. |
 
-### Planned extensions (beyond source handbook)
+### Planned extensions (v10-native, beyond v9)
 
 **Implemented in v0.2** — see [HANDBOOK/chapters/08-redteam-extensions.md](HANDBOOK/chapters/08-redteam-extensions.md) and `skill/reference/extensions-catalog.md`.
 
@@ -253,6 +255,6 @@ We explicitly reserve the right to:
 
 ## Source & attribution
 
-Techniques trace to the UFMCS *Red Team Handbook* v9.0, **extended** with decision science, product, and AI-quality techniques in v0.2. See [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md).
+*The Red Team Handbook*, Version 10 — maintained by RedTeam. Successor to UFMCS v9.0. See [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md).
 
 Implementation: [`skill/reference/ttp-catalog.md`](../skill/reference/ttp-catalog.md) · [`skill/reference/extensions-catalog.md`](../skill/reference/extensions-catalog.md) · Commands: [`skill/SKILL.md`](../skill/SKILL.md)

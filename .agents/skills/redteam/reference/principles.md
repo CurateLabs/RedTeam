@@ -1,6 +1,6 @@
 # Red Team Principles
 
-Four core principles organize every RedTeam command and technique. They trace to the UFMCS *Red Team Handbook* v9 — see [lineage.md](lineage.md) for history and attribution.
+Four core principles organize every RedTeam command and technique per ***The Red Team Handbook*, Version 10**. See [lineage.md](lineage.md) for v9 predecessor history.
 
 ## 1. Applied Critical Thinking (ACT)
 
@@ -66,7 +66,7 @@ Know your own biases, temperament, and communication patterns before challenging
 
 ## Ideal group process
 
-From Russo & Schoemaker's *Winning Decisions* (used in the source handbook):
+From Russo & Schoemaker's *Winning Decisions* (used in Handbook v10):
 
 1. **Diverge** — generate alternatives without judgment
 2. **Analyze** — examine assumptions, evidence, and logic

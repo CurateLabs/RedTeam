@@ -1,6 +1,6 @@
 {
   "name": "redteam",
-  "description": "Applied critical thinking and red teaming for AI agents. 29 commands — techniques adapted from UFMCS Red Team Handbook, extended for product and strategy decisions.",
+  "description": "RedTeam skill for AI agents — 29 commands implementing The Red Team Handbook v10 (successor to UFMCS v9).",
   "version": "0.2.0",
   "author": {
     "name": "David Spencer"

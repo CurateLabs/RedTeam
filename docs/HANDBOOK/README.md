@@ -1,6 +1,6 @@
-# Handbook documentation
+# Handbook documentation — Version 10
 
-RedTeam's superset reference adapted from the UFMCS *Red Team Handbook* v9.0. **We update and modify** — not verbatim reproduction. See [SOURCE.md](../SOURCE.md) for attribution.
+*The Red Team Handbook, Version 10* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../SOURCE.md).
 
 ## Chapters
 
