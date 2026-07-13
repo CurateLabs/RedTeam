@@ -1,7 +1,30 @@
 {
-  "title": "The Red Team Handbook",
+  "title": "RedTeam",
   "url": "https://curatelabs.github.io/RedTeam",
   "base": "/RedTeam/",
-  "src": "docs",
-  "out": "site"
+  "src": "content",
+  "out": "site",
+  "theme": {
+    "name": "sky"
+  },
+  "layout": {
+    "menubar": {
+      "left": [
+        { "text": "Guide", "url": "/guide/" },
+        { "text": "Handbook", "url": "/handbook/" },
+        { "text": "Developers", "url": "/developers/" }
+      ],
+      "right": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/CurateLabs/RedTeam",
+          "external": true
+        }
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "© CurateLabs",
+    "content": "RedTeam — applied critical thinking for AI agents. Not penetration testing."
+  }
 }

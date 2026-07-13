@@ -155,21 +155,27 @@ The skill uses your input as context. Offer `/redteam init` to persist context f
 
 ## Documentation site
 
-Handbook and project docs are published with [docmd](https://docmd.io) to GitHub Pages:
+Published with [docmd](https://docmd.io) to GitHub Pages:
 
 **https://curatelabs.github.io/RedTeam/**
+
+| Section | Contents |
+|---------|----------|
+| [User Guide](content/guide/) | Install, commands, `.redteam/` |
+| [Handbook](content/handbook/) | *The Red Team Handbook* v10 — full text |
+| [Developer Docs](docs/) | Product, architecture, ADRs |
 
 Build locally:
 
 ```bash
-npm run docs:site   # regenerate handbook + docmd build → site/
+npm run docs:site   # handbook + sync developers + docmd build → site/
 ```
 
 Push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
 ## Source
 
-**RedTeam** implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work. See [docs/HANDBOOK.md](docs/HANDBOOK.md), [docs/SOURCE.md](docs/SOURCE.md), and [NOTICE.md](NOTICE.md).
+**RedTeam** implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work. See [content/handbook/](content/handbook/), [docs/SOURCE.md](docs/SOURCE.md), and [NOTICE.md](NOTICE.md).
 
 Modeled on the [impeccable](https://github.com/pbakaus/impeccable) skills/plugin architecture.
 

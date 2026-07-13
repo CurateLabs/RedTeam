@@ -8,7 +8,7 @@ This repository maintains ***The Red Team Handbook*, Version 10** — a civilian
 |---|---|
 | **Handbook** | *The Red Team Handbook*, Version 10 |
 | **Skill / plugin** | **RedTeam** (`redteam`) — implements Handbook v10 in AI harnesses |
-| **Docs** | [`docs/HANDBOOK.md`](HANDBOOK.md) · [`docs/HANDBOOK/`](HANDBOOK/README.md) |
+| **Docs** | [`content/handbook/`](../content/handbook/) · [`content/guide/`](../content/guide/) · [`docs/`](README.md) |
 | **Status** | Living document; we update, extend, and modify over time |
 
 RedTeam is **not** affiliated with the U.S. Army, TRADOC, or UFMCS. Handbook v10 is an independent continuation for civilian, product, and AI-assisted decision-making.
@@ -56,5 +56,5 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 ## See also
 
 - [NOTICE.md](../NOTICE.md) — legal disclaimer
-- [HANDBOOK.md](HANDBOOK.md) — v10 concept inventory
+- [content/handbook/inventory.md](../content/handbook/inventory.md) — v10 concept inventory
 - [skill/SKILL.md](../skill/SKILL.md) — RedTeam skill implementation

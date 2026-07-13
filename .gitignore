@@ -147,3 +147,6 @@ vite.config.ts.timestamp-*
 .redteam/config.local.json
 .redteam/*.tmp
 # redteam-ignore-end
+
+# Doc site build artifacts (synced from docs/ at build time)
+content/developers/

@@ -1,0 +1,260 @@
+# The Red Team Handbook — Version 10
+
+***The Red Team Handbook*, Version 10** — maintained by the **RedTeam** project. Successor to the defunct UFMCS v9.0 work. The `redteam` skill implements this handbook in AI harnesses.
+
+This is a **living inventory** of red teaming concepts and techniques. We update, extend, and modify over time — not a verbatim reproduction of v9.
+
+**Scope:** Applied critical thinking, cultural empathy, and organizational decision support. **Not** cybersecurity penetration testing.
+
+> **Expanded docs:** Each chapter and catalog item has its own page under [Handbook pages](README.md).
+
+**Predecessor:** UFMCS *Red Team Handbook* v9.0 — attribution and history in [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
+
+The skill implementation lives in [`skill/reference/`](../../../skill/reference/). This doc is the canonical concept map; the skill catalog adds command mappings and facilitation detail.
+
+---
+
+## Chapter 1 — Foundational Concepts
+
+| Term | One-line definition |
+|------|---------------------|
+| **Red Teaming** | A structured cognitive approach that challenges plans and decisions to surface hidden risks, unseen options, and flawed assumptions before commitment. |
+| **UFMCS & Handbook v9 (historical)** | Defunct Army program that published v9.0 — predecessor to Handbook v10. Attribution only. |
+| **Four Core Principles** | The organizing frame for all RedTeam commands (see below). |
+
+### Four Core Principles
+
+RedTeam treats these as the organizing frame for all commands and techniques. ACT and GTM are retained as practical labels for technique selection.
+
+| Principle | Shorthand | What it means in practice |
+|-----------|-----------|---------------------------|
+| **Applied Critical Thinking** | **ACT** | Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them. |
+| **Cultural Empathy** | — | Understand how cultural frames shape what others see, value, and fear; practice empathetic cross-cultural communication and counter ethnocentrism. |
+| **Groupthink Mitigation** | **GTM** | Design group facilitation so dissent is safe, alternatives are generated, and decisions are stress-tested before approval. |
+| **Self-awareness** | — | Know your own biases, temperament, and communication patterns before trying to challenge others. |
+
+**RedTeam command alignment:** `challenge`, `critique`, `review` span all four; `frame` and `assumptions` lean ACT; `groupthink` and `devils-advocate` lean GTM; `culture` and cultural tools map to cultural empathy; introspection informs facilitator behavior in every session.
+
+---
+
+## Chapter 2 — Self-Awareness & Reflection
+
+| Term | One-line definition |
+|------|---------------------|
+| **Self-Authorship** | Developmental capacity to internally define beliefs, identity, and relationships rather than relying on external validation. Dimensions: cognitive, intrapersonal, interpersonal. |
+| **Temperament / Personality Dimensions®** | Jungian-based typology (e.g. MBTI lineage) for understanding how people prefer to perceive and decide — useful for anticipating friction in groups. |
+| **Emotional Intelligence Framework** | Self-competencies (self-awareness, self-regulation, motivation) and social competencies (empathy, social skills) that affect how we receive and deliver challenge. |
+| **Interpersonal Communication** | How messages are sent, received, and distorted — foundation for productive devil's advocacy without personal attack. |
+| **Interpersonal Conflict** | Patterns of disagreement escalation; Red Teamers must separate task conflict (healthy) from relationship conflict (destructive). |
+| **Introspection** | Deliberate inward examination — journaling, reflection time, structured exercises. |
+| **Who Am I?** | Introspective exercise: articulate identity, values, and biases before engaging others' frames. |
+
+**RedTeam note:** We deprioritize military-student journaling requirements but keep introspection as a facilitator and solo-practitioner habit. Consider running a lightweight Who Am I? before high-stakes `review` sessions.
+
+---
+
+## Chapter 3 — Cultural Empathy
+
+| Term | One-line definition |
+|------|---------------------|
+| **Ethnocentrism** | Judging other cultures by the standards of one's own — the primary bias cultural empathy counteracts. |
+| **Operating Landscape Map** | Multi-domain map of the operating environment: power, security, economy, society, information, infrastructure, physical context, and time — systems lens for complex environments. |
+| **Kluckhohn's Six Dimensions** | Age-old cultural variation axes (e.g. human nature, man-nature relationship, time, activity, relational, space) for comparing cultural defaults. |
+| **Nisbett on Cognitive Differences** | How Western vs. East Asian (and other) cognitive styles differ in attention, causality, and holism — affects negotiation and planning assumptions. |
+| **Hall on Communication Patterns** | High-context vs. low-context communication; use of space and time — explains why the same words land differently across cultures. |
+| **Hofstede's Country Profiles** | Power distance, uncertainty avoidance, individualism/collectivism, masculinity/femininity, long-term orientation — comparative national culture indices. |
+| **Five Operational Cultural Dimensions (historical)** | Source-handbook operationalization of cultural factors for planning in foreign environments. |
+| **Onion Model** | Culture manifests in layers: artifacts → espoused values → underlying assumptions; peel outward-in to find drivers. |
+| **Functional Systems Approach** | Analyze how cultural subsystems (political, economic, social, etc.) interact functionally rather than as isolated lists. |
+| **Cultural Perception Framework** | Structured method to surface how different actors perceive the same situation through their cultural lens. |
+
+**RedTeam note:** Cultural empathy is a **core principle**, not an optional add-on for "international" work. We extend it to organizational subcultures, discipline silos, and stakeholder worlds while keeping the full cross-cultural communication toolkit (Hall, Hofstede, Kluckhohn, perception frameworks). Operating Landscape Map is one lens among many.
+
+---
+
+## Chapter 4 — Applied Critical Thinking
+
+| Term | One-line definition |
+|------|---------------------|
+| **Critical thinking (in practice)** | Deliberate use of ACT tools and methods to deconstruct arguments, challenge assumptions, examine analogies, and explore alternatives under time pressure. |
+| **The Time Factor** | Decisions often lack time for full process — use reflexive shortcuts and scalable tools matched to available minutes. |
+| **Creating Space and Time** | Leader responsibility to protect reflection time; without it, groups default to autopilot and assumption-fill. |
+
+**RedTeam commands:** `challenge`, `assumptions`, `ach`, `5-whys`, `frame`, `futures`, `critique`, `review`.
+
+---
+
+## Chapter 5 — Group Process & Decision Support
+
+| Term | One-line definition |
+|------|---------------------|
+| **Group Dynamics** | How groups form norms, status hierarchies, and cohesion — the substrate groupthink grows on. |
+| **Groupthink** (Irving Janis) | Collective pressure for conformity that suppresses dissent and produces overconfident, under-examined decisions. |
+| **Groupthink Mitigation (GTM)** | Deliberate practices that force independent thinking before consensus and protect dissenting voices. |
+| **Confirmation bias** | Seeking and overweighting evidence that confirms what we already believe — ACT and ACH directly counter this. |
+| **Decision Support** | Red Team role: improve the quality of the decision, not own the outcome — inform, don't replace, the decider. |
+
+**Symptoms to watch for:** illusion of unanimity, self-censorship, mindguards, illusion of invulnerability, collective rationalization.
+
+**RedTeam commands:** `groupthink`, `devils-advocate`, `ideate`, `converge`, `review`.
+
+---
+
+## Chapter 6 — Thinking Creatively
+
+The creative thought process is a **sequence**, not a single brainstorm. RedTeam separates divergent and convergent phases explicitly (`ideate` → `converge`).
+
+| Stage | One-line definition |
+|-------|---------------------|
+| **Problem-Finding** | Decide whether you're solving the right problem — reframe before generating solutions. |
+| **Preparation** | Gather information, constraints, and diverse inputs before ideation. |
+| **Ideation** | Generate volume and variety of options without premature judgment. |
+| **Idea Verification** | Test ideas against evidence, feasibility, and assumptions — not the same as killing ideas early in ideation. |
+| **Communication** | Package the outcome so decision-makers can act — clarity and narrative matter. |
+
+**RedTeam commands:** `ideate`, `frame` (problem-finding), `converge`, `critique` (verification).
+
+---
+
+## Chapter 7 — Red Teaming with AI & Humans in the Loop
+
+Handbook v10-native. UFMCS v9 predates AI-assisted workflows; this chapter defines how the **RedTeam** skill behaves when models assist analysis and humans retain authority.
+
+| Term | One-line definition |
+|------|---------------------|
+| **AI-Assisted Red Teaming** | AI as loyal opposition; human owns stakes, judgment, and commitment. |
+| **Human-in-the-Loop Decision Authority** | Decider accountable; AI informs and challenges — does not approve or commit. |
+| **Grounding & Evidence Discipline** | Read source material; separate grounded claims from invention and phantom citations. |
+| **AI Check** | Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis. |
+| **AI Anti-Patterns** | Sycophancy, false balance, shallow steel-man, checklist theater — see concept page. |
+| **Hybrid Session Design** | Explicit AI/human handoffs across diverge → analyze → debate → converge. |
+| **Simulated Stakeholder Limits** | Label invented voices; prefer real dissent and `/redteam culture` with actual actors. |
+
+**RedTeam commands:** `ai-check`, `challenge`, `review`, `steelman`, `calibrate`, `record`, `sequence`.
+
+Expanded: [`HANDBOOK/chapters/07-ai-and-humans-in-the-loop.md`](HANDBOOK/chapters/07-ai-and-humans-in-the-loop.md)
+
+---
+
+## Chapter 8 — Tools, Techniques & Practices
+
+The core technique inventory. Most tools support **ACT**, **GTM**, or **both** — see the ACT–GTM Matrix concept. Tools are meant to **sequence**, not stand alone.
+
+**Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation · **Command** = `/redteam` shortcut when implemented
+
+### Facilitation & group structure
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **ACT–GTM Matrix** | Meta | Table matching tools to ACT, GTM, or both — pick and sequence by situation. | `tools` |
+| **Ideal Group Process** | Both | Diverge → analyze → debate → converge loop with rotating ACT/GTM tools. | `groupthink` |
+| **1-2-4-Whole Group** | GTM | Individual → pairs → fours → whole group; staged inclusion of every voice. | `groupthink` |
+| **1 on 1, 2 on 2, Exchange Emissaries** | GTM | Subgroup dialog with emissaries cross-pollinating between groups. | `groupthink` |
+| **Circle of Voices** | GTM | Round-robin: each speaks once before anyone speaks twice. | `groupthink` |
+| **Circular Response** | GTM | Structured response pattern ensuring respectful listening and ordered contribution. | `groupthink` |
+| **Fishbowl** | GTM | Inner group discusses, outer observes; swap roles to surface dynamics. | `groupthink` |
+| **Think-Write-Share** | GTM | Silent individual write before any discussion — defeats anchoring. | `groupthink` |
+| **Troika Consulting** | GTM | Client + three consultants rotate; client listens while consultants discuss. | `groupthink` |
+| **Gallery Walk** | GTM | Post ideas; participants silently annotate and build on others' work. | `ideate` |
+| **Dot Voting** | GTM | Allocate limited votes across options for quick prioritization. | `converge` |
+
+### Divergent & generative
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **Brainstorming** | GTM | Volume-first idea generation with deferred judgment. | `ideate` |
+| **5 Will Get You 25** | GTM | Each person generates five ideas; combine for quantity before quality. | `ideate` |
+| **Yes, And…** | GTM | Build on prior ideas without blocking — improv rule for ideation phases. | `ideate` |
+| **Outside-In Thinking** | ACT | Import solutions or frames from unrelated domains. | `ideate` |
+| **Mind Mapping** | ACT | Branching visual map from a central concept. | `ideate` |
+| **String of Pearls** | ACT | Sequential "what if" chain along a narrative thread. | `ideate` |
+| **What If? Analysis** | ACT | Explore consequences when a key variable changes. | `ideate` |
+| **My 15%** | GTM | Each person owns a slice of the problem they can influence — reduces diffusion of responsibility. | `ideate` |
+| **Appreciative Interview** | GTM | Explore what works before fixing what doesn't — expands the solution space. | `ideate` |
+
+### Analytical & critical
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **5 Whys** | ACT | Iterative why-questions to reach root causes and hidden assumptions. | `5-whys` |
+| **Analysis of Competing Hypotheses (ACH)** | ACT | Matrix scoring evidence against mutually exclusive hypotheses — minimize confirmation bias. | `ach` |
+| **Key Assumptions Check** | ACT | List what must be true for the plan to work; flag critical unvalidated beliefs. | `assumptions` |
+| **Assumption Sensitivity Analysis** | ACT | Rank assumptions by what happens if each is wrong (collapse vs. absorb). | `assumptions` |
+| **Argument Deconstruction** | ACT | Separate premises, inference, and conclusion; test each link. | `challenge` |
+| **Frame Audit** | ACT | Examine the lens defining the problem — scope, metrics, causality, values. | `frame` |
+| **4 Ways of Seeing** | ACT | Reframe as problem, polarity, pattern, or opportunity. | `frame` |
+| **Problem Restatement** | ACT | Rephrase the problem multiple ways before solving. | `frame` |
+| **6 Words** | Both | Distill the issue to six words — forces clarity. | `challenge` |
+| **SEE-I** (State, Elaborate, Exemplify, Illustrate) | ACT | Four-step clarification before debate. | `challenge` |
+| **Analogy Suitability Analysis** | ACT | Test whether the analogy in use actually fits. | `challenge` |
+| **Logic of Failure** | ACT | How can well-intentioned system logic still produce failure? | `challenge` |
+| **Critical Variables (CVs)** | ACT | Dynamic factors that drive outcomes — often mapped to an Operating Landscape Map. | `assumptions` |
+| **Who Else?** | ACT | Whose perspective is missing from this analysis? | `challenge` |
+| **Who Am I?** | ACT | Introspective identity/bias surfacing before engaging others. | `init` |
+
+### Adversarial & decision gates
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **Devil's Advocacy** | Both | Structured strongest-case against the prevailing view. | `devils-advocate` |
+| **Premortem Analysis** | ACT | Assume failure; work backward to causes and preventions. | `premortem` |
+| **Team A / Team B Analysis** | Both | Two teams argue opposing options, then swap and defend the other side. | `devils-advocate` |
+| **BATNA** | ACT | Best Alternative to a Negotiated Agreement — know your walk-away before negotiating. | `converge` |
+| **Divergence–Convergence** | Both | Explicit separate phases for generating vs. narrowing options. | `ideate` / `converge` |
+
+### Strategic & futures
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **Alternative Futures Analysis** | ACT | Multiple plausible futures against which to stress-test the plan. | `futures` |
+| **Indicators / Signposts of Change** | ACT | Early warnings that a given future is emerging. | `futures` |
+| **High Impact / Low Probability Analysis** | ACT | Tail risks — unlikely but catastrophic scenarios. | `futures` |
+| **SWOT Analysis** | ACT | Strengths, Weaknesses, Opportunities, Threats for an option or entity. | `converge` |
+| **Stakeholder Mapping** | Both | Who decides, who influences, who blocks, who suffers consequences. | `review` |
+| **Shifting the Burden** | ACT | Push past the obvious fix to ask who or what actually bears the structural load. | `assumptions` |
+
+### Cultural, deception & negotiation
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **Cultural Perception Framework** | ACT | How different cultural actors perceive the same events. | `frame` |
+| **Onion Model** | ACT | Peel cultural layers from artifacts to deep assumptions. | `frame` |
+| **6 Empathetic Questions** | Both | Questions that build understanding of another's frame without judgment. | `challenge` |
+| **Deception Detection** | ACT | MOM-POP-EVE-MOSES checklist + ACH when active deception is plausible. | `ach` |
+| **TRIZ** | ACT | Systematic inventive problem-solving from contradictions (Russian engineering tradition). | `ideate` |
+
+### Communication & narrative
+
+| Technique | ACT/GTM | One-line definition | Command |
+|-----|---------|---------------------|---------|
+| **Storytelling** | Both | Narrative form to communicate findings and alternatives persuasively. | `critique` |
+| **State–Elaborate–Exemplify–Illustrate** | ACT | See SEE-I above. | `challenge` |
+
+---
+
+## RedTeam superset & modifications
+
+We explicitly reserve the right to:
+
+| Area | Our stance |
+|------|------------|
+| **Terminology** | Plain-language aliases (e.g. "stress-test" alongside "premortem"); drop military jargon where it blocks civilian use. |
+| **Scope** | Generalize operational culture tools to org/product/stakeholder contexts. |
+| **TTP set** | Add techniques from negotiation, product discovery, pre-mortems (Klein), Kahneman, Minto, etc. |
+| **Commands** | Not every handbook TTP gets a dedicated `/redteam` command — some roll up under `challenge`, `ideate`, `tools`. |
+| **Sequencing** | Publish recommended tool chains (e.g. Frame Audit → Assumptions → Premortem → Review) independent of handbook chapter order. |
+| **Fidelity** | Update definitions and methods as we learn what works in AI-assisted facilitation. |
+
+### v10 commands (in catalog)
+
+See [Chapter 8 expanded index](HANDBOOK/chapters/08-tools-techniques-practices.md#v10-commands) — `outside-view`, `invert`, `incentives`, `ladder`, `steelman`, `calibrate`, `sequence`, `culture`, `launch`, `rfc`, `misuse`, `reversibility`, `record`, plus bias and AI reference docs.
+
+**Implemented in v0.2** — see `skill/reference/extensions-catalog.md`.
+
+---
+
+## Source & attribution
+
+*The Red Team Handbook*, Version 10 — maintained by RedTeam. Successor to UFMCS v9.0. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
+
+Implementation: [`skill/reference/ttp-catalog.md`](../skill/reference/ttp-catalog.md) · [`skill/reference/extensions-catalog.md`](../skill/reference/extensions-catalog.md) · Commands: [`skill/SKILL.md`](../skill/SKILL.md)

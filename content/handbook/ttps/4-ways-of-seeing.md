@@ -1,0 +1,30 @@
+# 4 Ways of Seeing
+
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
+**ACT/GTM:** ACT
+**Command:** `/redteam frame`
+
+## Summary
+
+Reframe as problem, polarity, pattern, or opportunity.
+
+## When to use
+
+Either/or fights that may be polarities to manage.
+
+## Method
+
+Apply four lenses in turn; ask which fits without forcing solve.
+
+## RedTeam notes
+
+Category: **analytical**. RedTeam may extend or alias this technique.
+
+## Related
+
+- [/redteam frame](../../skill/reference/frame.md)
+- [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
+
+## Lineage
+
+Part of [*The Red Team Handbook, Version 10*](../README.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).

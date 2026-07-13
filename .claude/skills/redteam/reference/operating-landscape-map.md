@@ -38,4 +38,4 @@ Map factors and interactions across:
 
 ## Full doc
 
-Repo: [`docs/HANDBOOK/concepts/operating-landscape-map.md`](../../docs/HANDBOOK/concepts/operating-landscape-map.md)
+Repo: [`content/handbook/concepts/operating-landscape-map.md`](../../content/handbook/concepts/operating-landscape-map.md)

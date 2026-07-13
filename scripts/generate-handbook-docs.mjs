@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * Generate docs/HANDBOOK/ chapter, concept, and TTP files.
+ * Generate content/handbook/ chapter, concept, and TTP files.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const HANDBOOK = path.join(ROOT, 'docs', 'HANDBOOK');
+const HANDBOOK = path.join(ROOT, 'content', 'handbook');
 const HANDBOOK_FULL = 'The Red Team Handbook, Version 10';
-const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../../HANDBOOK.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
+const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../README.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
 const DEFAULT_REDTEAM_NOTE = 'Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.';
 
 function slug(name) {
@@ -84,8 +84,8 @@ ${redteamNote}
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../../HANDBOOK.md)
-- [Source & lineage](../../SOURCE.md)
+- [Full inventory](../inventory.md)
+- [Source & lineage](../../developers/SOURCE.md)
 `;
 }
 
@@ -1146,8 +1146,8 @@ v9-origin techniques and v10-native commands live in one catalog. AI-specific pr
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../../HANDBOOK.md)
-- [Source & lineage](../../SOURCE.md)
+- [Full inventory](../inventory.md)
+- [Source & lineage](../../developers/SOURCE.md)
 `,
 );
 
@@ -1162,7 +1162,7 @@ writeDoc(
   'README.md',
   `# Handbook documentation — Version 10
 
-*${HANDBOOK_FULL}* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../SOURCE.md).
+*${HANDBOOK_FULL}* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
 
 ## Chapters
 
@@ -1178,25 +1178,33 @@ All technique pages: [\`ttps/\`](ttps/) (plus concepts cross-listed from other c
 
 ## Quick links
 
-- [Inventory summary](../HANDBOOK.md)
-- [Source & lineage](../SOURCE.md)
-- [Skill implementation](../../skill/reference/ttp-catalog.md)
-- [NOTICE](../../NOTICE.md)
+- [Full inventory](inventory.md)
+- [User guide](../../guide/)
+- [Source & lineage](../../developers/SOURCE.md)
+- [Skill implementation](../../../skill/reference/ttp-catalog.md)
+- [NOTICE](../../../NOTICE.md)
 `,
 );
 
-// Update HANDBOOK.md to point to tree (idempotent — skip if already linked)
-const handbookIndexPath = path.join(ROOT, 'docs', 'HANDBOOK.md');
-const handbookIndex = fs.readFileSync(handbookIndexPath, 'utf8');
-if (!handbookIndex.includes('HANDBOOK/README.md')) {
-  const insert = `\n> **Expanded docs:** Each chapter and catalog item has its own page under [\`HANDBOOK/\`](HANDBOOK/README.md).\n\n`;
-  fs.writeFileSync(
-    handbookIndexPath,
-    handbookIndex.replace(
-      'The skill implementation lives in',
-      `${insert}The skill implementation lives in`,
-    ),
+// Sync inventory.md from legacy path if present (one-time migration helper)
+const legacyInventory = path.join(ROOT, 'docs', 'HANDBOOK.md');
+const inventoryPath = path.join(HANDBOOK, 'inventory.md');
+if (!fs.existsSync(inventoryPath) && fs.existsSync(legacyInventory)) {
+  let inv = fs.readFileSync(legacyInventory, 'utf8');
+  inv = inv.replace(
+    /\[`HANDBOOK\/`\]\(HANDBOOK\/README\.md\)/g,
+    '[Handbook pages](README.md)',
   );
+  inv = inv.replace(
+    /\[SOURCE\.md\]\(SOURCE\.md\)/g,
+    '[SOURCE.md](../../developers/SOURCE.md)',
+  );
+  inv = inv.replace(
+    /\[NOTICE\.md\]\(\.\.\/NOTICE\.md\)/g,
+    '[NOTICE.md](../../../NOTICE.md)',
+  );
+  fs.writeFileSync(inventoryPath, inv);
+  console.log('  Migrated docs/HANDBOOK.md → content/handbook/inventory.md');
 }
 
 console.log(`Generated:`);
