@@ -1,0 +1,7 @@
+{
+  "title": "The Red Team Handbook",
+  "url": "https://curatelabs.github.io/RedTeam",
+  "base": "/RedTeam/",
+  "src": "docs",
+  "out": "site"
+}

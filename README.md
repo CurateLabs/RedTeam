@@ -153,6 +153,20 @@ No setup required. Paste any plan, strategy, email draft, or argument and invoke
 
 The skill uses your input as context. Offer `/redteam init` to persist context for later sessions.
 
+## Documentation site
+
+Handbook and project docs are published with [docmd](https://docmd.io) to GitHub Pages:
+
+**https://curatelabs.github.io/RedTeam/**
+
+Build locally:
+
+```bash
+npm run docs:site   # regenerate handbook + docmd build → site/
+```
+
+Push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
 ## Source
 
 **RedTeam** implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work. See [docs/HANDBOOK.md](docs/HANDBOOK.md), [docs/SOURCE.md](docs/SOURCE.md), and [NOTICE.md](NOTICE.md).
