@@ -10,14 +10,14 @@
 - [Chapter 4 — Applied Critical Thinking](chapters/04-applied-critical-thinking.md)
 - [Chapter 5 — Group Process & Decision Support](chapters/05-group-process.md)
 - [Chapter 6 — Thinking Creatively](chapters/06-thinking-creatively.md)
-- [Chapter 8 — RedTeam Extensions](chapters/08-redteam-extensions.md)
-- [Chapter 7 — Tools, Techniques & Practices](chapters/07-tools-techniques-practices.md)
+- [Chapter 7 — Red Teaming with AI & Humans in the Loop](chapters/07-ai-and-humans-in-the-loop.md)
+- [Chapter 8 — Tools, Techniques & Practices](chapters/08-tools-techniques-practices.md)
 
-## Concepts (52 docs)
+## Concepts (57 docs)
 
 All concept pages: [`concepts/`](concepts/)
 
-## TTP catalog (61 docs)
+## TTP catalog (61 technique pages)
 
 All technique pages: [`ttps/`](ttps/) (plus concepts cross-listed from other chapters)
 

@@ -1,6 +1,6 @@
 # Steelman
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
 **ACT/GTM:** Both
 **Command:** `/redteam steelman`
 
@@ -10,7 +10,7 @@ Strongest version of each side before debate or devil's advocacy.
 
 ## When to use
 
-Before devils-advocate; AI analysis quality control.
+Before devils-advocate; weak AI-generated opposition.
 
 ## Method
 
@@ -18,7 +18,7 @@ Steel-man A and B → straw man audit → hand off.
 
 ## RedTeam notes
 
-Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.
+Handbook v10 command technique. See skill/reference/extensions-catalog.md.
 
 ## Related
 

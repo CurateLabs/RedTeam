@@ -1,6 +1,6 @@
 # RedTeam Extensions Catalog
 
-Techniques and commands **native to Handbook v10** (beyond what v9 carried). Full docs: [`docs/HANDBOOK/chapters/08-redteam-extensions.md`](../../docs/HANDBOOK/chapters/08-redteam-extensions.md).
+Techniques and commands in the Handbook v10 catalog. Full docs: [`docs/HANDBOOK/chapters/08-tools-techniques-practices.md`](../../docs/HANDBOOK/chapters/08-tools-techniques-practices.md). AI process guidance: [Chapter 7](../../docs/HANDBOOK/chapters/07-ai-and-humans-in-the-loop.md).
 
 ## Commands (v10 extensions)
 

@@ -1,18 +1,18 @@
 # AI Anti-Patterns
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 7 — Red Teaming with AI & Humans in the Loop](../chapters/07-ai-and-humans-in-the-loop.md)
 
 ## Summary
 
-Sycophancy, false balance, phantom citations, shallow steel-man in AI output.
+Sycophancy, false balance, phantom citations, shallow steel-man, checklist theater in AI output.
 
 ## When to use
 
-Any AI-assisted red team session.
+Any AI-assisted red team session; facilitator quality control.
 
 ## Method
 
-Run ai-check; see anti-pattern table.
+Match symptom to anti-pattern table → run recommended command (`ai-check`, `steelman`, `calibrate`).
 
 ## RedTeam notes
 

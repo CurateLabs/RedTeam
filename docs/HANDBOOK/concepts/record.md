@@ -1,6 +1,6 @@
 # Decision Record
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
 **Command:** `/redteam record`
 
 ## Summary
@@ -17,7 +17,7 @@ Fill template from prior `.redteam/reviews/` artifacts.
 
 ## RedTeam notes
 
-Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.
+Handbook v10 command technique. See skill/reference/extensions-catalog.md.
 
 ## Related
 

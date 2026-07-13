@@ -1,6 +1,6 @@
 # Ideal Group Process
 
-**Chapter:** [Chapter 7 — Tools, Techniques & Practices](../chapters/07-tools-techniques-practices.md)
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
 **ACT/GTM:** Both
 **Command:** `/redteam groupthink`
 

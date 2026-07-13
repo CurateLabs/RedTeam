@@ -116,7 +116,27 @@ The creative thought process is a **sequence**, not a single brainstorm. RedTeam
 
 ---
 
-## Chapter 7 — Tools, Techniques & Practices
+## Chapter 7 — Red Teaming with AI & Humans in the Loop
+
+Handbook v10-native. UFMCS v9 predates AI-assisted workflows; this chapter defines how the **RedTeam** skill behaves when models assist analysis and humans retain authority.
+
+| Term | One-line definition |
+|------|---------------------|
+| **AI-Assisted Red Teaming** | AI as loyal opposition; human owns stakes, judgment, and commitment. |
+| **Human-in-the-Loop Decision Authority** | Decider accountable; AI informs and challenges — does not approve or commit. |
+| **Grounding & Evidence Discipline** | Read source material; separate grounded claims from invention and phantom citations. |
+| **AI Check** | Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis. |
+| **AI Anti-Patterns** | Sycophancy, false balance, shallow steel-man, checklist theater — see concept page. |
+| **Hybrid Session Design** | Explicit AI/human handoffs across diverge → analyze → debate → converge. |
+| **Simulated Stakeholder Limits** | Label invented voices; prefer real dissent and `/redteam culture` with actual actors. |
+
+**RedTeam commands:** `ai-check`, `challenge`, `review`, `steelman`, `calibrate`, `record`, `sequence`.
+
+Expanded: [`HANDBOOK/chapters/07-ai-and-humans-in-the-loop.md`](HANDBOOK/chapters/07-ai-and-humans-in-the-loop.md)
+
+---
+
+## Chapter 8 — Tools, Techniques & Practices
 
 The core technique inventory. Most tools support **ACT**, **GTM**, or **both** — see the ACT–GTM Matrix concept. Tools are meant to **sequence**, not stand alone.
 
@@ -225,31 +245,11 @@ We explicitly reserve the right to:
 | **Sequencing** | Publish recommended tool chains (e.g. Frame Audit → Assumptions → Premortem → Review) independent of handbook chapter order. |
 | **Fidelity** | Update definitions and methods as we learn what works in AI-assisted facilitation. |
 
-### Planned extensions (v10-native, beyond v9)
+### v10 commands (in catalog)
 
-**Implemented in v0.2** — see [HANDBOOK/chapters/08-redteam-extensions.md](HANDBOOK/chapters/08-redteam-extensions.md) and `skill/reference/extensions-catalog.md`.
+See [Chapter 8 expanded index](HANDBOOK/chapters/08-tools-techniques-practices.md#v10-commands) — `outside-view`, `invert`, `incentives`, `ladder`, `steelman`, `calibrate`, `sequence`, `culture`, `launch`, `rfc`, `misuse`, `reversibility`, `record`, plus bias and AI reference docs.
 
-| Extension | Command |
-|-----------|---------|
-| Outside view / base rates | `outside-view` |
-| Inversion | `invert` |
-| Incentives / Goodhart | `incentives` |
-| Ladder of inference | `ladder` |
-| Steelman | `steelman` |
-| Calibration | `calibrate` |
-| Playbooks | `sequence` |
-| Worldview mapping | `culture` |
-| AI quality check | `ai-check` |
-| Launch readiness | `launch` |
-| RFC review | `rfc` |
-| Misuse / abuse cases | `misuse` |
-| Reversibility | `reversibility` |
-| Decision record | `record` |
-| Cognitive bias catalog | [bias-catalog.md](../skill/reference/bias-catalog.md) |
-| AI anti-patterns | [ai-anti-patterns.md](../skill/reference/ai-anti-patterns.md) |
-| Decision record template | [decision-record-template.md](../skill/reference/decision-record-template.md) |
-
-**Also extended in existing commands:** pre-parade (`premortem`), Cynefin + polarity (`frame`), discovery-driven planning (`assumptions`), kill criteria (`review`), second-order effects (`challenge`), narrative audit (`critique`).
+**Implemented in v0.2** — see `skill/reference/extensions-catalog.md`.
 
 ---
 

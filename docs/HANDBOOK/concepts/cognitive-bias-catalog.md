@@ -1,6 +1,6 @@
 # Cognitive Bias Catalog
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
 
 ## Summary
 

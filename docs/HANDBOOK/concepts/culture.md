@@ -1,6 +1,6 @@
 # Culture / Worldview Mapping
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 8 — Tools, Techniques & Practices](../chapters/08-tools-techniques-practices.md)
 **ACT/GTM:** Both
 **Command:** `/redteam culture`
 
@@ -18,7 +18,7 @@ Actor table → collisions → empathetic questions.
 
 ## RedTeam notes
 
-Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.
+Handbook v10 command technique. See skill/reference/extensions-catalog.md.
 
 ## Related
 

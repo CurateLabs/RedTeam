@@ -40,7 +40,7 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 | PMESII-PT | [Operating Landscape Map](HANDBOOK/concepts/operating-landscape-map.md) |
 | TTP (military usage) | **Techniques** / tools & techniques |
 | Doctrine tone | Plain-language skill for any harness |
-| PDF-only distribution | Structured docs + `/redteam` commands |
+| PDF-only distribution | Structured docs (8 chapters) + `/redteam` commands |
 | — | v10 extensions: `ai-check`, `launch`, `rfc`, `outside-view`, `record`, … |
 
 ## How to cite

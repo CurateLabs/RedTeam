@@ -1,6 +1,6 @@
 # AI Check
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
+**Chapter:** [Chapter 7 — Red Teaming with AI & Humans in the Loop](../chapters/07-ai-and-humans-in-the-loop.md)
 **Command:** `/redteam ai-check`
 
 ## Summary
@@ -9,15 +9,15 @@ Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis.
 
 ## When to use
 
-After model-generated plans or reviews.
+After model-generated plans or reviews; when analysis feels too agreeable.
 
 ## Method
 
-Four checks → verdict trust/re-run/reject.
+Four checks → verdict trust / re-run / reject.
 
 ## RedTeam notes
 
-See ai-anti-patterns.md and bias-catalog.md.
+See skill/reference/ai-anti-patterns.md and bias-catalog.md.
 
 ## Related
 

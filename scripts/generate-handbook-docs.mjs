@@ -483,18 +483,92 @@ const chapters = [
     ],
   },
   {
-    num: 8,
-    title: 'RedTeam Extensions',
-    slug: '08-redteam-extensions',
+    num: 7,
+    title: 'Red Teaming with AI & Humans in the Loop',
+    slug: '07-ai-and-humans-in-the-loop',
     summary:
-      'RedTeam-native extensions: decision science, product red teaming, AI-quality checks, and durable decision records.',
+      'How to red team when AI assists analysis and humans retain decision authority — grounding, dissent, quality control, and hybrid session design.',
     redteamNote:
-      'These are RedTeam-native. We supersede and modify the source catalog — see skill/reference/extensions-catalog.md.',
-    commands: [
-      'outside-view', 'invert', 'incentives', 'ladder', 'steelman', 'calibrate',
-      'sequence', 'culture', 'ai-check', 'launch', 'rfc', 'misuse', 'reversibility', 'record',
-    ],
+      'Handbook v10-native. UFMCS v9 predates modern AI-assisted workflows; this chapter defines how the RedTeam skill should behave with humans in the loop.',
+    commands: ['ai-check', 'challenge', 'review', 'steelman', 'calibrate', 'record', 'sequence'],
     concepts: [
+      {
+        title: 'AI-Assisted Red Teaming',
+        slug: 'ai-assisted-red-teaming',
+        summary:
+          'Use AI as loyal opposition — challenge plans and surface risks — while the human owns stakes, judgment, and commitment.',
+        whenToUse: 'Any `/redteam` session in an AI harness; async document review; copilot decision support.',
+        method:
+          'Human frames decision and provides source material. AI runs structured techniques. Human verifies, decides, and records.',
+        actGtm: 'Both',
+        command: 'challenge',
+      },
+      {
+        title: 'Human-in-the-Loop Decision Authority',
+        slug: 'human-in-the-loop',
+        summary:
+          'The decider remains accountable. AI informs and challenges; it does not approve, commit, or replace stakeholder judgment.',
+        whenToUse: 'Setting expectations for AI-assisted reviews; avoiding "the model said no."',
+        method:
+          'Deliver findings and alternatives. Human retains GO/NO-GO. Record dissent and confidence. AI never owns the outcome.',
+        command: 'review',
+      },
+      {
+        title: 'Grounding & Evidence Discipline',
+        slug: 'grounding-evidence-discipline',
+        summary:
+          'Read actual source material before analyzing. Separate grounded claims from model invention, guesswork, and phantom citations.',
+        whenToUse: 'Every review targeting a document, plan, or artifact; before high-stakes output.',
+        method:
+          'Require source read. Flag unsupported facts. Run grounding check (see AI Check). Downgrade unverified claims in `calibrate`.',
+        actGtm: 'ACT',
+        command: 'calibrate',
+      },
+      {
+        title: 'AI Check',
+        slug: 'ai-check',
+        summary: 'Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis.',
+        whenToUse: 'After model-generated plans or reviews; when analysis feels too agreeable.',
+        method: 'Four checks → verdict trust / re-run / reject.',
+        redteamNote: 'See skill/reference/ai-anti-patterns.md and bias-catalog.md.',
+        command: 'ai-check',
+      },
+      {
+        title: 'AI Anti-Patterns',
+        slug: 'ai-anti-patterns',
+        summary: 'Sycophancy, false balance, phantom citations, shallow steel-man, checklist theater in AI output.',
+        whenToUse: 'Any AI-assisted red team session; facilitator quality control.',
+        method: 'Match symptom to anti-pattern table → run recommended command (`ai-check`, `steelman`, `calibrate`).',
+        redteamNote: 'Reference doc: skill/reference/ai-anti-patterns.md',
+      },
+      {
+        title: 'Hybrid Session Design',
+        slug: 'hybrid-session-design',
+        summary:
+          'Allocate roles across AI and humans across diverge → analyze → debate → converge with explicit handoffs.',
+        whenToUse: 'Teams mixing live facilitation with AI prep or async review chains.',
+        method:
+          'AI: volume ideation, first-pass ACH, pattern surfacing. Human: verification, real dissent, cultural empathy, approval. Leader speaks last.',
+        actGtm: 'Both',
+        command: 'sequence',
+      },
+      {
+        title: 'Simulated Stakeholder Limits',
+        slug: 'simulated-stakeholder-limits',
+        summary:
+          'When invented stakeholder voices help vs mislead — label simulations; prefer real dissent and `culture` with actual actors.',
+        whenToUse: 'AI simulates "what would Legal say?" without Legal in the room.',
+        method:
+          'Label simulated voices explicitly. Do not treat as evidence. Ask user for real stakeholders or run empathetic questions with unknowns flagged.',
+        actGtm: 'Both',
+        command: 'culture',
+      },
+    ],
+  },
+];
+
+/** v10 command concepts — indexed in Chapter 8 (tools), not a separate chapter */
+const v10CommandConcepts = [
       {
         title: 'Outside View / Reference Class Forecasting',
         slug: 'outside-view',
@@ -535,7 +609,7 @@ const chapters = [
         title: 'Steelman',
         slug: 'steelman',
         summary: 'Strongest version of each side before debate or devil\'s advocacy.',
-        whenToUse: 'Before devils-advocate; AI analysis quality control.',
+        whenToUse: 'Before devils-advocate; weak AI-generated opposition.',
         method: 'Steel-man A and B → straw man audit → hand off.',
         actGtm: 'Both',
         command: 'steelman',
@@ -565,15 +639,6 @@ const chapters = [
         method: 'Actor table → collisions → empathetic questions.',
         actGtm: 'Both',
         command: 'culture',
-      },
-      {
-        title: 'AI Check',
-        slug: 'ai-check',
-        summary: 'Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis.',
-        whenToUse: 'After model-generated plans or reviews.',
-        method: 'Four checks → verdict trust/re-run/reject.',
-        redteamNote: 'See ai-anti-patterns.md and bias-catalog.md.',
-        command: 'ai-check',
       },
       {
         title: 'Launch Readiness',
@@ -623,17 +688,11 @@ const chapters = [
         method: 'Look up bias → run recommended command.',
         redteamNote: 'Reference doc: skill/reference/bias-catalog.md',
       },
-      {
-        title: 'AI Anti-Patterns',
-        slug: 'ai-anti-patterns',
-        summary: 'Sycophancy, false balance, phantom citations, shallow steel-man in AI output.',
-        whenToUse: 'Any AI-assisted red team session.',
-        method: 'Run ai-check; see anti-pattern table.',
-        redteamNote: 'Reference doc: skill/reference/ai-anti-patterns.md',
-      },
-    ],
-  },
 ];
+
+const TOOLS_CHAPTER_NUM = 8;
+const TOOLS_CHAPTER_TITLE = 'Tools, Techniques & Practices';
+const TOOLS_CHAPTER_SLUG = '08-tools-techniques-practices';
 
 const ttps = [
   { title: 'ACT–GTM Matrix', slug: 'act-gtm-matrix', actGtm: 'Meta', command: 'tools', category: 'facilitation',
@@ -946,7 +1005,9 @@ for (const ch of chapters) {
     }
   }
 
-  // Chapter 7 index will add TTPs
+  // TTPs are listed in Chapter 8, not in per-chapter concept loops
+  if (ch.num === TOOLS_CHAPTER_NUM) continue;
+
   writeDoc(
     chapterDir,
     `${ch.slug}.md`,
@@ -962,12 +1023,44 @@ for (const ch of chapters) {
   );
 }
 
-// Chapter 7
-const ch7Items = [];
+// Write v10 command concept pages (Chapter 8 index)
+const v10Items = [];
+for (const c of v10CommandConcepts) {
+  const s = c.slug || slug(c.title);
+  if (writtenConcepts.has(s) && !c.allowDuplicate) continue;
+  writtenConcepts.add(s);
+
+  v10Items.push({ title: c.title, href: `../concepts/${s}.md`, summary: c.summary });
+
+  const related = c.related || [];
+  if (c.command) {
+    related.push({ title: `/redteam ${c.command}`, href: `../../skill/reference/${c.command}.md` });
+  }
+
+  writeDoc(
+    conceptDir,
+    `${s}.md`,
+    conceptDoc({
+      title: c.title,
+      chapter: `Chapter ${TOOLS_CHAPTER_NUM} — ${TOOLS_CHAPTER_TITLE}`,
+      chapterSlug: TOOLS_CHAPTER_SLUG,
+      summary: c.summary,
+      whenToUse: c.whenToUse,
+      method: c.method,
+      actGtm: c.actGtm,
+      command: c.command,
+      related,
+      redteamNote: c.redteamNote || 'Handbook v10 command technique. See skill/reference/extensions-catalog.md.',
+    }),
+  );
+}
+
+// Chapter 8 — Tools, Techniques & Practices
+const ch8Items = [];
 for (const t of ttps) {
   const s = t.slug || slug(t.title);
   if (t.skipTtp) {
-    ch7Items.push({
+    ch8Items.push({
       title: t.title,
       href: `../concepts/${s}.md`,
       summary: t.summary,
@@ -986,8 +1079,8 @@ for (const t of ttps) {
     `${s}.md`,
     conceptDoc({
       title: t.title,
-      chapter: 'Chapter 7 — Tools, Techniques & Practices',
-      chapterSlug: '07-tools-techniques-practices',
+      chapter: `Chapter ${TOOLS_CHAPTER_NUM} — ${TOOLS_CHAPTER_TITLE}`,
+      chapterSlug: TOOLS_CHAPTER_SLUG,
       summary: t.summary,
       whenToUse: t.whenToUse,
       method: t.method,
@@ -998,7 +1091,7 @@ for (const t of ttps) {
     }),
   );
 
-  ch7Items.push({
+  ch8Items.push({
     title: t.title,
     href: `../ttps/${s}.md`,
     summary: t.summary,
@@ -1007,46 +1100,61 @@ for (const t of ttps) {
 }
 
 const byCategory = {};
-for (const item of ch7Items) {
+for (const item of ch8Items) {
   const cat = ttps.find((t) => t.title === item.title).category;
   if (!byCategory[cat]) byCategory[cat] = [];
   byCategory[cat].push(item);
 }
 
-let ch7Body = '';
+let ch8Body = '';
 for (const [cat, items] of Object.entries(byCategory)) {
-  ch7Body += `\n### ${cat.charAt(0).toUpperCase() + cat.slice(1)}\n\n`;
-  ch7Body += items.map((i) => `- [${i.title}](${i.href}) — ${i.summary}`).join('\n');
-  ch7Body += '\n';
+  ch8Body += `\n### ${cat.charAt(0).toUpperCase() + cat.slice(1)}\n\n`;
+  ch8Body += items.map((i) => `- [${i.title}](${i.href}) — ${i.summary}`).join('\n');
+  ch8Body += '\n';
 }
+
+ch8Body += '\n### v10 commands {#v10-commands}\n\n';
+ch8Body += v10Items.map((i) => `- [${i.title}](${i.href}) — ${i.summary}`).join('\n');
+ch8Body += '\n';
+
+const v10Commands = [
+  'outside-view', 'invert', 'incentives', 'ladder', 'steelman', 'calibrate',
+  'sequence', 'culture', 'launch', 'rfc', 'misuse', 'reversibility', 'record',
+];
 
 writeDoc(
   chapterDir,
-  '07-tools-techniques-practices.md',
-  `# Chapter 7 — Tools, Techniques & Practices
+  `${TOOLS_CHAPTER_SLUG}.md`,
+  `# Chapter ${TOOLS_CHAPTER_NUM} — ${TOOLS_CHAPTER_TITLE}
 
-The core technique catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
+The technique catalog for Handbook v10. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
 
-Browse by category below. Each item has its own page in [\`ttps/\`](../ttps/).
+Browse by category below. Each item has its own page in [\`ttps/\`](../ttps/) or [\`concepts/\`](../concepts/) for v10 commands.
 
-${ch7Body}
+${ch8Body}
 
 ## RedTeam commands
 
 - \`/redteam tools\` — browse and recommend techniques
-- See individual TTP pages for mapped commands (\`premortem\`, \`ach\`, \`ideate\`, etc.)
+- See individual pages for mapped commands (\`premortem\`, \`ach\`, \`outside-view\`, etc.)
+${v10Commands.map((c) => `- \`/redteam ${c}\``).join('\n')}
+
+## RedTeam note
+
+v9-origin techniques and v10-native commands live in one catalog. AI-specific process guidance is in [Chapter 7 — Red Teaming with AI & Humans in the Loop](07-ai-and-humans-in-the-loop.md).
 
 ## See also
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)
 `,
 );
 
 // Handbook README index
 const chapterLinks = [
   ...chapters.map((ch) => ({ title: `Chapter ${ch.num} — ${ch.title}`, href: `chapters/${ch.slug}.md` })),
-  { title: 'Chapter 7 — Tools, Techniques & Practices', href: 'chapters/07-tools-techniques-practices.md' },
+  { title: `Chapter ${TOOLS_CHAPTER_NUM} — ${TOOLS_CHAPTER_TITLE}`, href: `chapters/${TOOLS_CHAPTER_SLUG}.md` },
 ];
 
 writeDoc(
@@ -1064,7 +1172,7 @@ ${chapterLinks.map((c) => `- [${c.title}](${c.href})`).join('\n')}
 
 All concept pages: [\`concepts/\`](concepts/)
 
-## TTP catalog (${ch7Items.length} docs)
+## TTP catalog (${ch8Items.length} technique pages)
 
 All technique pages: [\`ttps/\`](ttps/) (plus concepts cross-listed from other chapters)
 
@@ -1094,5 +1202,5 @@ if (!handbookIndex.includes('HANDBOOK/README.md')) {
 console.log(`Generated:`);
 console.log(`  ${chapters.length + 1} chapter docs`);
 console.log(`  ${writtenConcepts.size} concept docs`);
-console.log(`  ${ttps.length} TTP docs`);
+console.log(`  ${ch8Items.length} TTP docs`);
 console.log(`  HANDBOOK/README.md`);

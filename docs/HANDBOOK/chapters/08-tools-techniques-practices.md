@@ -1,8 +1,8 @@
-# Chapter 7 — Tools, Techniques & Practices
+# Chapter 8 — Tools, Techniques & Practices
 
-The core technique catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
+The technique catalog for Handbook v10. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
 
-Browse by category below. Each item has its own page in [`ttps/`](../ttps/).
+Browse by category below. Each item has its own page in [`ttps/`](../ttps/) or [`concepts/`](../concepts/) for v10 commands.
 
 
 ### Facilitation
@@ -90,13 +90,48 @@ Browse by category below. Each item has its own page in [`ttps/`](../ttps/).
 
 - [Storytelling](../ttps/storytelling.md) — Narrative form to communicate findings and alternatives persuasively.
 
+### v10 commands {#v10-commands}
+
+- [Outside View / Reference Class Forecasting](../concepts/outside-view.md) — Base-rate thinking: what happened in the reference class of similar past attempts?
+- [Inversion](../concepts/invert.md) — Munger-style: what would guarantee failure? Flip into avoidance rules.
+- [Incentive & Goodhart Analysis](../concepts/incentives.md) — How metrics and incentives get gamed; perverse second-order effects.
+- [Ladder of Inference](../concepts/ladder.md) — Argyris: separate observable data from interpretation and conclusion.
+- [Steelman](../concepts/steelman.md) — Strongest version of each side before debate or devil's advocacy.
+- [Calibration](../concepts/calibrate.md) — Grade claims as fact/inference/guess; attach confidence and disconfirmers.
+- [Sequence / Playbooks](../concepts/sequence.md) — Chained `/redteam` commands for decision types with time budgets.
+- [Culture / Worldview Mapping](../concepts/culture.md) — Stakeholder see/value/fear/want map — cultural empathy in practice for teams and products.
+- [Launch Readiness](../concepts/launch.md) — Product go-live checklist: ops, comms, metrics, rollback, misuse.
+- [RFC Review](../concepts/rfc.md) — Engineering decision doc review — options, reversibility, operations.
+- [Misuse & Abuse Cases](../concepts/misuse.md) — How artifact could be misused, gamed, or harm vulnerable users.
+- [Reversibility](../concepts/reversibility.md) — One-way vs two-way doors (Bezos); match process to reversibility.
+- [Decision Record](../concepts/record.md) — ADR-style artifact with assumptions, dissent, tripwires, review date.
+- [Cognitive Bias Catalog](../concepts/cognitive-bias-catalog.md) — Index of biases mapped to counter-techniques and commands.
+
 
 ## RedTeam commands
 
 - `/redteam tools` — browse and recommend techniques
-- See individual TTP pages for mapped commands (`premortem`, `ach`, `ideate`, etc.)
+- See individual pages for mapped commands (`premortem`, `ach`, `outside-view`, etc.)
+- `/redteam outside-view`
+- `/redteam invert`
+- `/redteam incentives`
+- `/redteam ladder`
+- `/redteam steelman`
+- `/redteam calibrate`
+- `/redteam sequence`
+- `/redteam culture`
+- `/redteam launch`
+- `/redteam rfc`
+- `/redteam misuse`
+- `/redteam reversibility`
+- `/redteam record`
+
+## RedTeam note
+
+v9-origin techniques and v10-native commands live in one catalog. AI-specific process guidance is in [Chapter 7 — Red Teaming with AI & Humans in the Loop](07-ai-and-humans-in-the-loop.md).
 
 ## See also
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)
