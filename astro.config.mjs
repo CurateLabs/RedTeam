@@ -10,6 +10,7 @@ export default defineConfig({
       title: 'RedTeam',
       description:
         'Applied critical thinking for better decisions, plans, strategies, policies, and arguments.',
+      customCss: ['./src/styles/theme.css'],
       social: [
         {
           icon: 'github',

@@ -1,0 +1,16 @@
+:root,
+::backdrop {
+  --redteam-red: #b91c1c;
+
+  /* Brighter dark-mode accents preserve contrast against Starlight's dark surfaces. */
+  --sl-color-accent-low: #450a0a;
+  --sl-color-accent: #ef4444;
+  --sl-color-accent-high: #fecaca;
+}
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+  --sl-color-accent-high: #991b1b;
+  --sl-color-accent: var(--redteam-red);
+  --sl-color-accent-low: #fee2e2;
+}
