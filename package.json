@@ -41,7 +41,7 @@
     "build": "node scripts/build.mjs",
     "build:dist": "node scripts/build.mjs dist",
     "docs:handbook": "node scripts/generate-handbook-docs.mjs",
-    "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && docmd build"
+    "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && node scripts/generate-docmd-nav.mjs && docmd build"
   },
   "devDependencies": {
     "@docmd/core": "0.8.10"

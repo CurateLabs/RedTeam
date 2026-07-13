@@ -1160,9 +1160,11 @@ const chapterLinks = [
 writeDoc(
   HANDBOOK,
   'README.md',
-  `# Handbook documentation — Version 10
+  `---
+title: The Red Team Handbook — Version 10
+---
 
-*${HANDBOOK_FULL}* — maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
+Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
 
 ## Chapters
 

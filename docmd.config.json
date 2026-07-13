@@ -4,9 +4,6 @@
   "base": "/RedTeam/",
   "src": "content",
   "out": "site",
-  "theme": {
-    "name": "sky"
-  },
   "layout": {
     "menubar": {
       "left": [
@@ -26,5 +23,6 @@
   "footer": {
     "copyright": "© Curate Labs",
     "content": "RedTeam — applied critical thinking for AI agents. Not penetration testing."
-  }
+  },
+  "customJs": ["scripts/docmd-expand-guide.js"]
 }

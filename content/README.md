@@ -1,4 +1,6 @@
-# RedTeam
+---
+title: RedTeam
+---
 
 Applied critical thinking skills for AI agents — **29 commands**, a full handbook, and a `.redteam/` workspace for decision reviews.
 

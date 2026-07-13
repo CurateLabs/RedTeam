@@ -1,4 +1,6 @@
-# The Red Team Handbook — Version 10
+---
+title: Full inventory
+---
 
 ***The Red Team Handbook*, Version 10** — maintained by **Curate Labs**. Successor to the defunct UFMCS v9.0 work. The `redteam` skill implements this handbook in AI harnesses.
 
