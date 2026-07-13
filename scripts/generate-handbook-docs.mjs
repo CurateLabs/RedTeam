@@ -9,7 +9,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const HANDBOOK = path.join(ROOT, 'content', 'handbook');
 const HANDBOOK_FULL = 'The Red Team Handbook, Version 10';
-const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
+const REPOSITORY_URL = 'https://github.com/CurateLabs/RedTeam';
+const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](${REPOSITORY_URL}/blob/main/NOTICE.md).`;
 const DEFAULT_REDTEAM_NOTE = 'Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.';
 
 function slug(name) {
@@ -961,7 +962,7 @@ for (const ch of chapters) {
 
     const related = c.related || [];
     if (c.command) {
-      related.push({ title: `/redteam ${c.command}`, href: `../../skill/reference/${c.command}.md` });
+      related.push({ title: `/redteam ${c.command}`, href: `${REPOSITORY_URL}/blob/main/skill/reference/${c.command}.md` });
     }
 
     writeDoc(
@@ -1033,7 +1034,7 @@ for (const c of v10CommandConcepts) {
 
   const related = c.related || [];
   if (c.command) {
-    related.push({ title: `/redteam ${c.command}`, href: `../../skill/reference/${c.command}.md` });
+    related.push({ title: `/redteam ${c.command}`, href: `${REPOSITORY_URL}/blob/main/skill/reference/${c.command}.md` });
   }
 
   writeDoc(
@@ -1069,9 +1070,9 @@ for (const t of ttps) {
   }
   const related = [];
   if (t.command) {
-    related.push({ title: `/redteam ${t.command}`, href: `../../skill/reference/${t.command}.md` });
+    related.push({ title: `/redteam ${t.command}`, href: `${REPOSITORY_URL}/blob/main/skill/reference/${t.command}.md` });
   }
-  related.push({ title: 'TTP catalog (skill)', href: '../../skill/reference/ttp-catalog.md' });
+  related.push({ title: 'TTP catalog (skill)', href: `${REPOSITORY_URL}/blob/main/skill/reference/ttp-catalog.md` });
 
   writeDoc(
     ttpDir,
@@ -1149,6 +1150,30 @@ v9-origin techniques and v10-native commands live in one catalog. AI-specific pr
 `,
 );
 
+writeDoc(
+  conceptDir,
+  'README.md',
+  `# Handbook Concepts
+
+Core ideas from *The Red Team Handbook*, Version 10. Use the Concepts section in the sidebar to browse all ${writtenConcepts.size} entries.
+
+- [Handbook overview](../README.md)
+- [Tools, techniques, and practices](../ttps/)
+`,
+);
+
+writeDoc(
+  ttpDir,
+  'README.md',
+  `# Tools, Techniques & Practices
+
+Practical methods from *The Red Team Handbook*, Version 10. Use the Techniques section in the sidebar to browse all ${ch8Items.length} entries.
+
+- [Handbook overview](../README.md)
+- [Handbook concepts](../concepts/)
+`,
+);
+
 // Handbook README index
 const chapterLinks = [
   ...chapters.map((ch) => ({ title: `Chapter ${ch.num} — ${ch.title}`, href: `chapters/${ch.slug}.md` })),
@@ -1160,7 +1185,7 @@ writeDoc(
   'README.md',
   `# The Red Team Handbook — Version 10
 
-Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
+Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../developers/SOURCE.md).
 
 ## Chapters
 
@@ -1176,10 +1201,10 @@ All technique pages: [\`ttps/\`](ttps/) (plus concepts cross-listed from other c
 
 ## Quick links
 
-- [User guide](../../guide/)
-- [Source & lineage](../../developers/SOURCE.md)
-- [Skill implementation](../../../skill/reference/ttp-catalog.md)
-- [NOTICE](../../../NOTICE.md)
+- [User guide](../guide/)
+- [Source & lineage](../developers/SOURCE.md)
+- [Skill implementation](${REPOSITORY_URL}/blob/main/skill/reference/ttp-catalog.md)
+- [NOTICE](${REPOSITORY_URL}/blob/main/NOTICE.md)
 `,
 );
 

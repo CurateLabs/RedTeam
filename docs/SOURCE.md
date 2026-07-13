@@ -8,7 +8,7 @@ This repository maintains ***The Red Team Handbook*, Version 10** — a civilian
 |---|---|
 | **Handbook** | *The Red Team Handbook*, Version 10 |
 | **Skill / plugin** | **RedTeam** (`redteam`) — implements Handbook v10 in AI harnesses |
-| **Docs** | [`content/handbook/`](../content/handbook/) · [`content/guide/`](../content/guide/) · [`docs/`](README.md) |
+| **Docs** | [Handbook](https://curatelabs.github.io/RedTeam/handbook/) · [User Guide](https://curatelabs.github.io/RedTeam/guide/) · [`docs/`](README.md) |
 | **Status** | Living document; we update, extend, and modify over time |
 
 RedTeam is **not** affiliated with the U.S. Army, TRADOC, or UFMCS. Handbook v10 is an independent continuation for civilian, product, and AI-assisted decision-making.
@@ -37,7 +37,7 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 | v9 (UFMCS) | Handbook v10 (RedTeam) |
 |------------|-------------------------|
 | Military operational framing | Decision, product, and strategy framing |
-| PMESII-PT | [Operating Landscape Map](HANDBOOK/concepts/operating-landscape-map.md) |
+| PMESII-PT | [Operating Landscape Map](https://curatelabs.github.io/RedTeam/handbook/concepts/operating-landscape-map/) |
 | TTP (military usage) | **Techniques** / tools & techniques |
 | Doctrine tone | Plain-language skill for any harness |
 | PDF-only distribution | Structured docs (8 chapters) + `/redteam` commands |
@@ -51,10 +51,10 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 **With predecessor credit:**  
 *The Red Team Handbook, Version 10 (RedTeam, Curate Labs). Successor to v9.0 (TRADOC G-2, UFMCS).*
 
-**In docs:** Link here or [NOTICE.md](../NOTICE.md). Do not describe RedTeam outputs as military doctrine.
+**In docs:** Link here or the repository [NOTICE](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md). Do not describe RedTeam outputs as military doctrine.
 
 ## See also
 
-- [NOTICE.md](../NOTICE.md) — legal disclaimer
-- [content/handbook/](../content/handbook/) — v10 handbook (chapters, concepts, techniques)
-- [skill/SKILL.md](../skill/SKILL.md) — RedTeam skill implementation
+- [NOTICE](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md) — legal disclaimer
+- [Handbook](https://curatelabs.github.io/RedTeam/handbook/) — v10 chapters, concepts, and techniques
+- [RedTeam skill implementation](https://github.com/CurateLabs/RedTeam/blob/main/skill/SKILL.md)

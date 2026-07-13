@@ -23,8 +23,8 @@ This page covers ACT execution; the foundational principle is documented in Chap
 ## Related
 
 - [Applied Critical Thinking (ACT)](../concepts/applied-critical-thinking.md)
-- [/redteam challenge](../../skill/reference/challenge.md)
+- [/redteam challenge](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/challenge.md)
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).

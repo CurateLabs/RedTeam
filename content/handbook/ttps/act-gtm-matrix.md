@@ -25,9 +25,9 @@ Category: **facilitation**. RedTeam may extend or alias this technique.
 
 ## Related
 
-- [/redteam tools](../../skill/reference/tools.md)
-- [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
+- [/redteam tools](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/tools.md)
+- [TTP catalog (skill)](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/ttp-catalog.md)
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
