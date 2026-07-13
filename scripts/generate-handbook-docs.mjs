@@ -24,9 +24,20 @@ function writeDoc(dir, filename, content) {
   return filePath;
 }
 
+function formatCategory(actGtm) {
+  const map = {
+    ACT: 'Critical thinking',
+    GTM: 'Group process',
+    Both: 'Critical thinking + Group process',
+    Meta: 'Meta',
+    Extension: 'RedTeam extension',
+  };
+  return map[actGtm] || actGtm;
+}
+
 function conceptDoc({ title, chapter, chapterSlug, summary, whenToUse, method, actGtm, command, related = [], redteamNote }) {
   const cmd = command ? `\n**Command:** \`/redteam ${command}\`` : '';
-  const act = actGtm ? `\n**ACT/GTM:** ${actGtm}` : '';
+  const cat = actGtm ? `\n**Category:** ${formatCategory(actGtm)}` : '';
   const relatedSection =
     related.length > 0
       ? `\n## Related\n\n${related.map((r) => `- [${r.title}](${r.href})`).join('\n')}\n`
@@ -34,7 +45,7 @@ function conceptDoc({ title, chapter, chapterSlug, summary, whenToUse, method, a
 
   return `# ${title}
 
-**Chapter:** [${chapter}](../chapters/${chapterSlug}.md)${act}${cmd}
+**Chapter:** [${chapter}](../chapters/${chapterSlug}.md)${cat}${cmd}
 
 ## Summary
 
@@ -48,13 +59,13 @@ ${whenToUse}
 
 ${method}
 
-## RedTeam modifications
+## RedTeam notes
 
-${redteamNote || 'RedTeam supersedes Handbook v9. Update this doc as our practice evolves — we do not commit to verbatim fidelity to the source.'}
+${redteamNote || 'Civilian adaptation of source-handbook techniques. We update and extend over time — not verbatim doctrine.'}
 ${relatedSection}
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.
 `;
 }
 
@@ -82,6 +93,7 @@ ${redteamNote}
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)
 `;
 }
 
@@ -91,9 +103,9 @@ const chapters = [
     title: 'Foundational Concepts',
     slug: '01-foundational-concepts',
     summary:
-      'Defines Red Teaming, UFMCS, and the four principles that organize every technique in the handbook and this project.',
+      'Defines red teaming, the four core principles, and how techniques are organized in RedTeam.',
     redteamNote:
-      'We treat the four principles as the organizing frame for all `/redteam` commands. Terminology may diverge from Army usage over time.',
+      'UFMCS history lives in docs/SOURCE.md. Day-to-day text uses civilian terms: critical thinking, group process, perspective-taking.',
     commands: ['challenge', 'critique', 'review', 'init'],
     concepts: [
       {
@@ -103,80 +115,77 @@ const chapters = [
         whenToUse:
           'When a plan, strategy, policy, or decision is approaching commitment and has not been independently challenged.',
         method:
-          '1. Clarify the decision and stakes.\n2. Assign a red team role (loyal opposition).\n3. Select ACT and/or GTM tools matched to time available.\n4. Surface assumptions, alternatives, and failure modes.\n5. Feed findings to the decider without owning the outcome.',
+          '1. Clarify the decision and stakes.\n2. Assign loyal opposition.\n3. Select techniques matched to time available.\n4. Surface assumptions, alternatives, and failure modes.\n5. Inform decision-makers without owning the outcome.',
         command: 'challenge',
         related: [
-          { title: 'Four Principles of UFMCS', href: '../concepts/four-principles-of-ufmcs.md' },
-          { title: 'Decision Support', href: '../concepts/decision-support.md' },
+          { title: 'Four Core Principles', href: '../concepts/four-core-principles.md' },
+          { title: 'Decision support', href: '../concepts/decision-support.md' },
         ],
       },
       {
-        title: 'UFMCS',
+        title: 'UFMCS (historical)',
+        slug: 'ufmcs-historical',
         summary:
-          'University of Foreign Military and Cultural Studies — the Army program that developed and taught Red Teaming methodology.',
-        whenToUse:
-          'When tracing source lineage, training context, or understanding why techniques combine ACT, culture, and group process.',
+          'University of Foreign Military and Cultural Studies — the U.S. Army program that developed and taught the source handbook curriculum.',
+        whenToUse: 'Attribution, training history, tracing technique lineage — not operational framing.',
         method:
-          'Reference for attribution and historical context. RedTeam generalizes UFMCS methods for civilian, product, and organizational decisions.',
-        redteamNote:
-          'UFMCS is historical source, not brand affiliation. We are not UFMCS and do not issue military certification.',
+          'Reference only. See docs/SOURCE.md. RedTeam is an independent civilian adaptation.',
+        redteamNote: 'Historical acknowledgment only. Do not use UFMCS as live product branding.',
       },
       {
-        title: 'Four Principles of UFMCS',
-        summary: 'The pillars every Red Team practice rests on: ACT, Cultural Empathy, GTM, and Self-Awareness.',
-        whenToUse: 'When designing any red team session, command flow, or facilitator checklist.',
+        title: 'Four Core Principles',
+        slug: 'four-core-principles',
+        summary: 'Critical thinking, group process, perspective-taking, and self-awareness — the organizing frame for all commands.',
+        whenToUse: 'Designing any red team session or command flow.',
         method:
-          '1. **ACT** — make reasoning explicit.\n2. **Cultural Empathy** — include missing worldviews.\n3. **GTM** — protect dissent and alternatives.\n4. **Self-Awareness** — know your own biases first.',
+          '1. Critical thinking — explicit reasoning.\n2. Group process — safe dissent.\n3. Perspective-taking — missing worldviews.\n4. Self-awareness — know your biases first.',
         related: [
-          { title: 'Applied Critical Thinking (ACT)', href: '../concepts/applied-critical-thinking.md' },
-          { title: 'Cultural Empathy', href: '../concepts/cultural-empathy.md' },
-          { title: 'Groupthink Mitigation (GTM)', href: '../concepts/groupthink-mitigation.md' },
-          { title: 'Self-Awareness & Reflection', href: '../concepts/self-awareness-reflection.md' },
+          { title: 'Critical thinking', href: '../concepts/critical-thinking.md' },
+          { title: 'Group process', href: '../concepts/group-process.md' },
+          { title: 'Perspective-taking', href: '../concepts/perspective-taking.md' },
+          { title: 'Self-awareness', href: '../concepts/self-awareness.md' },
         ],
       },
       {
-        title: 'Applied Critical Thinking (ACT)',
-        slug: 'applied-critical-thinking',
+        title: 'Critical Thinking',
+        slug: 'critical-thinking',
         summary:
           'Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them.',
-        whenToUse: 'Whenever reasoning quality matters and autopilot, bias, or time pressure may degrade decisions.',
+        whenToUse: 'Whenever reasoning quality matters under time pressure.',
         method:
-          'Slow down, ask why, deconstruct arguments, challenge assumptions, generate alternatives. Scale tool depth to time available.',
+          'Slow down, ask why, deconstruct arguments, challenge assumptions, generate alternatives.',
         actGtm: 'ACT',
         command: 'challenge',
-        chapter: 1,
-        alsoChapter: 4,
       },
       {
-        title: 'Cultural Empathy',
+        title: 'Perspective-Taking',
+        slug: 'perspective-taking',
         summary:
-          "Understand how others' cultural frames shape what they see, value, and fear; avoid projecting your own frame.",
-        whenToUse:
-          'Cross-cultural planning, multi-stakeholder decisions, organizational silos, or when "they just don\'t get it" appears.',
-        method:
-          'Map actor worldviews, use cultural frameworks as hypotheses not stereotypes, ask empathetic questions before judging intent.',
+          "Understand how others' frames shape what they see, value, and fear; avoid projecting your own frame.",
+        whenToUse: 'Cross-team, cross-border, or multi-stakeholder decisions.',
+        method: 'Map actor worldviews; use empathetic questions; compare perception maps.',
         actGtm: 'Both',
         related: [{ title: 'Cultural Perception Framework', href: '../ttps/cultural-perception-framework.md' }],
       },
       {
-        title: 'Groupthink Mitigation (GTM)',
-        slug: 'groupthink-mitigation',
+        title: 'Group Process',
+        slug: 'group-process',
         summary:
-          'Design group process so dissent is safe, alternatives are generated, and decisions are stress-tested before approval.',
-        whenToUse: 'Homogeneous teams, fast consensus, hierarchical cultures, or high-stakes group decisions.',
+          'Design facilitation so dissent is safe, alternatives are generated, and decisions are stress-tested before approval.',
+        whenToUse: 'Homogeneous teams, fast consensus, hierarchical cultures.',
         method:
-          'Assign contrarian roles, use think-write-share, leader speaks last, record dissent, sequence diverge before converge.',
+          'Contrarian roles, think-write-share, leader speaks last, record dissent.',
         actGtm: 'GTM',
         command: 'groupthink',
       },
       {
-        title: 'Self-Awareness & Reflection',
-        slug: 'self-awareness-reflection',
+        title: 'Self-Awareness',
+        slug: 'self-awareness',
         summary:
-          'Know your own biases, temperament, and communication patterns before trying to challenge others.',
-        whenToUse: 'Before facilitating, before devil\'s advocacy, when strong personal attachment to an outcome exists.',
-        method: 'Introspection, journaling, Who Am I? exercise, name your assumptions and temperament limits upfront.',
-        related: [{ title: 'Who Am I?', href: '../ttps/who-am-i.md' }],
+          'Know your own biases, temperament, and communication patterns before challenging others.',
+        whenToUse: 'Before facilitating or devil\'s advocacy when personally invested.',
+        method: 'Introspection, Who Am I? exercise, name assumptions upfront.',
+        related: [{ title: 'Who Am I?', href: '../concepts/who-am-i.md' }],
       },
     ],
   },
