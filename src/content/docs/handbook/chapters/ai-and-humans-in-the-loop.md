@@ -40,4 +40,4 @@ Handbook v10-native. UFMCS v9 predates modern AI-assisted workflows; this chapte
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

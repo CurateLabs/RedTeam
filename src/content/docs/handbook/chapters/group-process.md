@@ -35,4 +35,4 @@ GTM tools are first-class — not optional extras for "difficult" teams.
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

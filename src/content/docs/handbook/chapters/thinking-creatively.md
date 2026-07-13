@@ -35,4 +35,4 @@ RedTeam separates `ideate` and `converge` explicitly.
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

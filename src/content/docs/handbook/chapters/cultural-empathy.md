@@ -39,4 +39,4 @@ Cultural empathy is a first-class principle. We extend it to organizational subc
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

@@ -9,7 +9,7 @@ next:
   label: "Chapter 1 — Foundational Concepts"
 ---
 
-Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](/RedTeam/developers/source/).
+Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/).
 
 ## Chapters
 
@@ -33,6 +33,6 @@ All technique pages: [`techniques/`](/RedTeam/handbook/techniques/) (plus concep
 ## Quick links
 
 - [User guide](/RedTeam/guide/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)
 - [Skill implementation](https://github.com/CurateLabs/RedTeam/blob/main/skill/reference/ttp-catalog.md)
 - [NOTICE](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md)

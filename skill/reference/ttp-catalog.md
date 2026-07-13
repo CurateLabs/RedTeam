@@ -306,4 +306,4 @@ Reference: [bias-catalog.md](bias-catalog.md) · [ai-anti-patterns.md](ai-anti-p
 
 ## Lineage
 
-Part of [*The Red Team Handbook*, Version 10](https://curatelabs.github.io/RedTeam/handbook/). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md).
+Part of [*The Red Team Handbook*, Version 10](https://curatelabs.github.io/RedTeam/handbook/). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/strategy/source-lineage.md`](../../docs/strategy/source-lineage.md).

@@ -1,77 +1,61 @@
-<!-- LLM: This document captures the product's design context: brand, content, interaction,
-accessibility, and component conventions that make the experience coherent. It is also
-discoverable by tools that look for DESIGN.md. Read PRODUCT.md and 1-EXPERIENCES.md first.
-Interview the user about any existing brand, UI kit, design system, Storybook, tokens,
-screenshots, Figma files, terminal conventions, docs standards, or accessibility bar. Keep
-implementation mechanics in 3-ENGINEERING/ unless they are necessary to explain a design
-rule. Remove LLM comments as you go. -->
-
 # Design
 
-<!-- LLM: One short paragraph. Describe the role this design context plays for the project.
-For services or CLIs, cover terminal/docs/API experience. For user-facing products, cover
-visual and interaction experience too. -->
-
-_What should stay consistent across the product experience?_
+RedTeam has no visual product UI. Design context governs **command output**, **review artifacts**, **handbook and developer docs**, and **terminology** so every harness presents the same applied-critical-thinking experience.
 
 ## Design Principles
 
-<!-- LLM: Capture 3-6 principles that guide product decisions and UX trade-offs. These should
-connect to the experience principles in 1-EXPERIENCES.md. -->
+- **Loyal opposition** — challenge thinking to improve decisions, not to win arguments
+- **Civilian framing** — decision, product, and strategy language; not military doctrine or cybersecurity
+- **Structured output** — commands produce scannable sections (assumptions, risks, verdict, follow-ups)
+- **Skills over scanners** — guide model behavior through reference flows, not deterministic rule engines
+- **Attribution without reproduction** — summarize handbook techniques; link to v10 docs and [`strategy/source-lineage.md`](strategy/source-lineage.md)
 
-- **_Principle name_** - _what it means in practice._
+## Design tool context
+
+Agents and contributors should load `PRODUCT.md` and this file before changing skill reference flows, handbook pages, or developer docs. Visual critique does not apply; focus on voice, structure, and command ergonomics. For UI work on the Starlight docs site, follow existing Starlight patterns in `src/content/docs/`.
 
 ## Brand And Voice
 
-<!-- LLM: Document naming, tone, writing style, terminology, and visible personality. Include
-words to use/avoid when that matters. -->
-
-- **Tone:** _how the product should sound._
-- **Terminology:** _preferred words and names._
-- **Writing rules:** _short rules for labels, empty states, errors, docs, or prompts._
+- **Tone:** Direct, skeptical-in-service-of-clarity, plain language; confident but not doctrinal
+- **Terminology:** "Applied critical thinking" and "red teaming" (civilian sense); "commands" and "techniques"; avoid "penetration testing", "exploits", and military operational framing unless quoting lineage
+- **Writing rules:** Use tables and headings for scanability; lead with the decision or plan under review; end reviews with explicit verdict and follow-ups
 
 ## Visual And Content Style
 
-<!-- LLM: Capture visual/content rules that apply to the product. If the project has no
-visual UI, state what is not applicable and document terminal, API, docs, or generated
-artifact style instead. Link to tokens, CSS, Figma, brand assets, or Storybook when
-available. -->
-
-- **Color:** _palette, semantic usage, contrast expectations._
-- **Typography:** _font choices, scale, hierarchy._
-- **Spacing & layout:** _grid, density, alignment, rhythm._
-- **Iconography & imagery:** _style, sourcing, usage rules._
-- **Content structure:** _headings, tables, examples, screenshots, diagrams, or docs rules._
+- **Color:** N/A for skill output; docs site uses Starlight defaults
+- **Typography:** N/A for skill output; handbook and developer docs use Markdown headings (`#`–`###`), tables, and code fences for commands
+- **Spacing & layout:** One idea per section; numbered steps in flows; avoid wall-of-text reviews
+- **Iconography & imagery:** Handbook may use diagrams; skill output is text-first
+- **Content structure:** Command references follow per-command templates in `skill/reference/`; handbook chapters in `src/content/docs/handbook/`; developer docs follow docslime lifecycle in `docs/`
 
 ## Interaction Patterns
 
-<!-- LLM: Document common interaction rules: navigation, forms, loading, empty/error/success
-states, keyboard behavior, CLI output, API ergonomics, motion, and progressive disclosure. -->
-
-- **Navigation:** _how users move through the product._
-- **Controls:** _buttons, inputs, menus, toggles, commands, or API calls._
-- **States:** _loading, empty, error, success, disabled._
-- **Motion:** _animation principles or "none" if motion is not part of the experience._
+- **Navigation:** Users invoke `/redteam <command> [target]`; optional pins via `/redteam pin <command>`
+- **Controls:** Chat commands only; CLI is for install (`npx github:CurateLabs/RedTeam install`)
+- **States:** Missing CONTEXT.md is valid for chat-only; missing skill install is an install error, not a silent fallback
+- **Motion:** None
 
 ## Components And Patterns
 
-<!-- LLM: List reusable components, UI patterns, command patterns, API patterns, or docs
-patterns. Link to code, Storybook, design files, or implementation docs where they exist. -->
-
 | Component / pattern | Use it for | Notes / source |
 |---|---|---|
-| _Name_ | _When to use it_ | _Link or rule_ |
+| `/redteam <command>` router | All user-facing flows | `skill/SKILL.md` |
+| Per-command reference flow | Structured technique output | `skill/reference/<command>.md` |
+| TTP catalog | Browse techniques | `skill/reference/ttp-catalog.md` |
+| CONTEXT.md | Project-anchored background | `.redteam/CONTEXT.template.md` |
+| Review artifact | Persisted command output | `.redteam/reviews/<slug>-<command>.md` |
+| Decision record template | `record` command output | `skill/reference/decision-record-template.md` |
+| Starlight developer sync | Published developer docs | `scripts/prepare-docs-site.mjs` |
 
 ## Accessibility
 
-<!-- LLM: Capture the accessibility bar. Include keyboard behavior, focus, contrast, reduced
-motion, semantic HTML, screen-reader expectations, CLI equivalents, or docs accessibility. -->
-
-- _Accessibility rule or target._
+- Docs site inherits Starlight accessibility (semantic HTML, keyboard nav, contrast)
+- Skill output should use headings and lists so screen-reader users can skim reviews
+- Do not rely on color alone in any generated tables or diagrams
 
 ## References
 
-<!-- LLM: Link the source of truth for design assets and implementation surfaces. Delete this
-section if there are no references yet. -->
-
-- _Figma / Storybook / token file / component directory / brand asset._
+- [Handbook v10](https://curatelabs.github.io/RedTeam/handbook/) — published concepts and techniques
+- [User Guide](https://curatelabs.github.io/RedTeam/guide/) — install and command usage
+- [`strategy/source-lineage.md`](strategy/source-lineage.md) — attribution and citation
+- [`skill/SKILL.md`](https://github.com/CurateLabs/RedTeam/blob/main/skill/SKILL.md) — skill router implementation

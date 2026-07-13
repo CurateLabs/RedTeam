@@ -61,4 +61,4 @@ Technical decision record review — architecture, API, platform, or engineering
 
 - `/redteam reversibility`
 - `/redteam misuse`
-- Link to project ADRs in `docs/3-ENGINEERING/ADRs/` when present
+- Link to project ADRs in `docs/engineering/adrs/` when present

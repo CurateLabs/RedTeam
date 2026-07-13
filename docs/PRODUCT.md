@@ -23,6 +23,12 @@ Applied critical thinking becomes as easy as `/redteam challenge` — in chat or
 - Support `.redteam/` for persistent CONTEXT.md and review artifacts
 - Install into Claude, Cursor, Codex, ChatGPT, and GitHub Copilot harnesses
 
+## Quality stance
+
+- **Behavior-driven traceability** — user outcomes in `experience/` become requirements, tests, and observability signals
+- **ADRs for durable choices** — significant architecture and product decisions live in `engineering/adrs/`
+- **Skills-only delivery** — no server or deterministic validator; quality depends on reference flows, install smoke tests, and manual review of command output
+
 ## Non-goals
 
 - Cybersecurity penetration testing or exploit development
@@ -35,3 +41,9 @@ Applied critical thinking becomes as easy as `/redteam challenge` — in chat or
 - Reviews produce structured, actionable output (assumptions, verdict, follow-ups)
 - `.redteam/reviews/` artifacts are useful at retrospectives
 - AI-assisted sessions pass `ai-check` before high-stakes decisions
+
+## Stakeholders
+
+- **Curate Labs** — publisher and maintainer of Handbook v10 and the RedTeam skill
+- **Primary users** — decision-makers, product leads, and AI power users who run structured reviews
+- **Harness platforms** — Cursor, Claude, Codex, ChatGPT, and Copilot as distribution surfaces for the skill

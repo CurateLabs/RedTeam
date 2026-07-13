@@ -31,4 +31,4 @@ Handbook v10 command technique. See skill/reference/extensions-catalog.md.
 
 ## Lineage
 
-Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/source/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).
+Part of [*The Red Team Handbook, Version 10*](/RedTeam/handbook/), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](/RedTeam/developers/strategy/source-lineage/) and [NOTICE.md](https://github.com/CurateLabs/RedTeam/blob/main/NOTICE.md).

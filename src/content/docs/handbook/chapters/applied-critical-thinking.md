@@ -37,4 +37,4 @@ Most `/redteam` commands are ACT-leaning, GTM-leaning, or both.
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

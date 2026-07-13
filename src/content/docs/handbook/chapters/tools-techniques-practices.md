@@ -142,4 +142,4 @@ v9-origin techniques and v10-native commands live in one catalog. AI-specific pr
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

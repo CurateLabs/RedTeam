@@ -37,4 +37,4 @@ UFMCS v9 history lives in docs/SOURCE.md. The RedTeam skill implements Handbook 
 ## See also
 
 - [Handbook index](/RedTeam/handbook/)
-- [Source & lineage](/RedTeam/developers/source/)
+- [Source & lineage](/RedTeam/developers/strategy/source-lineage/)

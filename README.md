@@ -170,7 +170,7 @@ Push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deplo
 
 ## Source
 
-**RedTeam** implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work. See [src/content/docs/handbook/](src/content/docs/handbook/), [docs/SOURCE.md](docs/SOURCE.md), and [NOTICE.md](NOTICE.md).
+**RedTeam** implements ***The Red Team Handbook*, Version 10** — successor to the defunct UFMCS v9.0 work. See [src/content/docs/handbook/](src/content/docs/handbook/), [docs/strategy/source-lineage.md](docs/strategy/source-lineage.md), and [NOTICE.md](NOTICE.md).
 
 Modeled on the [impeccable](https://github.com/pbakaus/impeccable) skills/plugin architecture.
 

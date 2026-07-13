@@ -97,4 +97,4 @@ Separate file in `.redteam/sessions/` for calibration practice:
 
 ## ADR integration
 
-If the project uses `docs/3-ENGINEERING/ADRs/`, offer to mirror this record there with `docslime add adr` or manual copy — keep `.redteam/reviews/` as the red team source of truth.
+If the project uses `docs/engineering/adrs/`, offer to mirror this record there with `docslime add adr` or manual copy — keep `.redteam/reviews/` as the red team source of truth.
