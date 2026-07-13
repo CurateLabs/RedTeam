@@ -1,6 +1,6 @@
 # Assumptions Flow
 
-Key Assumptions Check and Assumption Sensitivity Analysis from Handbook v9.
+Key Assumptions Check and Assumption Sensitivity Analysis from the source handbook.
 
 ## When to use
 

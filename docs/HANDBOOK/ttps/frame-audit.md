@@ -16,7 +16,7 @@ Stuck debate; wrong problem; metrics gaming.
 
 Document current frame elements → generate alternative frames → test which opens options.
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **analytical**. RedTeam may extend or alias this technique.
 
@@ -25,6 +25,6 @@ Category: **analytical**. RedTeam may extend or alias this technique.
 - [/redteam frame](../../skill/reference/frame.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

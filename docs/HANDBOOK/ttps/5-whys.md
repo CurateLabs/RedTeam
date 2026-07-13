@@ -16,7 +16,7 @@ Iterative why-questions to reach root causes and hidden assumptions.
 
 State problem → why? ×5 → validate root → distinguish symptom vs cause.
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **analytical**. RedTeam may extend or alias this technique.
 
@@ -25,6 +25,6 @@ Category: **analytical**. RedTeam may extend or alias this technique.
 - [/redteam 5-whys](../../skill/reference/5-whys.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

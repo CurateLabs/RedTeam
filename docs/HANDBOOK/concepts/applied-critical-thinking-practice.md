@@ -6,7 +6,7 @@
 
 ## Summary
 
-Chapter 4 operationalizes ACT under time pressure. See also the principle in Chapter 1.
+Chapter 4 operationalizes critical thinking under time pressure. See also the principle in Chapter 1.
 
 ## When to use
 
@@ -14,17 +14,17 @@ Every red team session — match tool depth to minutes available.
 
 ## Method
 
-Reflexive checks when fast; full TTP sequences when stakes warrant.
+Reflexive checks when fast; full technique sequences when stakes warrant.
 
-## RedTeam modifications
+## RedTeam notes
 
 This page covers ACT execution; the foundational principle is documented in Chapter 1.
 
 ## Related
 
-- [Applied Critical Thinking (ACT) — principle](../concepts/applied-critical-thinking.md)
+- [Applied Critical Thinking (ACT)](../concepts/applied-critical-thinking.md)
 - [/redteam challenge](../../skill/reference/challenge.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

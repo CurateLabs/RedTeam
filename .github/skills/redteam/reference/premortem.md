@@ -1,6 +1,6 @@
 # Premortem Flow
 
-From Handbook v9: imagine the decision or project has already failed, then work backward to identify causes and preventions.
+From the source handbook: imagine the decision or project has already failed, then work backward to identify causes and preventions.
 
 ## When to use
 

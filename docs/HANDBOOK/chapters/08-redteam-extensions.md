@@ -1,6 +1,6 @@
 # Chapter 8 — RedTeam Extensions
 
-Superset beyond Handbook v9: decision science, product red teaming, AI-quality checks, and durable decision records.
+RedTeam-native extensions: decision science, product red teaming, AI-quality checks, and durable decision records.
 
 ## Concepts & tools in this chapter
 
@@ -11,7 +11,7 @@ Superset beyond Handbook v9: decision science, product red teaming, AI-quality c
 - [Steelman](../concepts/steelman.md) — Strongest version of each side before debate or devil's advocacy.
 - [Calibration](../concepts/calibrate.md) — Grade claims as fact/inference/guess; attach confidence and disconfirmers.
 - [Sequence / Playbooks](../concepts/sequence.md) — Chained `/redteam` commands for decision types with time budgets.
-- [Culture / Worldview Mapping](../concepts/culture.md) — Stakeholder see/value/fear/want map — generalized cultural empathy.
+- [Culture / Worldview Mapping](../concepts/culture.md) — Stakeholder see/value/fear/want map — cultural empathy in practice for teams and products.
 - [AI Check](../concepts/ai-check.md) — Meta-review: mirror, grounding, dissent, sycophancy on AI-assisted analysis.
 - [Launch Readiness](../concepts/launch.md) — Product go-live checklist: ops, comms, metrics, rollback, misuse.
 - [RFC Review](../concepts/rfc.md) — Engineering decision doc review — options, reversibility, operations.
@@ -40,9 +40,10 @@ Superset beyond Handbook v9: decision science, product red teaming, AI-quality c
 
 ## RedTeam note
 
-These are RedTeam-native. We supersede and modify — not verbatim Army doctrine. See skill/reference/extensions-catalog.md.
+These are RedTeam-native. We supersede and modify the source catalog — see skill/reference/extensions-catalog.md.
 
 ## See also
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)

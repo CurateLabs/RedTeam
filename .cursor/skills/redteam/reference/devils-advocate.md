@@ -1,6 +1,6 @@
 # Devil's Advocate Flow
 
-Structured opposition from Handbook v9. Not performative negativity — a disciplined case against the prevailing view.
+Structured opposition from the source handbook. Not performative negativity — a disciplined case against the prevailing view.
 
 ## When to use
 

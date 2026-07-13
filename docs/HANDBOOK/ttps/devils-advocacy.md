@@ -16,7 +16,7 @@ Structured strongest-case against the prevailing view.
 
 Steel-man prevailing view → structured case against → assess fatal vs addressable objections.
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **adversarial**. RedTeam may extend or alias this technique.
 
@@ -25,6 +25,6 @@ Category: **adversarial**. RedTeam may extend or alias this technique.
 - [/redteam devils-advocate](../../skill/reference/devils-advocate.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

@@ -1,6 +1,6 @@
 # 5 Whys Flow
 
-From Handbook v9: iterative "why" questioning to drill past symptoms to root causes and hidden assumptions.
+From the source handbook: iterative "why" questioning to drill past symptoms to root causes and hidden assumptions.
 
 ## When to use
 

@@ -1,6 +1,6 @@
 # Alternative Futures Flow
 
-From Handbook v9: explore multiple plausible futures to avoid single-forecast planning and surprise.
+From the source handbook: explore multiple plausible futures to avoid single-forecast planning and surprise.
 
 ## When to use
 

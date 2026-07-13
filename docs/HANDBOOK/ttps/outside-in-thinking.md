@@ -16,7 +16,7 @@ Domain trapped; incremental options only.
 
 Ask: who solved a analogous problem elsewhere? What would [unlikely industry] do?
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **divergent**. RedTeam may extend or alias this technique.
 
@@ -25,6 +25,6 @@ Category: **divergent**. RedTeam may extend or alias this technique.
 - [/redteam ideate](../../skill/reference/ideate.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

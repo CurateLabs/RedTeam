@@ -1,23 +1,12 @@
 # Handbook Reference
 
-Source lineage: U.S. Army TRADOC G-2 / UFMCS *Red Team Handbook* v9.0 (~238 pages, text layer). This document is RedTeam's **working inventory** — a superset that **updates, extends, and modifies** the original. We do not reproduce handbook text verbatim and we do not commit to staying faithful to the source wording or structure over time.
+RedTeam's **working inventory** of red teaming concepts and techniques — a superset that **updates, extends, and modifies** the original source. We do not reproduce handbook text verbatim and we do not commit to staying faithful to the source wording or structure over time.
 
-**Scope:** Applied critical thinking, cultural analysis, and organizational decision support. **Not** cybersecurity penetration testing. In this project, "TTPs" means Red Teaming tools, techniques, and practices for improving individual and group decision-making.
-
-
-> **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
-
+**Scope:** Applied critical thinking, cultural empathy, and organizational decision support. **Not** cybersecurity penetration testing. "Techniques" means structured tools and practices for improving individual and group decision-making.
 
 > **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
 
-
-> **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
-
-
-> **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
-
-
-> **Expanded docs:** Each chapter and catalog item has its own page under [`HANDBOOK/`](HANDBOOK/README.md).
+**Lineage:** Techniques trace primarily to the UFMCS *Red Team Handbook* v9.0. Military program history and attribution live in [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md) — not in day-to-day product language.
 
 The skill implementation lives in [`skill/reference/`](../skill/reference/). This doc is the canonical concept map; the skill catalog adds command mappings and facilitation detail.
 
@@ -28,21 +17,21 @@ The skill implementation lives in [`skill/reference/`](../skill/reference/). Thi
 | Term | One-line definition |
 |------|---------------------|
 | **Red Teaming** | A structured cognitive approach that challenges plans and decisions to surface hidden risks, unseen options, and flawed assumptions before commitment. |
-| **UFMCS** | University of Foreign Military and Cultural Studies — the Army program that developed and taught Red Teaming methodology. |
-| **Four Principles of UFMCS** | The pillars every Red Team practice rests on (see below). |
+| **UFMCS (historical)** | University of Foreign Military and Cultural Studies — the program that developed the source handbook curriculum. Attribution only. |
+| **Four Core Principles** | The organizing frame for all RedTeam commands (see below). |
 
-### Four Principles of UFMCS
+### Four Core Principles
 
-RedTeam treats these as the organizing frame for all commands and TTPs. We may rename, merge, or extend them as the product evolves.
+RedTeam treats these as the organizing frame for all commands and techniques. ACT and GTM are retained as practical labels for technique selection.
 
-| Principle | What it means in practice |
-|-----------|---------------------------|
-| **Applied Critical Thinking (ACT)** | Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them. |
-| **Cultural Empathy** | Understand how others' cultural frames shape what they see, value, and fear; avoid projecting your own frame. |
-| **Groupthink Mitigation & Decision Support (GTM)** | Design group process so dissent is safe, alternatives are generated, and decisions are stress-tested before approval. |
-| **Self-Awareness & Reflection** | Know your own biases, temperament, and communication patterns before trying to challenge others'. |
+| Principle | Shorthand | What it means in practice |
+|-----------|-----------|---------------------------|
+| **Applied Critical Thinking** | **ACT** | Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them. |
+| **Cultural Empathy** | — | Understand how cultural frames shape what others see, value, and fear; practice empathetic cross-cultural communication and counter ethnocentrism. |
+| **Groupthink Mitigation** | **GTM** | Design group facilitation so dissent is safe, alternatives are generated, and decisions are stress-tested before approval. |
+| **Self-awareness** | — | Know your own biases, temperament, and communication patterns before trying to challenge others. |
 
-**RedTeam command alignment:** `challenge`, `critique`, `review` span all four; `frame` and `assumptions` lean ACT; `groupthink` and `devils-advocate` lean GTM; cultural tools map to future `culture` commands; introspection informs facilitator behavior in every session.
+**RedTeam command alignment:** `challenge`, `critique`, `review` span all four; `frame` and `assumptions` lean ACT; `groupthink` and `devils-advocate` lean GTM; `culture` and cultural tools map to cultural empathy; introspection informs facilitator behavior in every session.
 
 ---
 
@@ -72,12 +61,12 @@ RedTeam treats these as the organizing frame for all commands and TTPs. We may r
 | **Nisbett on Cognitive Differences** | How Western vs. East Asian (and other) cognitive styles differ in attention, causality, and holism — affects negotiation and planning assumptions. |
 | **Hall on Communication Patterns** | High-context vs. low-context communication; use of space and time — explains why the same words land differently across cultures. |
 | **Hofstede's Country Profiles** | Power distance, uncertainty avoidance, individualism/collectivism, masculinity/femininity, long-term orientation — comparative national culture indices. |
-| **Five Operational Cultural Dimensions** | Army operationalization of cultural factors for planning in foreign environments. |
+| **Five Operational Cultural Dimensions (historical)** | Source-handbook operationalization of cultural factors for planning in foreign environments. |
 | **Onion Model** | Culture manifests in layers: artifacts → espoused values → underlying assumptions; peel outward-in to find drivers. |
 | **Functional Systems Approach** | Analyze how cultural subsystems (political, economic, social, etc.) interact functionally rather than as isolated lists. |
 | **Cultural Perception Framework** | Structured method to surface how different actors perceive the same situation through their cultural lens. |
 
-**RedTeam note:** Operating Landscape Map and similar framing tools are **optional lenses** — valuable for geopolitical and org-political analysis, not required for product or business red teams. We generalize "cultural empathy" to include organizational subcultures, discipline silos, and stakeholder worldviews.
+**RedTeam note:** Cultural empathy is a **core principle**, not an optional add-on for "international" work. We extend it to organizational subcultures, discipline silos, and stakeholder worlds while keeping the full cross-cultural communication toolkit (Hall, Hofstede, Kluckhohn, perception frameworks). Operating Landscape Map is one lens among many.
 
 ---
 
@@ -85,15 +74,15 @@ RedTeam treats these as the organizing frame for all commands and TTPs. We may r
 
 | Term | One-line definition |
 |------|---------------------|
-| **Applied Critical Thinking (ACT)** | Deliberate use of tools and methods to deconstruct arguments, challenge assumptions, examine analogies, and explore alternatives under time pressure. |
-| **The Time Factor** | Decisions often lack time for full process — ACT includes reflexive shortcuts and scalable tools matched to available minutes. |
+| **Critical thinking (in practice)** | Deliberate use of ACT tools and methods to deconstruct arguments, challenge assumptions, examine analogies, and explore alternatives under time pressure. |
+| **The Time Factor** | Decisions often lack time for full process — use reflexive shortcuts and scalable tools matched to available minutes. |
 | **Creating Space and Time** | Leader responsibility to protect reflection time; without it, groups default to autopilot and assumption-fill. |
 
 **RedTeam commands:** `challenge`, `assumptions`, `ach`, `5-whys`, `frame`, `futures`, `critique`, `review`.
 
 ---
 
-## Chapter 5 — Groupthink Mitigation & Decision Support
+## Chapter 5 — Group Process & Decision Support
 
 | Term | One-line definition |
 |------|---------------------|
@@ -125,15 +114,15 @@ The creative thought process is a **sequence**, not a single brainstorm. RedTeam
 
 ---
 
-## Chapter 7 — Tools, Techniques & Practices (TTP Catalog)
+## Chapter 7 — Tools, Techniques & Practices
 
-The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** — see the ACT–GTM matrix concept. Tools are meant to **sequence**, not stand alone.
+The core technique inventory. Most tools support **ACT**, **GTM**, or **both** — see the ACT–GTM Matrix concept. Tools are meant to **sequence**, not stand alone.
 
 **Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation · **Command** = `/redteam` shortcut when implemented
 
 ### Facilitation & group structure
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **ACT–GTM Matrix** | Meta | Table matching tools to ACT, GTM, or both — pick and sequence by situation. | `tools` |
 | **Ideal Group Process** | Both | Diverge → analyze → debate → converge loop with rotating ACT/GTM tools. | `groupthink` |
@@ -149,7 +138,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Divergent & generative
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **Brainstorming** | GTM | Volume-first idea generation with deferred judgment. | `ideate` |
 | **5 Will Get You 25** | GTM | Each person generates five ideas; combine for quantity before quality. | `ideate` |
@@ -163,7 +152,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Analytical & critical
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **5 Whys** | ACT | Iterative why-questions to reach root causes and hidden assumptions. | `5-whys` |
 | **Analysis of Competing Hypotheses (ACH)** | ACT | Matrix scoring evidence against mutually exclusive hypotheses — minimize confirmation bias. | `ach` |
@@ -183,7 +172,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Adversarial & decision gates
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **Devil's Advocacy** | Both | Structured strongest-case against the prevailing view. | `devils-advocate` |
 | **Premortem Analysis** | ACT | Assume failure; work backward to causes and preventions. | `premortem` |
@@ -193,7 +182,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Strategic & futures
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **Alternative Futures Analysis** | ACT | Multiple plausible futures against which to stress-test the plan. | `futures` |
 | **Indicators / Signposts of Change** | ACT | Early warnings that a given future is emerging. | `futures` |
@@ -204,7 +193,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Cultural, deception & negotiation
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **Cultural Perception Framework** | ACT | How different cultural actors perceive the same events. | `frame` |
 | **Onion Model** | ACT | Peel cultural layers from artifacts to deep assumptions. | `frame` |
@@ -214,7 +203,7 @@ The handbook's core inventory. Most tools support **ACT**, **GTM**, or **both** 
 
 ### Communication & narrative
 
-| TTP | ACT/GTM | One-line definition | Command |
+| Technique | ACT/GTM | One-line definition | Command |
 |-----|---------|---------------------|---------|
 | **Storytelling** | Both | Narrative form to communicate findings and alternatives persuasively. | `critique` |
 | **State–Elaborate–Exemplify–Illustrate** | ACT | See SEE-I above. | `challenge` |
@@ -234,7 +223,7 @@ We explicitly reserve the right to:
 | **Sequencing** | Publish recommended tool chains (e.g. Frame Audit → Assumptions → Premortem → Review) independent of handbook chapter order. |
 | **Fidelity** | Update definitions and methods as we learn what works in AI-assisted facilitation. |
 
-### Planned extensions (not in v9)
+### Planned extensions (beyond source handbook)
 
 **Implemented in v0.2** — see [HANDBOOK/chapters/08-redteam-extensions.md](HANDBOOK/chapters/08-redteam-extensions.md) and `skill/reference/extensions-catalog.md`.
 
@@ -264,6 +253,6 @@ We explicitly reserve the right to:
 
 ## Source & attribution
 
-Derived from *The Red Team Handbook*, Version 9.0, TRADOC G-2, UFMCS. **Extended** with decision science, product, and AI-quality techniques in v0.2. See [NOTICE.md](../NOTICE.md).
+Techniques trace to the UFMCS *Red Team Handbook* v9.0, **extended** with decision science, product, and AI-quality techniques in v0.2. See [SOURCE.md](SOURCE.md) and [NOTICE.md](../NOTICE.md).
 
 Implementation: [`skill/reference/ttp-catalog.md`](../skill/reference/ttp-catalog.md) · [`skill/reference/extensions-catalog.md`](../skill/reference/extensions-catalog.md) · Commands: [`skill/SKILL.md`](../skill/SKILL.md)

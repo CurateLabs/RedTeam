@@ -6,24 +6,24 @@
 
 ## Summary
 
-Design group process so dissent is safe, alternatives are generated, and decisions are stress-tested before approval.
+Design facilitation so dissent is safe, alternatives are generated, and decisions are stress-tested before approval.
 
 ## When to use
 
-Homogeneous teams, fast consensus, hierarchical cultures, or high-stakes group decisions.
+Homogeneous teams, fast consensus, hierarchical cultures.
 
 ## Method
 
-Assign contrarian roles, use think-write-share, leader speaks last, record dissent, sequence diverge before converge.
+Contrarian roles, think-write-share, leader speaks last, record dissent.
 
-## RedTeam modifications
+## RedTeam notes
 
-RedTeam supersedes Handbook v9. Update this doc as our practice evolves — we do not commit to verbatim fidelity to the source.
+Civilian adaptation of source-handbook techniques. We update and extend over time — not verbatim doctrine.
 
 ## Related
 
 - [/redteam groupthink](../../skill/reference/groupthink.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

@@ -18,15 +18,15 @@ We are **not** affiliated with the U.S. Army, TRADOC, or UFMCS. This project is 
 - The idea of **loyal opposition** — challenge thinking to improve decisions, not to win arguments
 - Structured techniques: premortems, competing hypotheses, assumption checks, frame audits, group facilitation patterns
 - Emphasis on dissent, alternatives, and making implicit assumptions explicit
+- **Cultural empathy** as a core discipline — cross-cultural communication, perception mapping, and empathetic inquiry
 
 ## What we changed
 
 | Source handbook | RedTeam |
 |-----------------|---------|
 | Military operational framing | Decision, product, and strategy framing |
-| ACT / GTM abbreviations | **Critical thinking** / **Group process** |
 | PMESII-PT and similar acronyms | [Operating Landscape Map](HANDBOOK/concepts/operating-landscape-map.md) |
-| TTP (military usage) | **Techniques** or **tools & techniques** |
+| TTP (military usage) | **Techniques** or **tools & techniques** (ACT/GTM labels retained) |
 | UFMCS four pillars (named) | [Four core principles](HANDBOOK/concepts/four-core-principles.md) |
 | Doctrine tone | Plain-language skills for any harness |
 

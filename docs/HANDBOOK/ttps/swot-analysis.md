@@ -16,7 +16,7 @@ Strengths, Weaknesses, Opportunities, Threats for an option or entity.
 
 Fill four quadrants → cross-link (SO/WO/ST/WT strategies) → prioritize.
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **strategic**. RedTeam may extend or alias this technique.
 
@@ -25,6 +25,6 @@ Category: **strategic**. RedTeam may extend or alias this technique.
 - [/redteam converge](../../skill/reference/converge.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

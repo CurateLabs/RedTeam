@@ -2,7 +2,7 @@
 
 Four core principles organize every RedTeam command and technique. They trace to the UFMCS *Red Team Handbook* v9 — see [lineage.md](lineage.md) for history and attribution.
 
-## 1. Critical thinking
+## 1. Applied Critical Thinking (ACT)
 
 Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them.
 
@@ -20,7 +20,7 @@ Deliberately analyze how we perceive, interpret, and reason — make implicit as
 - What is the strongest counter-argument?
 - Am I confusing what I want to be true with what the evidence supports?
 
-## 2. Group process
+## 2. Groupthink Mitigation (GTM)
 
 Design facilitation so dissent is safe, alternatives are heard, and decisions are stress-tested before approval.
 
@@ -38,14 +38,22 @@ Design facilitation so dissent is safe, alternatives are heard, and decisions ar
 - Leader speaks last
 - Anonymous input rounds when hierarchy suppresses voice
 
-## 3. Perspective-taking
+## 3. Cultural Empathy
 
-Understand how others perceive, interpret, and value the situation — across cultures, teams, disciplines, and stakeholder roles.
+Understand how others perceive, interpret, and value the situation — across cultures, communication styles, teams, disciplines, and stakeholder roles. Cultural empathy is **empathetic inquiry**, not agreement: you seek to understand a frame before you challenge it.
+
+**Cross-cultural communication:**
+- High-context vs. low-context messages land differently (Hall)
+- Power distance, uncertainty avoidance, and related defaults shape risk and authority (Hofstede — as hypothesis, not stereotype)
+- Cognitive and causal styles differ across cultures (Nisbett) — disagreement may be framing, not facts
 
 **Ask:**
-- Whose perspective is missing?
-- What would someone with different values conclude?
-- Are we projecting our frame onto others?
+- Whose cultural frame is missing from this analysis?
+- What would someone with different values or communication norms conclude?
+- Are we projecting our frame — or ethnocentrism — onto others?
+- What empathetic questions would build understanding before judgment?
+
+**Practice:** `/redteam culture` · Cultural Perception Framework · 6 Empathetic Questions
 
 ## 4. Self-awareness
 
@@ -65,7 +73,7 @@ From Russo & Schoemaker's *Winning Decisions* (used in the source handbook):
 3. **Debate** — structured challenge and discussion
 4. **Converge** — narrow to actionable decisions
 
-Critical-thinking and group-process techniques rotate through this loop until time runs out.
+Critical-thinking (ACT) and group-process (GTM) techniques rotate through this loop until time runs out.
 
 ## Choosing techniques
 

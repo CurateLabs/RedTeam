@@ -14,10 +14,10 @@ Daily practice for facilitators; before high-stakes reviews.
 
 Short structured reflection: what did I assume? what did I avoid saying? what would change my mind?
 
-## RedTeam modifications
+## RedTeam notes
 
 Lightweight reflection prompts replace mandatory military journaling.
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

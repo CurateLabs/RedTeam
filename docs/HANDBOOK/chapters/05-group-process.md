@@ -1,4 +1,4 @@
-# Chapter 5 — Groupthink Mitigation & Decision Support
+# Chapter 5 — Group Process & Decision Support
 
 Group dynamics, groupthink symptoms, and the red team role in decision support.
 
@@ -25,3 +25,4 @@ GTM tools are first-class — not optional extras for "difficult" teams.
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)

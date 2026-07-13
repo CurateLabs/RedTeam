@@ -1,10 +1,10 @@
 # RedTeam Extensions Catalog
 
-Techniques and commands **beyond** U.S. Army Red Team Handbook v9. Full docs: [`docs/HANDBOOK/chapters/08-redteam-extensions.md`](../../docs/HANDBOOK/chapters/08-redteam-extensions.md).
+Techniques and commands **beyond** the source UFMCS handbook catalog. Full docs: [`docs/HANDBOOK/chapters/08-redteam-extensions.md`](../../docs/HANDBOOK/chapters/08-redteam-extensions.md).
 
 ## Commands (superset)
 
-| Command | Source tradition | Handbook v9? |
+| Command | Source tradition | In source handbook? |
 |---------|------------------|--------------|
 | `outside-view` | Kahneman, Tetlock — base rates | No |
 | `invert` | Munger — inversion | Partial (premortem) |
@@ -13,7 +13,7 @@ Techniques and commands **beyond** U.S. Army Red Team Handbook v9. Full docs: [`
 | `steelman` | Debate / epistemics | No |
 | `calibrate` | Forecasting, Duke | No |
 | `sequence` | RedTeam playbooks | No |
-| `culture` | Generalized cultural empathy | Partial |
+| `culture` | Cultural empathy — cross-cultural and stakeholder frames | Partial |
 | `ai-check` | RedTeam — AI-assisted review | No |
 | `launch` | Product go-live | No |
 | `rfc` | Engineering ADR culture | No |

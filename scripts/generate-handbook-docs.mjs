@@ -24,20 +24,9 @@ function writeDoc(dir, filename, content) {
   return filePath;
 }
 
-function formatCategory(actGtm) {
-  const map = {
-    ACT: 'Critical thinking',
-    GTM: 'Group process',
-    Both: 'Critical thinking + Group process',
-    Meta: 'Meta',
-    Extension: 'RedTeam extension',
-  };
-  return map[actGtm] || actGtm;
-}
-
 function conceptDoc({ title, chapter, chapterSlug, summary, whenToUse, method, actGtm, command, related = [], redteamNote }) {
   const cmd = command ? `\n**Command:** \`/redteam ${command}\`` : '';
-  const cat = actGtm ? `\n**Category:** ${formatCategory(actGtm)}` : '';
+  const act = actGtm ? `\n**ACT/GTM:** ${actGtm}` : '';
   const relatedSection =
     related.length > 0
       ? `\n## Related\n\n${related.map((r) => `- [${r.title}](${r.href})`).join('\n')}\n`
@@ -45,7 +34,7 @@ function conceptDoc({ title, chapter, chapterSlug, summary, whenToUse, method, a
 
   return `# ${title}
 
-**Chapter:** [${chapter}](../chapters/${chapterSlug}.md)${cat}${cmd}
+**Chapter:** [${chapter}](../chapters/${chapterSlug}.md)${act}${cmd}
 
 ## Summary
 
@@ -105,7 +94,7 @@ const chapters = [
     summary:
       'Defines red teaming, the four core principles, and how techniques are organized in RedTeam.',
     redteamNote:
-      'UFMCS history lives in docs/SOURCE.md. Day-to-day text uses civilian terms: critical thinking, group process, perspective-taking.',
+      'UFMCS history lives in docs/SOURCE.md. ACT and GTM remain useful technique labels; military org names stay in attribution docs only.',
     commands: ['challenge', 'critique', 'review', 'init'],
     concepts: [
       {
@@ -135,20 +124,20 @@ const chapters = [
       {
         title: 'Four Core Principles',
         slug: 'four-core-principles',
-        summary: 'Critical thinking, group process, perspective-taking, and self-awareness — the organizing frame for all commands.',
+        summary: 'ACT, cultural empathy, GTM, and self-awareness — the organizing frame for all commands.',
         whenToUse: 'Designing any red team session or command flow.',
         method:
-          '1. Critical thinking — explicit reasoning.\n2. Group process — safe dissent.\n3. Perspective-taking — missing worldviews.\n4. Self-awareness — know your biases first.',
+          '1. **ACT** (Applied Critical Thinking) — explicit reasoning.\n2. **Cultural empathy** — understand missing worldviews and communication frames.\n3. **GTM** (Groupthink Mitigation) — safe dissent.\n4. **Self-awareness** — know your biases first.',
         related: [
-          { title: 'Critical thinking', href: '../concepts/critical-thinking.md' },
-          { title: 'Group process', href: '../concepts/group-process.md' },
-          { title: 'Perspective-taking', href: '../concepts/perspective-taking.md' },
+          { title: 'Applied Critical Thinking (ACT)', href: '../concepts/applied-critical-thinking.md' },
+          { title: 'Cultural Empathy', href: '../concepts/cultural-empathy.md' },
+          { title: 'Groupthink Mitigation (GTM)', href: '../concepts/groupthink-mitigation.md' },
           { title: 'Self-awareness', href: '../concepts/self-awareness.md' },
         ],
       },
       {
-        title: 'Critical Thinking',
-        slug: 'critical-thinking',
+        title: 'Applied Critical Thinking (ACT)',
+        slug: 'applied-critical-thinking',
         summary:
           'Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them.',
         whenToUse: 'Whenever reasoning quality matters under time pressure.',
@@ -158,18 +147,23 @@ const chapters = [
         command: 'challenge',
       },
       {
-        title: 'Perspective-Taking',
-        slug: 'perspective-taking',
+        title: 'Cultural Empathy',
+        slug: 'cultural-empathy',
         summary:
-          "Understand how others' frames shape what they see, value, and fear; avoid projecting your own frame.",
-        whenToUse: 'Cross-team, cross-border, or multi-stakeholder decisions.',
-        method: 'Map actor worldviews; use empathetic questions; compare perception maps.',
+          "Understand how cultural frames shape what others see, value, and fear — across nations, organizations, teams, and disciplines. Practice empathetic cross-cultural communication; counter ethnocentrism and projection.",
+        whenToUse: 'Cross-cultural planning, multi-stakeholder decisions, org silos, or when "they just don\'t get it" appears.',
+        method:
+          'Map actor worldviews and communication patterns. Use cultural frameworks as hypotheses, not stereotypes. Ask empathetic questions before judging intent.',
         actGtm: 'Both',
-        related: [{ title: 'Cultural Perception Framework', href: '../ttps/cultural-perception-framework.md' }],
+        command: 'culture',
+        related: [
+          { title: 'Cultural Perception Framework', href: '../ttps/cultural-perception-framework.md' },
+          { title: 'Chapter 3 — Cultural Empathy', href: '../chapters/03-cultural-empathy.md' },
+        ],
       },
       {
-        title: 'Group Process',
-        slug: 'group-process',
+        title: 'Groupthink Mitigation (GTM)',
+        slug: 'groupthink-mitigation',
         summary:
           'Design facilitation so dissent is safe, alternatives are generated, and decisions are stress-tested before approval.',
         whenToUse: 'Homogeneous teams, fast consensus, hierarchical cultures.',
@@ -263,15 +257,15 @@ const chapters = [
     title: 'Cultural Empathy',
     slug: '03-cultural-empathy',
     summary:
-      'Frameworks for understanding how culture shapes perception, planning, and conflict — generalized beyond military operations.',
+      'How culture shapes perception, cross-cultural communication, planning, and conflict — a core red teaming discipline, not an optional lens.',
     redteamNote:
-      'Operating Landscape Map and other culture tools are optional lenses for geopolitical analysis; business red teams use org and stakeholder subcultures.',
-    commands: ['frame', 'challenge'],
+      'Cultural empathy is a first-class principle. We extend it to organizational subcultures and stakeholder worlds without dropping the cross-cultural toolkit (Hall, Hofstede, Kluckhohn, perception frameworks). Operating Landscape Map is one tool among many.',
+    commands: ['frame', 'challenge', 'culture'],
     concepts: [
       {
         title: 'Ethnocentrism',
         summary:
-          "Judging other cultures by the standards of one's own — the primary bias cultural empathy counteracts.",
+          'Judging other cultures by the standards of one\'s own — the primary bias cultural empathy counteracts.',
         whenToUse: 'When analysis assumes "normal" is universal; when stakeholders are labeled irrational.',
         method: 'Name the home-frame explicitly. Ask what behavior looks like from inside the other frame.',
       },
@@ -284,7 +278,7 @@ const chapters = [
         method:
           'Map factors in each domain; trace cross-domain interactions; avoid treating domains as isolated checklists.\n\n**Domains:** power & governance · security & risk · economy & resources · society & community · information & narrative · infrastructure & capabilities · physical environment · time & tempo',
         redteamNote:
-          'RedTeam generalization of the Handbook v9 multi-domain operating-environment framework. Plain domain names, not military acronyms. Comparable to PESTLE+ for business contexts.',
+          'RedTeam generalization of the source handbook multi-domain operating-environment framework. Plain domain names, not military acronyms. Comparable to PESTLE+ for business contexts.',
       },
       {
         title: "Kluckhohn's Six Dimensions",
@@ -318,11 +312,11 @@ const chapters = [
         redteamNote: 'We treat Hofstede as one input; organizational culture often dominates national averages.',
       },
       {
-        title: 'Five Operational Cultural Dimensions',
-        summary: 'Army operationalization of cultural factors for planning in foreign environments.',
-        whenToUse: 'Defense or geopolitical planning contexts.',
+        title: 'Five Operational Cultural Dimensions (historical)',
+        summary: 'Source-handbook operationalization of cultural factors for planning in foreign environments.',
+        whenToUse: 'Tracing technique lineage; geopolitical planning contexts.',
         method: 'Apply as structured observation framework in operational design.',
-        redteamNote: 'Optional; map to organizational equivalents (power, risk tolerance, time horizon, etc.).',
+        redteamNote: 'Historical source framing. Map to organizational equivalents (power, risk tolerance, time horizon, etc.).',
       },
       {
         title: 'Onion Model',
@@ -358,25 +352,25 @@ const chapters = [
     title: 'Applied Critical Thinking',
     slug: '04-applied-critical-thinking',
     summary: 'How to think critically under time pressure — reflexive habits and scalable tools.',
-    redteamNote: 'Most `/redteam` commands are ACT-leaning or ACT+GTM.',
+    redteamNote: 'Most `/redteam` commands are ACT-leaning, GTM-leaning, or both.',
     commands: ['challenge', 'assumptions', 'ach', '5-whys', 'frame', 'futures', 'critique', 'review'],
     concepts: [
       {
         title: 'Applied Critical Thinking in practice',
         slug: 'applied-critical-thinking-practice',
-        summary: 'Chapter 4 operationalizes ACT under time pressure. See also the principle in Chapter 1.',
+        summary: 'Chapter 4 operationalizes critical thinking under time pressure. See also the principle in Chapter 1.',
         whenToUse: 'Every red team session — match tool depth to minutes available.',
-        method: 'Reflexive checks when fast; full TTP sequences when stakes warrant.',
+        method: 'Reflexive checks when fast; full technique sequences when stakes warrant.',
         actGtm: 'ACT',
         command: 'challenge',
-        related: [{ title: 'Applied Critical Thinking (ACT) — principle', href: '../concepts/applied-critical-thinking.md' }],
+        related: [{ title: 'Applied Critical Thinking (ACT)', href: '../concepts/applied-critical-thinking.md' }],
         redteamNote: 'This page covers ACT execution; the foundational principle is documented in Chapter 1.',
       },
       {
         title: 'The Time Factor',
         slug: 'the-time-factor',
         summary:
-          'Decisions often lack time for full process — ACT includes reflexive shortcuts and scalable tools matched to available minutes.',
+          'Decisions often lack time for full process — use reflexive shortcuts and scalable tools matched to available minutes.',
         whenToUse: 'Every session — pick tool depth by minutes available, not ideal process.',
         method:
           '5 min: reflexive checks. 15 min: single tool. 60+ min: sequenced toolkit. Leaders must not skip all reflection because of urgency.',
@@ -394,8 +388,8 @@ const chapters = [
   },
   {
     num: 5,
-    title: 'Groupthink Mitigation & Decision Support',
-    slug: '05-groupthink-mitigation',
+    title: 'Group Process & Decision Support',
+    slug: '05-group-process',
     summary: 'Group dynamics, groupthink symptoms, and the red team role in decision support.',
     redteamNote: 'GTM tools are first-class — not optional extras for "difficult" teams.',
     commands: ['groupthink', 'devils-advocate', 'ideate', 'converge', 'review'],
@@ -490,9 +484,9 @@ const chapters = [
     title: 'RedTeam Extensions',
     slug: '08-redteam-extensions',
     summary:
-      'Superset beyond Handbook v9: decision science, product red teaming, AI-quality checks, and durable decision records.',
+      'RedTeam-native extensions: decision science, product red teaming, AI-quality checks, and durable decision records.',
     redteamNote:
-      'These are RedTeam-native. We supersede and modify — not verbatim Army doctrine. See skill/reference/extensions-catalog.md.',
+      'These are RedTeam-native. We supersede and modify the source catalog — see skill/reference/extensions-catalog.md.',
     commands: [
       'outside-view', 'invert', 'incentives', 'ladder', 'steelman', 'calibrate',
       'sequence', 'culture', 'ai-check', 'launch', 'rfc', 'misuse', 'reversibility', 'record',
@@ -563,7 +557,7 @@ const chapters = [
       {
         title: 'Culture / Worldview Mapping',
         slug: 'culture',
-        summary: 'Stakeholder see/value/fear/want map — generalized cultural empathy.',
+        summary: 'Stakeholder see/value/fear/want map — cultural empathy in practice for teams and products.',
         whenToUse: 'Cross-team, cross-border, org silo conflicts.',
         method: 'Actor table → collisions → empathetic questions.',
         actGtm: 'Both',
@@ -1028,7 +1022,7 @@ writeDoc(
   '07-tools-techniques-practices.md',
   `# Chapter 7 — Tools, Techniques & Practices
 
-The handbook's core TTP catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
+The core technique catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
 
 Browse by category below. Each item has its own page in [\`ttps/\`](../ttps/).
 
@@ -1036,7 +1030,7 @@ ${ch7Body}
 
 ## RedTeam commands
 
-- \`/redteam tools\` — browse and recommend TTPs
+- \`/redteam tools\` — browse and recommend techniques
 - See individual TTP pages for mapped commands (\`premortem\`, \`ach\`, \`ideate\`, etc.)
 
 ## See also
@@ -1057,7 +1051,7 @@ writeDoc(
   'README.md',
   `# Handbook documentation
 
-RedTeam's superset reference derived from *The Red Team Handbook* v9.0. **We update and modify** — not verbatim reproduction.
+RedTeam's superset reference adapted from the UFMCS *Red Team Handbook* v9.0. **We update and modify** — not verbatim reproduction. See [SOURCE.md](../SOURCE.md) for attribution.
 
 ## Chapters
 
@@ -1074,17 +1068,19 @@ All technique pages: [\`ttps/\`](ttps/) (plus concepts cross-listed from other c
 ## Quick links
 
 - [Inventory summary](../HANDBOOK.md)
+- [Source & lineage](../SOURCE.md)
 - [Skill implementation](../../skill/reference/ttp-catalog.md)
 - [NOTICE](../../NOTICE.md)
 `,
 );
 
-// Update HANDBOOK.md to point to tree
-const handbookIndex = fs.readFileSync(path.join(ROOT, 'docs', 'HANDBOOK.md'), 'utf8');
-if (!handbookIndex.includes('docs/HANDBOOK/README.md')) {
+// Update HANDBOOK.md to point to tree (idempotent — skip if already linked)
+const handbookIndexPath = path.join(ROOT, 'docs', 'HANDBOOK.md');
+const handbookIndex = fs.readFileSync(handbookIndexPath, 'utf8');
+if (!handbookIndex.includes('HANDBOOK/README.md')) {
   const insert = `\n> **Expanded docs:** Each chapter and catalog item has its own page under [\`HANDBOOK/\`](HANDBOOK/README.md).\n\n`;
   fs.writeFileSync(
-    path.join(ROOT, 'docs', 'HANDBOOK.md'),
+    handbookIndexPath,
     handbookIndex.replace(
       'The skill implementation lives in',
       `${insert}The skill implementation lives in`,

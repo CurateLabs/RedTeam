@@ -14,21 +14,21 @@ When a plan, strategy, policy, or decision is approaching commitment and has not
 ## Method
 
 1. Clarify the decision and stakes.
-2. Assign a red team role (loyal opposition).
-3. Select ACT and/or GTM tools matched to time available.
+2. Assign loyal opposition.
+3. Select techniques matched to time available.
 4. Surface assumptions, alternatives, and failure modes.
-5. Feed findings to the decider without owning the outcome.
+5. Inform decision-makers without owning the outcome.
 
-## RedTeam modifications
+## RedTeam notes
 
-RedTeam supersedes Handbook v9. Update this doc as our practice evolves — we do not commit to verbatim fidelity to the source.
+Civilian adaptation of source-handbook techniques. We update and extend over time — not verbatim doctrine.
 
 ## Related
 
-- [Four Principles of UFMCS](../concepts/four-principles-of-ufmcs.md)
-- [Decision Support](../concepts/decision-support.md)
+- [Four Core Principles](../concepts/four-core-principles.md)
+- [Decision support](../concepts/decision-support.md)
 - [/redteam challenge](../../skill/reference/challenge.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

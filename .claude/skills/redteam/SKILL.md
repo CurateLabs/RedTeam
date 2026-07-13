@@ -1,14 +1,14 @@
 ---
 name: redteam
 description: >-
-  Applied critical thinking and red teaming based on the U.S. Army Red Team
-  Handbook v9, plus RedTeam extensions (outside-view, invert, incentives,
-  steelman, calibrate, ai-check, launch, rfc, misuse, reversibility, record,
-  sequence, culture, ladder). Use when the user wants to challenge assumptions,
-  stress-test plans, decisions, strategies, policies, designs, or arguments;
-  run premortems, ACH, assumptions checks, frame audits, groupthink mitigation,
-  base-rate forecasting, incentive gaming analysis, or AI output quality review.
-  Works in chat or with a `.redteam/` directory. Not penetration testing.
+  Applied critical thinking and red teaming for decisions, plans, and strategies,
+  plus RedTeam extensions (outside-view, invert, incentives, steelman, calibrate,
+  ai-check, launch, rfc, misuse, reversibility, record, sequence, culture, ladder).
+  Use when the user wants to challenge assumptions, stress-test plans, decisions,
+  strategies, policies, designs, or arguments; run premortems, ACH, assumptions checks,
+  frame audits, groupthink mitigation, base-rate forecasting, incentive gaming analysis,
+  or AI output quality review. Works in chat or with a `.redteam/` directory.
+  Not penetration testing. Techniques trace to UFMCS Red Team Handbook — see lineage.md.
 version: 0.2.0
 argument-hint: "[command] [target]"
 user-invocable: true
@@ -19,7 +19,7 @@ license: Apache-2.0
 
 Red teaming as applied critical thinking: challenge assumptions, surface hidden risks, and improve decisions before commitment.
 
-Grounded in the U.S. Army Red Team Handbook v9 (TRADOC G-2, UFMCS), **extended** with decision science, product red teaming, and AI-quality checks. Red teaming here means **applied critical thinking and groupthink mitigation** — not cybersecurity penetration testing.
+Techniques trace to the UFMCS *Red Team Handbook* v9, **extended** with decision science, product red teaming, and AI-quality checks. See [reference/lineage.md](reference/lineage.md) for source history. Red teaming here means **applied critical thinking and groupthink mitigation** — not cybersecurity penetration testing.
 
 Superset catalog: [reference/extensions-catalog.md](reference/extensions-catalog.md)
 
@@ -30,14 +30,14 @@ You MUST do these steps before proceeding:
 1. Run `node scripts/context.mjs` once per session (or `node <skill-base-dir>/scripts/context.mjs` if the runtime shows the skill path). Keep cwd at the user's project. If the request names a specific decision, document, or file, append `--target <path>` to the command. If you've already seen its output in this conversation, do not re-run it. The script prints the project's decision context (`CONTEXT.md` when present) or reports `NO_CONTEXT_MD`. **If it reports `NO_CONTEXT_MD`:** divert into `reference/init.md` only when the user invoked `init`, or when they are starting a new decision review with no prior context and need structured capture. For scoped commands against material the user already provided in chat (a plan, memo, strategy, PRD, email draft), **do not block on init** — the user's input is the context. Offer `/redteam init` once as an optional follow-up to persist context. A missing CONTEXT.md must never block a scoped review.
 2. If the user invoked a sub-command (`premortem`, `ach`, `challenge`, ...), you MUST read `reference/<command>.md` next. Non-optional. The reference defines the command's flow.
 3. For any review targeting a document, plan, or codebase artifact, read the actual source material before analyzing. Do not critique from memory or summary alone.
-4. Read `reference/principles.md` when performing any adversarial or evaluative command. It encodes the four UFMCS pillars and ACT fundamentals. Skipping it produces shallow pushback instead of structured red teaming.
+4. Read `reference/principles.md` when performing any adversarial or evaluative command. It encodes the four core principles and ACT/GTM fundamentals. Skipping it produces shallow pushback instead of structured red teaming.
 
 ## Core principles (always apply)
 
 - **Make the implicit explicit.** Surface assumptions, frames, and biases that are driving the conclusion but not stated.
 - **Separate perception from interpretation.** What is observed vs. what is inferred?
 - **Generate and evaluate alternatives.** A decision without rejected alternatives is incomplete.
-- **Match tool to time.** Use quick reflex checks when time is short; use full TTP sequences when the stakes warrant it.
+- **Match tool to time.** Use quick reflex checks when time is short; use full technique sequences when the stakes warrant it.
 - **Be the loyal opposition.** Challenge the thinking, not the person's worth. The goal is a better decision, not winning an argument.
 - **Do not confuse red teaming with negativity.** Identify strengths and viable paths, not only flaws.
 
@@ -59,7 +59,7 @@ You MUST do these steps before proceeding:
 | `groupthink [target]` | Facilitate | Design a groupthink-mitigation session | [reference/groupthink.md](reference/groupthink.md) |
 | `ideate [target]` | Facilitate | Divergent thinking: generate alternatives | [reference/ideate.md](reference/ideate.md) |
 | `converge [target]` | Facilitate | Convergent decision support: narrow options | [reference/converge.md](reference/converge.md) |
-| `tools` | Reference | Browse TTP catalog (Handbook v9 + extensions) | [reference/tools.md](reference/tools.md) |
+| `tools` | Reference | Browse technique catalog (source handbook + extensions) | [reference/tools.md](reference/tools.md) |
 | **Extensions** | | | |
 | `outside-view [target]` | Extension | Base rates and reference class forecasting | [reference/outside-view.md](reference/outside-view.md) |
 | `invert [target]` | Extension | Inversion — what would guarantee failure? | [reference/invert.md](reference/invert.md) |

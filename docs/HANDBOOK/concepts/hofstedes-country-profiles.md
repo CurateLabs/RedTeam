@@ -14,10 +14,10 @@ International rollout, global teams — as starting hypothesis only.
 
 Use indices to generate questions, not stereotypes. Validate with local stakeholders.
 
-## RedTeam modifications
+## RedTeam notes
 
 We treat Hofstede as one input; organizational culture often dominates national averages.
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

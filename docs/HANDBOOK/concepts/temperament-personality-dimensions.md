@@ -14,10 +14,10 @@ Team composition, predicting conflict styles, designing who plays contrarian.
 
 Use typology as hypothesis about friction, not excuse for behavior. Pair opposite preferences in think-write-share rounds.
 
-## RedTeam modifications
+## RedTeam notes
 
 Optional in RedTeam. Never use typology to dismiss dissent ("they're just a type X").
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

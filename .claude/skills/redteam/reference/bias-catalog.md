@@ -1,6 +1,6 @@
 # Cognitive Bias Catalog
 
-RedTeam superset reference. Maps common biases to counter-techniques (Handbook v9 + decision science). Use with `/redteam tools` or when a bias is suspected.
+RedTeam superset reference. Maps common biases to counter-techniques (source handbook + decision science). Use with `/redteam tools` or when a bias is suspected.
 
 | Bias | Symptom | Counter-technique | Command |
 |------|---------|-------------------|---------|

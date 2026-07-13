@@ -19,7 +19,7 @@ Planning which tools to run and in what order.
 3. Select tools from matrix.
 4. Sequence diverge before converge.
 
-## RedTeam modifications
+## RedTeam notes
 
 Category: **facilitation**. RedTeam may extend or alias this technique.
 
@@ -28,6 +28,6 @@ Category: **facilitation**. RedTeam may extend or alias this technique.
 - [/redteam tools](../../skill/reference/tools.md)
 - [TTP catalog (skill)](../../skill/reference/ttp-catalog.md)
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

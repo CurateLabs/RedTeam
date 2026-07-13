@@ -1,6 +1,6 @@
 # RedTeam
 
-Applied critical thinking skills for AI agents. **29 commands** — Handbook v9 core plus RedTeam extensions (outside-view, ai-check, launch, rfc, and more).
+Applied critical thinking skills for AI agents. **29 commands** — source handbook core plus RedTeam extensions (outside-view, ai-check, launch, rfc, and more).
 
 > **Quick start:** Run `npx redteam install`, reload your harness, then `/redteam challenge <your plan>` in chat. For a full playbook: `/redteam sequence <decision>`.
 
@@ -155,7 +155,7 @@ The skill uses your input as context. Offer `/redteam init` to persist context f
 
 ## Source
 
-Techniques from *The Red Team Handbook*, Version 9.0, TRADOC G-2, UFMCS. RedTeam **supersets and modifies** the original — see [docs/HANDBOOK.md](docs/HANDBOOK.md) for the full concept inventory. See [NOTICE.md](NOTICE.md) for attribution.
+Techniques adapted from the UFMCS *Red Team Handbook* v9.0. RedTeam **supersets and modifies** the original — see [docs/HANDBOOK.md](docs/HANDBOOK.md) for the full concept inventory and [docs/SOURCE.md](docs/SOURCE.md) for lineage. See [NOTICE.md](NOTICE.md) for legal attribution.
 
 Modeled on the [impeccable](https://github.com/pbakaus/impeccable) skills/plugin architecture.
 

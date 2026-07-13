@@ -24,7 +24,7 @@ npm run build:dist   # dist/ only
 |------|---------|
 | `skill/SKILL.md` | Main skill router |
 | `skill/reference/*.md` | Per-command flows |
-| `skill/reference/ttp-catalog.md` | Handbook v9 TTP catalog |
+| `skill/reference/ttp-catalog.md` | Source handbook technique catalog (civilian labels) |
 | `skill/scripts/context.mjs` | Loads CONTEXT.md |
 | `.redteam/config.json` | Project config |
 
@@ -38,5 +38,5 @@ npm run build:dist   # dist/ only
 ## Do not
 
 - Add penetration testing or exploit content
-- Copy the full Army handbook verbatim into the repo
+- Copy the full source handbook verbatim into the repo
 - Block scoped reviews when CONTEXT.md is missing

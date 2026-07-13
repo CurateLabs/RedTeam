@@ -16,10 +16,10 @@ Map factors in each domain; trace cross-domain interactions; avoid treating doma
 
 **Domains:** power & governance · security & risk · economy & resources · society & community · information & narrative · infrastructure & capabilities · physical environment · time & tempo
 
-## RedTeam modifications
+## RedTeam notes
 
-RedTeam generalization of the Handbook v9 multi-domain operating-environment framework. Plain domain names, not military acronyms. Comparable to PESTLE+ for business contexts.
+RedTeam generalization of the source handbook multi-domain operating-environment framework. Plain domain names, not military acronyms. Comparable to PESTLE+ for business contexts.
 
-## Source
+## Lineage
 
-Derived from *The Red Team Handbook* v9.0 (TRADOC G-2, UFMCS). See [NOTICE.md](../../../NOTICE.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [SOURCE.md](../../../SOURCE.md) and [NOTICE.md](../../../NOTICE.md). Military terms appear here for attribution only.

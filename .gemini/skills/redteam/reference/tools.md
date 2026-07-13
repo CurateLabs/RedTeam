@@ -1,6 +1,6 @@
 # Tools Command
 
-Browse and recommend TTPs from Handbook v9 and RedTeam extensions.
+Browse and recommend techniques from the source handbook catalog and RedTeam extensions.
 
 ## When invoked
 
@@ -8,7 +8,7 @@ Browse and recommend TTPs from Handbook v9 and RedTeam extensions.
 2. If user described a situation → recommend 2–3 tools with rationale
 3. If no argument → show categorized summary + extensions
 
-## Recommendation logic (Handbook v9)
+## Recommendation logic (source handbook)
 
 | Situation | Primary tools |
 |-----------|---------------|

@@ -4,8 +4,8 @@ How to think critically under time pressure — reflexive habits and scalable to
 
 ## Concepts & tools in this chapter
 
-- [Applied Critical Thinking in practice](../concepts/applied-critical-thinking-practice.md) — Chapter 4 operationalizes ACT under time pressure. See also the principle in Chapter 1.
-- [The Time Factor](../concepts/the-time-factor.md) — Decisions often lack time for full process — ACT includes reflexive shortcuts and scalable tools matched to available minutes.
+- [Applied Critical Thinking in practice](../concepts/applied-critical-thinking-practice.md) — Chapter 4 operationalizes critical thinking under time pressure. See also the principle in Chapter 1.
+- [The Time Factor](../concepts/the-time-factor.md) — Decisions often lack time for full process — use reflexive shortcuts and scalable tools matched to available minutes.
 - [Creating Space and Time](../concepts/creating-space-and-time.md) — Leader responsibility to protect reflection time; without it, groups default to autopilot and assumption-fill.
 
 ## RedTeam commands
@@ -21,9 +21,10 @@ How to think critically under time pressure — reflexive habits and scalable to
 
 ## RedTeam note
 
-Most `/redteam` commands are ACT-leaning or ACT+GTM.
+Most `/redteam` commands are ACT-leaning, GTM-leaning, or both.
 
 ## See also
 
 - [Handbook index](../README.md)
 - [Full inventory](../../HANDBOOK.md)
+- [Source & lineage](../../SOURCE.md)

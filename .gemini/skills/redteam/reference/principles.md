@@ -1,10 +1,10 @@
-# Red Team Principles (Handbook v9)
+# Red Team Principles
 
-The U.S. Army Red Team Handbook v9 defines red teaming as a flexible cognitive approach to support decision making. Four pillars underpin every technique:
+Four core principles organize every RedTeam command and technique. They trace to the UFMCS *Red Team Handbook* v9 — see [lineage.md](lineage.md) for history and attribution.
 
 ## 1. Applied Critical Thinking (ACT)
 
-The deliberate process of analyzing and evaluating how we perceive and interpret the world, performed to improve understanding and decision making.
+Deliberately analyze how we perceive, interpret, and reason — make implicit assumptions explicit and test them.
 
 **Fundamentals:**
 - Slow down when stakes are high
@@ -22,7 +22,7 @@ The deliberate process of analyzing and evaluating how we perceive and interpret
 
 ## 2. Groupthink Mitigation (GTM)
 
-Closely examine group dynamics. Actively solicit and consider ideas from all members without fear of recrimination.
+Design facilitation so dissent is safe, alternatives are heard, and decisions are stress-tested before approval.
 
 **Signs of groupthink:**
 - Illusion of unanimity
@@ -34,43 +34,53 @@ Closely examine group dynamics. Actively solicit and consider ideas from all mem
 **Mitigation practices:**
 - Assign a devil's advocate or contrarian role
 - Use think-write-share before open discussion
-- Bring in outside perspectives (emissaries)
+- Bring in outside perspectives
 - Leader speaks last
 - Anonymous input rounds when hierarchy suppresses voice
 
 ## 3. Cultural Empathy
 
-Understand how others perceive, interpret, and value the situation. A decision that makes sense in one cultural frame may fail in another.
+Understand how others perceive, interpret, and value the situation — across cultures, communication styles, teams, disciplines, and stakeholder roles. Cultural empathy is **empathetic inquiry**, not agreement: you seek to understand a frame before you challenge it.
+
+**Cross-cultural communication:**
+- High-context vs. low-context messages land differently (Hall)
+- Power distance, uncertainty avoidance, and related defaults shape risk and authority (Hofstede — as hypothesis, not stereotype)
+- Cognitive and causal styles differ across cultures (Nisbett) — disagreement may be framing, not facts
 
 **Ask:**
-- Whose perspective is missing?
-- What would a stakeholder with different values conclude?
-- Are we projecting our frame onto others?
+- Whose cultural frame is missing from this analysis?
+- What would someone with different values or communication norms conclude?
+- Are we projecting our frame — or ethnocentrism — onto others?
+- What empathetic questions would build understanding before judgment?
 
-## 4. Self-Awareness and Reflection
+**Practice:** `/redteam culture` · Cultural Perception Framework · 6 Empathetic Questions
 
-Red teamers must understand their own cognition — biases, mental models, framing, and worldviews — before they can help others see theirs.
+## 4. Self-awareness
+
+Know your own biases, temperament, and communication patterns before challenging others.
 
 **Practice:**
 - Name your own assumptions before challenging others'
 - Acknowledge when you lack domain expertise
 - Separate confidence in the process from attachment to an outcome
 
-## Ideal Group Process
+## Ideal group process
 
-From Russo & Schoemaker's *Winning Decisions*, adapted by UFMCS:
+From Russo & Schoemaker's *Winning Decisions* (used in the source handbook):
 
 1. **Diverge** — generate alternatives without judgment
 2. **Analyze** — examine assumptions, evidence, and logic
 3. **Debate** — structured challenge and discussion
 4. **Converge** — narrow to actionable decisions
 
-ACT and GTM tools rotate through this loop continuously until time runs out. Select and sequence tools based on the decision's stakes and time available.
+Critical-thinking (ACT) and group-process (GTM) techniques rotate through this loop until time runs out.
 
-## Tool categories
+## Choosing techniques
 
-Most Handbook v9 tools support ACT, GTM, or both. RedTeam v0.2 adds **extensions** — see [extensions-catalog.md](extensions-catalog.md) and [bias-catalog.md](bias-catalog.md). Select tools by:
+See [ttp-catalog.md](ttp-catalog.md) and [extensions-catalog.md](extensions-catalog.md). Select by:
 
-1. What is the decision type? (strategic, operational, analytical, creative)
-2. How much time is available?
-3. Is the primary risk bad reasoning (ACT) or suppressed dissent (GTM)?
+1. Decision type (strategic, tactical, analytical, creative)
+2. Time available
+3. Primary risk: flawed reasoning vs. suppressed dissent
+
+Bias index: [bias-catalog.md](bias-catalog.md)

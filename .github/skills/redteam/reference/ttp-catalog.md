@@ -1,14 +1,14 @@
-# TTP Catalog — Red Team Handbook v9
+# TTP Catalog
 
-Tools, Techniques, and Practices from TRADOC G-2 / UFMCS. Most support Applied Critical Thinking (ACT), Groupthink Mitigation (GTM), or both.
+Tools, techniques, and practices adapted from the UFMCS *Red Team Handbook* v9. Most support **ACT** (Applied Critical Thinking), **GTM** (Groupthink Mitigation), or both. See [lineage.md](lineage.md) for source attribution.
 
-**Canonical inventory:** [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md) — full chapter-by-chapter concept map. This file is the facilitation-oriented subset with command mappings. RedTeam supersedes and modifies the handbook; we do not stay verbatim to v9.
+**Canonical inventory:** [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md) — full chapter-by-chapter concept map. This file is the facilitation-oriented subset with command mappings. RedTeam supersedes and modifies the source; we do not stay verbatim to v9.
 
-**Legend:** ACT = Applied Critical Thinking, GTM = Groupthink Mitigation
+**Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation
 
 ## Quick reference → command mapping
 
-| Handbook TTP | `/redteam` command |
+| Handbook technique | `/redteam` command |
 |--------------|------------------|
 | Premortem Analysis | `premortem` |
 | Analysis of Competing Hypotheses | `ach` |
@@ -248,7 +248,7 @@ Full cycle: generate, then narrow. → `ideate` then `converge`
 ### Ideal Group Process
 **ACT/GTM:** ACT/GTM | **Time:** 60–180 min
 
-Diverge → analyze → debate → converge with rotating ACT/GTM tools. → `groupthink`
+Diverge → analyze → debate → converge with rotating critical-thinking and group-process tools. → `groupthink`
 
 ### BATNA (Best Alternative to a Negotiated Agreement)
 **ACT/GTM:** ACT | **Time:** 30–45 min
@@ -304,6 +304,6 @@ Reference: [bias-catalog.md](bias-catalog.md) · [ai-anti-patterns.md](ai-anti-p
 
 ---
 
-## Attribution
+## Lineage
 
-Derived from *The Red Team Handbook*, Version 9.0, TRADOC G-2, UFMCS. RedTeam supersedes and extends — see [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md).
+Adapted from the UFMCS *Red Team Handbook* v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md). RedTeam supersedes and extends — see [`docs/HANDBOOK.md`](../../docs/HANDBOOK.md).

@@ -1,6 +1,6 @@
 # Culture Flow
 
-Lightweight stakeholder and worldview mapping — RedTeam's generalized cultural empathy session (not military PMESII).
+Cultural empathy in practice — stakeholder and worldview mapping with cross-cultural communication tools. Extends Chapter 3 frameworks to org, product, and multi-stakeholder decisions (not limited to geopolitical PMESII-style analysis).
 
 ## When to use
 

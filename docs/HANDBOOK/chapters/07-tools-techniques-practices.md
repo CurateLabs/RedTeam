@@ -1,6 +1,6 @@
 # Chapter 7 — Tools, Techniques & Practices
 
-The handbook's core TTP catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
+The core technique catalog. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
 
 Browse by category below. Each item has its own page in [`ttps/`](../ttps/).
 
@@ -93,7 +93,7 @@ Browse by category below. Each item has its own page in [`ttps/`](../ttps/).
 
 ## RedTeam commands
 
-- `/redteam tools` — browse and recommend TTPs
+- `/redteam tools` — browse and recommend techniques
 - See individual TTP pages for mapped commands (`premortem`, `ach`, `ideate`, etc.)
 
 ## See also

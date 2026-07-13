@@ -1,19 +1,18 @@
-# Decision Record
+# Self-Awareness
 
-**Chapter:** [Chapter 8 — RedTeam Extensions](../chapters/08-redteam-extensions.md)
-**Command:** `/redteam record`
+**Chapter:** [Chapter 1 — Foundational Concepts](../chapters/01-foundational-concepts.md)
 
 ## Summary
 
-ADR-style artifact with assumptions, dissent, tripwires, review date.
+Know your own biases, temperament, and communication patterns before challenging others.
 
 ## When to use
 
-After GO from review; end of sequence.
+Before facilitating or devil's advocacy when personally invested.
 
 ## Method
 
-Fill template from prior `.redteam/reviews/` artifacts.
+Introspection, Who Am I? exercise, name assumptions upfront.
 
 ## RedTeam notes
 
@@ -21,7 +20,7 @@ Civilian adaptation of source-handbook techniques. We update and extend over tim
 
 ## Related
 
-- [/redteam record](../../skill/reference/record.md)
+- [Who Am I?](../concepts/who-am-i.md)
 
 ## Lineage
 

@@ -1,6 +1,6 @@
 # Groupthink Mitigation Flow
 
-Design a session or intervention to break groupthink and surface dissent. From Handbook v9 Chapter 5.
+Design a session or intervention to break groupthink and surface dissent. From source handbook Chapter 5.
 
 ## When to use
 
