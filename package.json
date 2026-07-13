@@ -42,9 +42,9 @@
     "build:dist": "node scripts/build.mjs dist",
     "test:cli-install": "node scripts/test-cli-install.mjs",
     "docs:handbook": "node scripts/generate-handbook-docs.mjs",
-    "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && docmd build"
+    "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && docmd build && node scripts/fix-docmd-output.mjs && node scripts/check-docs-site.mjs"
   },
   "devDependencies": {
-    "@docmd/core": "0.8.10"
+    "@docmd/core": "0.8.12"
   }
 }

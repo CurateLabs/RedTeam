@@ -32,6 +32,7 @@ test (or flag it as a gap). -->
 
 | Experience / Requirement | Scenario (Given/When/Then) | Test |
 |---|---|---|
+| GitHub Pages documentation | Given the generated site is hosted at `/RedTeam/`, when a reader follows a sidebar link or an in-page link, refreshes the destination, or opens that URL directly, then the same styled page loads and every local link and asset remains under `/RedTeam/`. | `npm run docs:site`; browser check against a `/RedTeam/`-prefixed static server |
 | _Experience name / FR-1_ | _Given … When … Then …_ | _path/to/test_ |
 
 ## Evaluation against product goals
@@ -49,7 +50,8 @@ just code correctness. -->
 coverage threshold). Ask the user for the real commands. -->
 
 ```
-_command to run the tests_
+npm run test:cli-install
+npm run docs:site
 ```
 
 ## Continuous integration
