@@ -22,7 +22,7 @@ User → AI harness (Claude / Cursor / ChatGPT / Codex)
 |---|---|---|
 | `skill/SKILL.md` | Command router and principles | reference/*.md |
 | `skill/reference/` | Per-command flows and TTP catalog | Handbook v9 concepts |
-| `skill/scripts/context.mjs` | Load CONTEXT.md from project | Node 18+ |
+| `skill/scripts/context.mjs` | Load CONTEXT.md from project | Node 22.12+ |
 | `skill/scripts/pin.mjs` | Pin command shortcuts | Harness dirs |
 | `.redteam/` | Decision context and review artifacts | User project |
 | `cli/bin/cli.js` | GitHub-backed `npx` installer | scripts/build.mjs |

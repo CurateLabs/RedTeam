@@ -38,4 +38,4 @@ Map factors and interactions across:
 
 ## Full doc
 
-Repo: [`content/handbook/concepts/operating-landscape-map.md`](../../content/handbook/concepts/operating-landscape-map.md)
+Handbook: [Operating Landscape Map](https://curatelabs.github.io/RedTeam/handbook/concepts/operating-landscape-map/)

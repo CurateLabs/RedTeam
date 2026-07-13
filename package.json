@@ -35,16 +35,21 @@
     "NOTICE.md"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12.0"
   },
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:dist": "node scripts/build.mjs dist",
     "test:cli-install": "node scripts/test-cli-install.mjs",
-    "docs:handbook": "node scripts/generate-handbook-docs.mjs",
-    "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && docmd build && node scripts/fix-docmd-output.mjs && node scripts/check-docs-site.mjs"
+    "docs:prepare": "node scripts/prepare-docs-site.mjs",
+    "docs:dev": "npm run docs:prepare && astro dev",
+    "docs:check": "npm run docs:prepare && astro check",
+    "docs:site": "npm run docs:prepare && astro check && astro build && node scripts/check-docs-site.mjs"
   },
   "devDependencies": {
-    "@docmd/core": "0.8.12"
+    "@astrojs/check": "0.9.9",
+    "@astrojs/starlight": "0.41.3",
+    "astro": "7.0.7",
+    "typescript": "6.0.3"
   }
 }

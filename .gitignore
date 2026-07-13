@@ -148,5 +148,6 @@ vite.config.ts.timestamp-*
 .redteam/*.tmp
 # redteam-ignore-end
 
-# Doc site build artifacts (synced from docs/ at build time)
-content/developers/
+# Starlight documentation build artifacts and staged developer docs
+.astro/
+src/content/docs/developers/

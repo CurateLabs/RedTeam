@@ -2,7 +2,7 @@
 
 Tools, techniques, and practices from ***The Red Team Handbook*, Version 10**. Most support **ACT**, **GTM**, or both. See [lineage.md](lineage.md).
 
-**Canonical handbook:** [`content/handbook/README.md`](../../content/handbook/README.md) — chapter index and concept map. This file is the facilitation-oriented subset with command mappings.
+**Canonical handbook:** [The Red Team Handbook, Version 10](https://curatelabs.github.io/RedTeam/handbook/) — chapter index and concept map. This file is the facilitation-oriented subset with command mappings.
 
 **Legend:** ACT = Applied Critical Thinking · GTM = Groupthink Mitigation
 
@@ -306,4 +306,4 @@ Reference: [bias-catalog.md](bias-catalog.md) · [ai-anti-patterns.md](ai-anti-p
 
 ## Lineage
 
-Part of [*The Red Team Handbook*, Version 10](../../content/handbook/README.md). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md).
+Part of [*The Red Team Handbook*, Version 10](https://curatelabs.github.io/RedTeam/handbook/). RedTeam skill implementation. Predecessor: UFMCS v9.0. See [lineage.md](lineage.md) and [`docs/SOURCE.md`](../../docs/SOURCE.md).
