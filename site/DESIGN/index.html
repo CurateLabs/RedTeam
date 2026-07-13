@@ -1,0 +1,1060 @@
+<!--
+  ---------------------------------------------------------------
+  docmd : the zero-config documentation engine.
+  @website https://docmd.io
+  [docmd-source] - Please do not remove this header.
+  ---------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="docmd v0.8.10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>/**
+ * --------------------------------------------------------------------
+ * docmd : the zero-config documentation engine.
+ *
+ * @package     @docmd/core (and ecosystem)
+ * @website     https://docmd.io
+ * @repository  https://github.com/docmd-io/docmd
+ * @license     MIT
+ * @copyright   Copyright (c) 2025-present docmd.io
+ *
+ * [docmd-source] - Please do not remove this header.
+ * --------------------------------------------------------------------
+ */
+
+(function () {
+  try {
+    // 1. Determine Theme
+    //
+    // Resolve from three sources, in priority order:
+    //   1. localStorage explicit user choice (light / dark)
+    //   2. window.DOCMD_APPEARANCE  (current canonical name, set by EJS templates)
+    //   3. window.DOCMD_DEFAULT_MODE (legacy alias kept for pre-0.8.7 outputs)
+    //   4. 'light' as the final fallback
+    //
+    // Note: localStorage is only honoured when it holds an explicit
+    // 'light' or 'dark' value. A stored 'system' value (from a prior
+    // session where the user picked "follow system") must NOT win over
+    // a freshly resolved config value — the resolved value will itself
+    // be 'system' in that case and the OS preference check below takes
+    // over, so this is a no-op for the in-session behaviour but keeps
+    // any future storage migration simple.
+    var localValue = localStorage.getItem('docmd-theme');
+    var configValue = window.DOCMD_APPEARANCE
+      || window.DOCMD_DEFAULT_MODE
+      || 'light';
+    var theme = (localValue === 'light' || localValue === 'dark')
+      ? localValue
+      : configValue;
+
+    if (theme === 'system') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // 2. Apply to Root
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // 3. Highlight.js Toggle Strategy
+    var lightLink = document.getElementById('hljs-light');
+    var darkLink = document.getElementById('hljs-dark');
+
+    if (lightLink && darkLink) {
+      if (theme === 'dark') {
+        lightLink.disabled = true;
+        darkLink.disabled = false;
+      } else {
+        lightLink.disabled = false;
+        darkLink.disabled = true;
+      }
+    }
+
+    document.documentElement.style.visibility = "visible";
+  } catch (e) {
+    document.documentElement.style.visibility = "visible";
+    console.error('Theme init failed', e);
+  }
+})();</script>
+    <style>
+      html {
+        visibility: hidden;
+      }
+    </style>
+    
+    <script>
+      var root = "../";
+      if (root && !root.endsWith('/')) root += '/';
+      if (root === '') root = './';
+      window.DOCMD_ROOT = root;
+
+      window.DOCMD_SITE_ROOT = "/";
+
+      window.DOCMD_APPEARANCE = "system";
+      window.DOCMD_VERSION_ROOT = "/";
+      window.DOCMD_BASE = "/";
+      window.DOCMD_LOCALE = "";
+      window.DOCMD_DEFAULT_LOCALE = "";
+    </script>
+    <title>
+      Design : .
+    </title>
+
+    <base href="/">
+    
+    <link rel="stylesheet" href="../assets/css/docmd-main.css?v=mrfclcva">
+    
+    <link rel="stylesheet" href="../assets/css/docmd-highlight-light.css?v=mrfclcva" id="hljs-light" >
+    <link rel="stylesheet" href="../assets/css/docmd-highlight-dark.css?v=mrfclcva" id="hljs-dark" disabled>
+    
+    
+<meta name="description" content="">
+<link rel="canonical" href="/DESIGN/">
+<meta property="og:title" content="Design - .">
+<meta property="og:description" content="">
+<meta property="og:url" content="/DESIGN/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design - .">
+<meta name="twitter:description" content="">
+
+
+
+<link rel="stylesheet" href="../assets/css/docmd-git.css?v=mrfclcva" >
+<link rel="stylesheet" href="../assets/css/docmd-openapi.css?v=mrfclcva" >
+
+    
+    <script>/**
+ * --------------------------------------------------------------------
+ * docmd : the zero-config documentation engine.
+ *
+ * @package     @docmd/core (and ecosystem)
+ * @website     https://docmd.io
+ * @repository  https://github.com/docmd-io/docmd
+ * @license     MIT
+ * @copyright   Copyright (c) 2025-present docmd.io
+ *
+ * [docmd-source] - Please do not remove this header.
+ * --------------------------------------------------------------------
+ */
+
+(function () {
+  try {
+    // 1. Determine Theme
+    //
+    // Resolve from three sources, in priority order:
+    //   1. localStorage explicit user choice (light / dark)
+    //   2. window.DOCMD_APPEARANCE  (current canonical name, set by EJS templates)
+    //   3. window.DOCMD_DEFAULT_MODE (legacy alias kept for pre-0.8.7 outputs)
+    //   4. 'light' as the final fallback
+    //
+    // Note: localStorage is only honoured when it holds an explicit
+    // 'light' or 'dark' value. A stored 'system' value (from a prior
+    // session where the user picked "follow system") must NOT win over
+    // a freshly resolved config value — the resolved value will itself
+    // be 'system' in that case and the OS preference check below takes
+    // over, so this is a no-op for the in-session behaviour but keeps
+    // any future storage migration simple.
+    var localValue = localStorage.getItem('docmd-theme');
+    var configValue = window.DOCMD_APPEARANCE
+      || window.DOCMD_DEFAULT_MODE
+      || 'light';
+    var theme = (localValue === 'light' || localValue === 'dark')
+      ? localValue
+      : configValue;
+
+    if (theme === 'system') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // 2. Apply to Root
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // 3. Highlight.js Toggle Strategy
+    var lightLink = document.getElementById('hljs-light');
+    var darkLink = document.getElementById('hljs-dark');
+
+    if (lightLink && darkLink) {
+      if (theme === 'dark') {
+        lightLink.disabled = true;
+        darkLink.disabled = false;
+      } else {
+        lightLink.disabled = false;
+        darkLink.disabled = true;
+      }
+    }
+
+    document.documentElement.style.visibility = "visible";
+  } catch (e) {
+    document.documentElement.style.visibility = "visible";
+    console.error('Theme init failed', e);
+  }
+})();</script>
+  </head>
+  <body
+    class="sidebar-collapsible"
+    data-default-collapsed="false"
+    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="docs/DESIGN.md">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    
+    
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          
+            <h1><a href="../">
+                .
+              </a></h1>
+          
+          <span class="mobile-view sidebar-menu-button float-right">
+            
+<svg class="lucide-icon icon-menu " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-menu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg>
+
+          </span>
+        </div>
+        <div class="sidebar-top-group">
+          
+          
+          
+          
+        </div>
+        
+
+<nav class="sidebar-nav" aria-label="Main Navigation">
+  <ul>
+    
+      <li class="" >
+      
+        <a href="../" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Documentation
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../3-ARCHITECTURE/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Architecture
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="active" >
+      
+        <a href="../DESIGN/" class="active "
+          >
+          
+          <span class="nav-item-title">
+            Design
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../1-EXPERIENCES/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Experiences
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../PRODUCT/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Product
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../2-REQUIREMENTS/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Requirements
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../4-TESTING/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Testing
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            0 PRODUCT
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../0-PRODUCT/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Product
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            1 JOURNEYS
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../1-JOURNEYS/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Journeys
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            3 ENGINEERING
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../3-ENGINEERING/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Engineering
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            ADRs
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../3-ENGINEERING/ADRs/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Architecture Decision Records
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+        <div class="sidebar-bottom-group mt-auto">
+          
+          
+          
+          
+        </div>
+      </aside>
+      
+      
+      
+      <div class="main-content-wrapper">
+        
+        
+          <header class="page-header">
+            <div class="header-left">
+              
+                <button id="sidebar-toggle-button" class="sidebar-toggle-button"
+                  aria-label="Toggle Sidebar">
+                  
+<svg class="lucide-icon icon-chevron-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg>
+
+                </button>
+              
+              <div class="header-titles-wrapper">
+                <span class="header-title">
+                  Design
+                </span>
+              </div>
+            </div>
+            <div class="header-right">
+              
+                
+
+
+<div class="docmd-options-menu">
+    
+    <button class="docmd-search-trigger" aria-label="Search">
+        
+<svg class="lucide-icon icon-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+
+        <span class="search-label">Search</span>
+        <span class="search-keys"><kbd class="docmd-kbd">⌘</kbd><kbd class="docmd-kbd">K</kbd></span>
+    </button>
+    
+
+    
+
+    
+
+    
+    <button class="theme-toggle-button" aria-label="Toggle theme">
+        
+<svg class="lucide-icon icon-sun icon-sun" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+ 
+<svg class="lucide-icon icon-moon icon-moon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+
+    </button>
+    
+
+    
+</div>
+
+              
+            </div>
+          </header>
+        
+        <div class="content-theme-cover">
+          <main class="content-area" id="main-content">
+            <div class="content-layout">
+              <div class="main-content">
+                <div class="docmd-breadcrumbs-row">
+                  <div id="docmd-raw-markdown" data-content="%3C!--%20LLM%3A%20This%20document%20captures%20the%20product&#039;s%20design%20context%3A%20brand%2C%20content%2C%20interaction%2C%0Aaccessibility%2C%20and%20component%20conventions%20that%20make%20the%20experience%20coherent.%20It%20is%20also%0Adiscoverable%20by%20tools%20that%20look%20for%20DESIGN.md.%20Read%20PRODUCT.md%20and%201-EXPERIENCES.md%20first.%0AInterview%20the%20user%20about%20any%20existing%20brand%2C%20UI%20kit%2C%20design%20system%2C%20Storybook%2C%20tokens%2C%0Ascreenshots%2C%20Figma%20files%2C%20terminal%20conventions%2C%20docs%20standards%2C%20or%20accessibility%20bar.%20Keep%0Aimplementation%20mechanics%20in%203-ENGINEERING%2F%20unless%20they%20are%20necessary%20to%20explain%20a%20design%0Arule.%20Remove%20LLM%20comments%20as%20you%20go.%20--%3E%0A%0A%23%20Design%0A%0A%3C!--%20LLM%3A%20One%20short%20paragraph.%20Describe%20the%20role%20this%20design%20context%20plays%20for%20the%20project.%0AFor%20services%20or%20CLIs%2C%20cover%20terminal%2Fdocs%2FAPI%20experience.%20For%20user-facing%20products%2C%20cover%0Avisual%20and%20interaction%20experience%20too.%20--%3E%0A%0A_What%20should%20stay%20consistent%20across%20the%20product%20experience%3F_%0A%0A%23%23%20Design%20Principles%0A%0A%3C!--%20LLM%3A%20Capture%203-6%20principles%20that%20guide%20product%20decisions%20and%20UX%20trade-offs.%20These%20should%0Aconnect%20to%20the%20experience%20principles%20in%201-EXPERIENCES.md.%20--%3E%0A%0A-%20**_Principle%20name_**%20-%20_what%20it%20means%20in%20practice._%0A%0A%23%23%20Brand%20And%20Voice%0A%0A%3C!--%20LLM%3A%20Document%20naming%2C%20tone%2C%20writing%20style%2C%20terminology%2C%20and%20visible%20personality.%20Include%0Awords%20to%20use%2Favoid%20when%20that%20matters.%20--%3E%0A%0A-%20**Tone%3A**%20_how%20the%20product%20should%20sound._%0A-%20**Terminology%3A**%20_preferred%20words%20and%20names._%0A-%20**Writing%20rules%3A**%20_short%20rules%20for%20labels%2C%20empty%20states%2C%20errors%2C%20docs%2C%20or%20prompts._%0A%0A%23%23%20Visual%20And%20Content%20Style%0A%0A%3C!--%20LLM%3A%20Capture%20visual%2Fcontent%20rules%20that%20apply%20to%20the%20product.%20If%20the%20project%20has%20no%0Avisual%20UI%2C%20state%20what%20is%20not%20applicable%20and%20document%20terminal%2C%20API%2C%20docs%2C%20or%20generated%0Aartifact%20style%20instead.%20Link%20to%20tokens%2C%20CSS%2C%20Figma%2C%20brand%20assets%2C%20or%20Storybook%20when%0Aavailable.%20--%3E%0A%0A-%20**Color%3A**%20_palette%2C%20semantic%20usage%2C%20contrast%20expectations._%0A-%20**Typography%3A**%20_font%20choices%2C%20scale%2C%20hierarchy._%0A-%20**Spacing%20%26%20layout%3A**%20_grid%2C%20density%2C%20alignment%2C%20rhythm._%0A-%20**Iconography%20%26%20imagery%3A**%20_style%2C%20sourcing%2C%20usage%20rules._%0A-%20**Content%20structure%3A**%20_headings%2C%20tables%2C%20examples%2C%20screenshots%2C%20diagrams%2C%20or%20docs%20rules._%0A%0A%23%23%20Interaction%20Patterns%0A%0A%3C!--%20LLM%3A%20Document%20common%20interaction%20rules%3A%20navigation%2C%20forms%2C%20loading%2C%20empty%2Ferror%2Fsuccess%0Astates%2C%20keyboard%20behavior%2C%20CLI%20output%2C%20API%20ergonomics%2C%20motion%2C%20and%20progressive%20disclosure.%20--%3E%0A%0A-%20**Navigation%3A**%20_how%20users%20move%20through%20the%20product._%0A-%20**Controls%3A**%20_buttons%2C%20inputs%2C%20menus%2C%20toggles%2C%20commands%2C%20or%20API%20calls._%0A-%20**States%3A**%20_loading%2C%20empty%2C%20error%2C%20success%2C%20disabled._%0A-%20**Motion%3A**%20_animation%20principles%20or%20%22none%22%20if%20motion%20is%20not%20part%20of%20the%20experience._%0A%0A%23%23%20Components%20And%20Patterns%0A%0A%3C!--%20LLM%3A%20List%20reusable%20components%2C%20UI%20patterns%2C%20command%20patterns%2C%20API%20patterns%2C%20or%20docs%0Apatterns.%20Link%20to%20code%2C%20Storybook%2C%20design%20files%2C%20or%20implementation%20docs%20where%20they%20exist.%20--%3E%0A%0A%7C%20Component%20%2F%20pattern%20%7C%20Use%20it%20for%20%7C%20Notes%20%2F%20source%20%7C%0A%7C---%7C---%7C---%7C%0A%7C%20_Name_%20%7C%20_When%20to%20use%20it_%20%7C%20_Link%20or%20rule_%20%7C%0A%0A%23%23%20Accessibility%0A%0A%3C!--%20LLM%3A%20Capture%20the%20accessibility%20bar.%20Include%20keyboard%20behavior%2C%20focus%2C%20contrast%2C%20reduced%0Amotion%2C%20semantic%20HTML%2C%20screen-reader%20expectations%2C%20CLI%20equivalents%2C%20or%20docs%20accessibility.%20--%3E%0A%0A-%20_Accessibility%20rule%20or%20target._%0A%0A%23%23%20References%0A%0A%3C!--%20LLM%3A%20Link%20the%20source%20of%20truth%20for%20design%20assets%20and%20implementation%20surfaces.%20Delete%20this%0Asection%20if%20there%20are%20no%20references%20yet.%20--%3E%0A%0A-%20_Figma%20%2F%20Storybook%20%2F%20token%20file%20%2F%20component%20directory%20%2F%20brand%20asset._%0A" style="display: none;"></div>
+                  
+                    <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
+                      <ol>
+                        
+                        
+                          <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
+                            
+                              <span>Design</span>
+                            
+                            
+                          </li>
+                        
+                      </ol>
+                    </nav>
+                  
+
+                  
+                    <div class="docmd-copy-widgets">
+                      
+                        <button class="docmd-copy-btn docmd-copy-raw-btn" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-copy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg>
+</span>
+                        </button>
+                      
+                      
+                        <button class="docmd-copy-btn docmd-copy-context-btn" data-copied="Copied!" title="Copy Context">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-message-square"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+</svg>
+</span>
+                          <span class="docmd-btn-text">Copy Context</span>
+                        </button>
+                      
+                    </div>
+                  
+                </div>
+                
+                <p>&lt;!-- LLM: This document captures the product’s design context: brand, content, interaction,<br>
+accessibility, and component conventions that make the experience coherent. It is also<br>
+discoverable by tools that look for <a href="http://DESIGN.md">DESIGN.md</a>. Read <a href="http://PRODUCT.md">PRODUCT.md</a> and <a href="http://1-EXPERIENCES.md">1-EXPERIENCES.md</a> first.<br>
+Interview the user about any existing brand, UI kit, design system, Storybook, tokens,<br>
+screenshots, Figma files, terminal conventions, docs standards, or accessibility bar. Keep<br>
+implementation mechanics in 3-ENGINEERING/ unless they are necessary to explain a design<br>
+rule. Remove LLM comments as you go. --&gt;</p>
+<h1 id="design" class="docmd-heading"><a href="#design" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Design</h1>
+<p>&lt;!-- LLM: One short paragraph. Describe the role this design context plays for the project.<br>
+For services or CLIs, cover terminal/docs/API experience. For user-facing products, cover<br>
+visual and interaction experience too. --&gt;</p>
+<p><em>What should stay consistent across the product experience?</em></p>
+<h2 id="design-design-principles" class="docmd-heading"><a href="#design-design-principles" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Design Principles</h2>
+<p>&lt;!-- LLM: Capture 3-6 principles that guide product decisions and UX trade-offs. These should<br>
+connect to the experience principles in <a href="http://1-EXPERIENCES.md">1-EXPERIENCES.md</a>. --&gt;</p>
+<ul>
+<li><strong><em>Principle name</em></strong> - <em>what it means in practice.</em></li>
+</ul>
+<h2 id="design-brand-and-voice" class="docmd-heading"><a href="#design-brand-and-voice" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Brand And Voice</h2>
+<p>&lt;!-- LLM: Document naming, tone, writing style, terminology, and visible personality. Include<br>
+words to use/avoid when that matters. --&gt;</p>
+<ul>
+<li><strong>Tone:</strong> <em>how the product should sound.</em></li>
+<li><strong>Terminology:</strong> <em>preferred words and names.</em></li>
+<li><strong>Writing rules:</strong> <em>short rules for labels, empty states, errors, docs, or prompts.</em></li>
+</ul>
+<h2 id="design-visual-and-content-style" class="docmd-heading"><a href="#design-visual-and-content-style" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Visual And Content Style</h2>
+<p>&lt;!-- LLM: Capture visual/content rules that apply to the product. If the project has no<br>
+visual UI, state what is not applicable and document terminal, API, docs, or generated<br>
+artifact style instead. Link to tokens, CSS, Figma, brand assets, or Storybook when<br>
+available. --&gt;</p>
+<ul>
+<li><strong>Color:</strong> <em>palette, semantic usage, contrast expectations.</em></li>
+<li><strong>Typography:</strong> <em>font choices, scale, hierarchy.</em></li>
+<li><strong>Spacing &amp; layout:</strong> <em>grid, density, alignment, rhythm.</em></li>
+<li><strong>Iconography &amp; imagery:</strong> <em>style, sourcing, usage rules.</em></li>
+<li><strong>Content structure:</strong> <em>headings, tables, examples, screenshots, diagrams, or docs rules.</em></li>
+</ul>
+<h2 id="design-interaction-patterns" class="docmd-heading"><a href="#design-interaction-patterns" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Interaction Patterns</h2>
+<p>&lt;!-- LLM: Document common interaction rules: navigation, forms, loading, empty/error/success<br>
+states, keyboard behavior, CLI output, API ergonomics, motion, and progressive disclosure. --&gt;</p>
+<ul>
+<li><strong>Navigation:</strong> <em>how users move through the product.</em></li>
+<li><strong>Controls:</strong> <em>buttons, inputs, menus, toggles, commands, or API calls.</em></li>
+<li><strong>States:</strong> <em>loading, empty, error, success, disabled.</em></li>
+<li><strong>Motion:</strong> <em>animation principles or “none” if motion is not part of the experience.</em></li>
+</ul>
+<h2 id="design-components-and-patterns" class="docmd-heading"><a href="#design-components-and-patterns" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Components And Patterns</h2>
+<p>&lt;!-- LLM: List reusable components, UI patterns, command patterns, API patterns, or docs<br>
+patterns. Link to code, Storybook, design files, or implementation docs where they exist. --&gt;</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component / pattern</th>
+<th>Use it for</th>
+<th>Notes / source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Name</em></td>
+<td><em>When to use it</em></td>
+<td><em>Link or rule</em></td>
+</tr>
+</tbody>
+</table>
+</div><h2 id="design-accessibility" class="docmd-heading"><a href="#design-accessibility" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Accessibility</h2>
+<p>&lt;!-- LLM: Capture the accessibility bar. Include keyboard behavior, focus, contrast, reduced<br>
+motion, semantic HTML, screen-reader expectations, CLI equivalents, or docs accessibility. --&gt;</p>
+<ul>
+<li><em>Accessibility rule or target.</em></li>
+</ul>
+<h2 id="design-references" class="docmd-heading"><a href="#design-references" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>References</h2>
+<p>&lt;!-- LLM: Link the source of truth for design assets and implementation surfaces. Delete this<br>
+section if there are no references yet. --&gt;</p>
+<ul>
+<li><em>Figma / Storybook / token file / component directory / brand asset.</em></li>
+</ul>
+
+                
+                  <div class="page-navigation">
+                    
+                      <a href="../3-ARCHITECTURE/" class="prev-page">
+                        
+<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+
+                        <span><small>Previous</small><strong>
+                            Architecture
+                          </strong></span>
+                      </a>
+                    
+                    
+                      <a href="../1-EXPERIENCES/" class="next-page">
+                        <span><small>Next</small>
+                          <strong>
+                            Experiences
+                          </strong></span>
+                        
+<svg class="lucide-icon icon-arrow-right page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+
+                      </a>
+                    
+                  </div>
+                
+              </div>
+              <div class="toc-sidebar">
+                
+
+
+  <div class="toc-container">
+    <h2 class="toc-title">On This Page<span class="mobile-view toc-menu-button float-right">
+<svg class="lucide-icon icon-chevron-down " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg>
+</span></h2>
+    <ul class="toc-list">
+      
+        <li class="toc-item toc-level-1">
+          <a href="#design" class="toc-link">Design</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-design-principles" class="toc-link">Design Principles</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-brand-and-voice" class="toc-link">Brand And Voice</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-visual-and-content-style" class="toc-link">Visual And Content Style</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-interaction-patterns" class="toc-link">Interaction Patterns</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-components-and-patterns" class="toc-link">Components And Patterns</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-accessibility" class="toc-link">Accessibility</a>
+        </li>
+      
+        <li class="toc-item toc-level-2">
+          <a href="#design-references" class="toc-link">References</a>
+        </li>
+      
+    </ul>
+  </div>
+
+              </div>
+            </div>
+            <div class="page-footer-actions">
+              
+              
+              <span class="git-spacer"></span>
+              
+            </div>
+          </main>
+          
+
+
+<footer class="page-footer">
+  <div class="footer-content">
+    <div class="user-footer">© 2026</div>
+    
+      <div class="branding-footer">
+        Built with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"></path><path d="m18 15-2-2"></path><path d="m15 18-2-2"></path></svg> <a href="https://docmd.io" target="_blank" rel="noopener">docmd.</a>
+      </div>
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+      <script src="../assets/js/docmd-main.js?v=mrfclcva"></script>
+      
+      <script src="../assets/js/docmd-git.js?v=mrfclcva"></script>
+      <script src="../assets/js/docmd-image-lightbox.js?v=mrfclcva" ></script>
+<script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js" ></script>
+<script src="../assets/js/docmd-search.js?v=mrfclcva" ></script>
+<script src="../assets/js/docmd-git.js?v=mrfclcva" type="module"></script>
+
+  <!-- Search Modal (Injected by @docmd/plugin-search) -->
+  <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
+       data-search-placeholder="Search documentation..."
+       data-search-no-results="No results found."
+       data-search-error="Failed to load search index."
+       data-search-initial="Type to start searching..."
+       data-search-navigate="to navigate"
+       data-search-escape="to close">
+      <div class="docmd-search-box">
+          <div class="docmd-search-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              <input type="text" id="docmd-search-input" placeholder="Search documentation..." autocomplete="off" spellcheck="false">
+              <button onclick="window.closeDocmdSearch()" class="docmd-search-close" aria-label="Close search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+              </button>
+          </div>
+          <div id="docmd-search-results" class="docmd-search-results"></div>
+          <div class="docmd-search-footer">
+              <span><kbd class="docmd-kbd">↑</kbd> <kbd class="docmd-kbd">↓</kbd> to navigate</span>
+              <span><kbd class="docmd-kbd">ESC</kbd> to close</span>
+          </div>
+      </div>
+  </div>
+
+    <script>
+      (function() {
+        var searchDebounceTimer;
+
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (!link || !window.gtag) return;
+          
+          var url = link.href;
+          var hostname = window.location.hostname;
+          var isExternal = link.hostname && link.hostname !== hostname;
+          var isDownload = link.hasAttribute('download') || url.match(/\.(pdf|zip|tar|gz|exe|pkg)$/i);
+          
+          if (isExternal) {
+            gtag('event', 'click_external', { 'url': url, 'link_text': link.innerText.trim() });
+          } else if (isDownload) {
+            gtag('event', 'download', { 'file_name': url.split('/').pop(), 'url': url });
+          }
+
+          // TOC tracking
+          if (link.classList.contains('toc-link')) {
+            gtag('event', 'toc_click', { 'target_id': link.getAttribute('href'), 'title': link.innerText.trim() });
+          }
+
+          // Permalink tracking
+          if (link.classList.contains('heading-anchor')) {
+            gtag('event', 'permalink_click', { 'url': url });
+          }
+        });
+
+        
+        // Search Keyword Tracking
+        document.addEventListener('input', function(e) {
+          if (e.target.id === 'docmd-search-input' && window.gtag) {
+            var query = e.target.value.trim();
+            if (query.length < 3) return;
+            
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(function() {
+              gtag('event', 'search', { 'search_term': query });
+            }, 1000);
+          }
+        });
+        
+      })();
+    </script>
+
+<script>window.__git_config={"repo":null,"branch":"main","editLink":false,"lastUpdated":true,"commitHistory":true,"maxCommits":5,"dateFormat":"relative"};window.__git_i18n={"lastUpdated":"Last updated","recentCommits":"Recent commits","viewCommitHistory":"View commit history","editOnGitHub":"Edit on GitHub","editOnGitLab":"Edit on GitLab","editOnBitbucket":"Edit on Bitbucket","editThisPage":"Edit this page","justNow":"just now","minutesAgo":"{n}m ago","hoursAgo":"{n}h ago","daysAgo":"{n}d ago"}</script>
+      
+      
+      
+  </body>
+</html>

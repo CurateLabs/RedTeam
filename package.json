@@ -1,0 +1,45 @@
+{
+  "name": "redteam",
+  "version": "0.2.0",
+  "description": "Applied critical thinking and red teaming skills for AI agents, based on the U.S. Army Red Team Handbook v9",
+  "keywords": [
+    "red-team",
+    "critical-thinking",
+    "decision-making",
+    "skills",
+    "ai",
+    "claude",
+    "cursor",
+    "chatgpt"
+  ],
+  "license": "Apache-2.0",
+  "author": "David Spencer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidspencer/redteam.git"
+  },
+  "type": "module",
+  "bin": {
+    "redteam": "cli/bin/cli.js"
+  },
+  "files": [
+    "skill/",
+    "plugin/",
+    ".claude-plugin/",
+    "chatgpt/",
+    "cli/",
+    "scripts/",
+    ".redteam/config.json",
+    ".redteam/CONTEXT.template.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:dist": "node scripts/build.mjs dist",
+    "docs:handbook": "node scripts/generate-handbook-docs.mjs"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "redteam",
+  "description": "Applied critical thinking and red teaming for AI agents. 1 skill, 15 commands, based on the U.S. Army Red Team Handbook v9.",
+  "version": "0.2.0",
+  "author": {
+    "name": "David Spencer"
+  },
+  "homepage": "https://github.com/davidspencer/redteam",
+  "repository": "https://github.com/davidspencer/redteam",
+  "skills": "./plugin/skills/"
+}

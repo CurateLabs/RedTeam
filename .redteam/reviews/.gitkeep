@@ -1,0 +1,3 @@
+# Keep review artifacts; ignore local overrides
+config.local.json
+*.tmp
