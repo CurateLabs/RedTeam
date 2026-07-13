@@ -1,6 +1,4 @@
----
-title: User Guide
----
+# User Guide
 
 How to install and use the **RedTeam** skill in Cursor, Claude Code, Codex, and ChatGPT.
 

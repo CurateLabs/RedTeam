@@ -24,5 +24,4 @@ GTM tools are first-class — not optional extras for "difficult" teams.
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

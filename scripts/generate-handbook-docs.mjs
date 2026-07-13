@@ -84,7 +84,6 @@ ${redteamNote}
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)
 `;
 }
@@ -1146,7 +1145,6 @@ v9-origin techniques and v10-native commands live in one catalog. AI-specific pr
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)
 `,
 );
@@ -1160,9 +1158,7 @@ const chapterLinks = [
 writeDoc(
   HANDBOOK,
   'README.md',
-  `---
-title: The Red Team Handbook — Version 10
----
+  `# The Red Team Handbook — Version 10
 
 Maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
 
@@ -1180,34 +1176,12 @@ All technique pages: [\`ttps/\`](ttps/) (plus concepts cross-listed from other c
 
 ## Quick links
 
-- [Full inventory](inventory.md)
 - [User guide](../../guide/)
 - [Source & lineage](../../developers/SOURCE.md)
 - [Skill implementation](../../../skill/reference/ttp-catalog.md)
 - [NOTICE](../../../NOTICE.md)
 `,
 );
-
-// Sync inventory.md from legacy path if present (one-time migration helper)
-const legacyInventory = path.join(ROOT, 'docs', 'HANDBOOK.md');
-const inventoryPath = path.join(HANDBOOK, 'inventory.md');
-if (!fs.existsSync(inventoryPath) && fs.existsSync(legacyInventory)) {
-  let inv = fs.readFileSync(legacyInventory, 'utf8');
-  inv = inv.replace(
-    /\[`HANDBOOK\/`\]\(HANDBOOK\/README\.md\)/g,
-    '[Handbook pages](README.md)',
-  );
-  inv = inv.replace(
-    /\[SOURCE\.md\]\(SOURCE\.md\)/g,
-    '[SOURCE.md](../../developers/SOURCE.md)',
-  );
-  inv = inv.replace(
-    /\[NOTICE\.md\]\(\.\.\/NOTICE\.md\)/g,
-    '[NOTICE.md](../../../NOTICE.md)',
-  );
-  fs.writeFileSync(inventoryPath, inv);
-  console.log('  Migrated docs/HANDBOOK.md → content/handbook/inventory.md');
-}
 
 console.log(`Generated:`);
 console.log(`  ${chapters.length + 1} chapter docs`);

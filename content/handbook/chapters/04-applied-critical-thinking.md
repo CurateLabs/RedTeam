@@ -26,5 +26,4 @@ Most `/redteam` commands are ACT-leaning, GTM-leaning, or both.
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

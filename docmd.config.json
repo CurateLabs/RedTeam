@@ -3,26 +3,5 @@
   "url": "https://curatelabs.github.io/RedTeam",
   "base": "/RedTeam/",
   "src": "content",
-  "out": "site",
-  "layout": {
-    "menubar": {
-      "left": [
-        { "text": "Guide", "url": "/guide/" },
-        { "text": "Handbook", "url": "/handbook/" },
-        { "text": "Developers", "url": "/developers/" }
-      ],
-      "right": [
-        {
-          "text": "GitHub",
-          "url": "https://github.com/CurateLabs/RedTeam",
-          "external": true
-        }
-      ]
-    }
-  },
-  "footer": {
-    "copyright": "© Curate Labs",
-    "content": "RedTeam — applied critical thinking for AI agents. Not penetration testing."
-  },
-  "customJs": ["scripts/docmd-expand-guide.js"]
+  "out": "site"
 }

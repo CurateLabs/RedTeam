@@ -150,4 +150,3 @@ vite.config.ts.timestamp-*
 
 # Doc site build artifacts (synced from docs/ at build time)
 content/developers/
-content/navigation.json

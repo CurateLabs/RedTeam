@@ -28,5 +28,4 @@ Cultural empathy is a first-class principle. We extend it to organizational subc
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

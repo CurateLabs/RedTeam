@@ -56,5 +56,5 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 ## See also
 
 - [NOTICE.md](../NOTICE.md) — legal disclaimer
-- [content/handbook/inventory.md](../content/handbook/inventory.md) — v10 concept inventory
+- [content/handbook/](../content/handbook/) — v10 handbook (chapters, concepts, techniques)
 - [skill/SKILL.md](../skill/SKILL.md) — RedTeam skill implementation

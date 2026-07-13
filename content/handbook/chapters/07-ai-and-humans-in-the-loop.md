@@ -29,5 +29,4 @@ Handbook v10-native. UFMCS v9 predates modern AI-assisted workflows; this chapte
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

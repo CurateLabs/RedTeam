@@ -133,5 +133,4 @@ v9-origin techniques and v10-native commands live in one catalog. AI-specific pr
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

@@ -24,5 +24,4 @@ RedTeam separates `ideate` and `converge` explicitly.
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)

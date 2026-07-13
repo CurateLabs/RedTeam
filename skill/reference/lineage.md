@@ -22,6 +22,6 @@ RedTeam continues the curriculum as **Handbook v10**: updated for civilian, prod
 
 ## Full attribution
 
-Handbook: [`content/handbook/inventory.md`](../../content/handbook/inventory.md) · Source: [`docs/SOURCE.md`](../../docs/SOURCE.md) · Legal: [`NOTICE.md`](../../NOTICE.md)
+Handbook: [`content/handbook/README.md`](../../content/handbook/README.md) · Source: [`docs/SOURCE.md`](../../docs/SOURCE.md) · Legal: [`NOTICE.md`](../../NOTICE.md)
 
 **Do not** present RedTeam output as military doctrine.

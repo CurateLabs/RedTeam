@@ -23,5 +23,4 @@ We deprioritize military-student journaling requirements but keep introspection 
 ## See also
 
 - [Handbook index](../README.md)
-- [Full inventory](../inventory.md)
 - [Source & lineage](../../developers/SOURCE.md)
