@@ -2,7 +2,7 @@
 
 All commands run through `/redteam <command> [target]`.
 
-## Core commands
+## Command catalog
 
 | Command | What it does |
 |---------|--------------|
@@ -21,11 +21,6 @@ All commands run through `/redteam <command> [target]`.
 | `ideate` | Divergent thinking |
 | `converge` | Convergent decision support |
 | `tools` | Browse technique catalog |
-
-## Extensions (v0.2)
-
-| Command | What it does |
-|---------|--------------|
 | `outside-view` | Base rates and reference class forecasting |
 | `invert` | What would guarantee failure? |
 | `incentives` | Metric gaming and Goodhart analysis |

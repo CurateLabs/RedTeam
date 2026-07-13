@@ -9,6 +9,13 @@
       "defaultCollapsed": true
     }
   },
+  "redirects": {
+    "/quick-start/": "/RedTeam/guide/quick-start/",
+    "/installation/": "/RedTeam/guide/installation/",
+    "/commands/": "/RedTeam/guide/commands/",
+    "/redteam-directory/": "/RedTeam/guide/redteam-directory/",
+    "/chat-only/": "/RedTeam/guide/chat-only/"
+  },
   "navigation": [
     {
       "title": "User Guide",

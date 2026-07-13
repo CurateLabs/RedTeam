@@ -37,12 +37,7 @@ All commands run through `/redteam`:
 | `/redteam groupthink` | Design groupthink mitigation session |
 | `/redteam ideate` | Divergent thinking |
 | `/redteam converge` | Convergent decision support |
-| `/redteam tools` | Browse TTP catalog (v9 + extensions) |
-
-### Extensions (v0.2)
-
-| Command | What it does |
-|---------|--------------|
+| `/redteam tools` | Browse the technique catalog |
 | `/redteam outside-view` | Base rates and reference class forecasting |
 | `/redteam invert` | What would guarantee failure? |
 | `/redteam incentives` | Metric gaming and Goodhart analysis |
