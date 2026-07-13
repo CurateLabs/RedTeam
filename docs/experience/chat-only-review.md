@@ -53,6 +53,6 @@ The harness loads the skill and reference flow; the model produces adversarial r
 
 ## Related requirements, tests, architecture, and ADRs
 
-- Requirements: FR-1, FR-2
+- Requirements: FR-1, FR-2, NFR-7
 - Architecture: [Chat-only review flow](../engineering/ARCHITECTURE.md#chat-only-review)
 - Tests: [`engineering/TESTING.md`](../engineering/TESTING.md)

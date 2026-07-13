@@ -15,8 +15,8 @@ AI power users and contributors installing into Cursor, Claude, Codex, Agents, o
 ## Current journey
 
 1. User runs `npx --yes github:CurateLabs/RedTeam install` (or copies skill / installs plugin)
-2. `build.mjs` copies `skill/` into harness directories
-3. `.redteam/` scaffold is created if missing
+2. `cli/bin/cli.js` runs `build.mjs`, detects harness directories (or honors `--providers=`), and copies the skill in
+3. `.redteam/` scaffold (`reviews/`, `sessions/`, `config.json`, `CONTEXT.template.md`) is created if missing
 4. User reloads harness and runs `/redteam challenge`
 
 ## Opportunity and hypothesis
@@ -39,7 +39,7 @@ Installer places skill files, scripts, and `.redteam/` scaffold; user can run co
 
 - **Given** the skill is installed
 - **When** the user runs `/redteam pin premortem`
-- **Then** a pinned shortcut (e.g. `/premortem`) is available in the harness
+- **Then** a pinned shortcut (`$premortem`) is available in the harness
 
 ## Constraints and domain language
 
@@ -57,6 +57,6 @@ Installer places skill files, scripts, and `.redteam/` scaffold; user can run co
 
 ## Related requirements, tests, architecture, and ADRs
 
-- Requirements: FR-6, FR-7, NFR-2, NFR-3
+- Requirements: FR-6, FR-7, FR-10, NFR-2, NFR-3
 - Architecture: [Install flow](../engineering/ARCHITECTURE.md#install)
 - Tests: `scripts/test-cli-install.mjs`, [`engineering/TESTING.md`](../engineering/TESTING.md)

@@ -20,6 +20,8 @@ RedTeam verifies behavior through **automated smoke tests** for install and docs
 | Docs publish / FR-8 | Given docs hosted at `/RedTeam/`, when a reader follows links or opens URLs directly, then styled pages load with valid local links | `npm run docs:site` |
 | Chat-only review / FR-2 | Given no CONTEXT.md, when `/redteam challenge` runs, then structured output appears | Manual harness check (gap: no automated eval) |
 | Project-anchored / FR-5 | Given CONTEXT.md, when premortem runs, then review artifact is saved | Manual harness check (gap: no automated eval) |
+| Command coverage / FR-9 | Given the `skill/SKILL.md` command table, then each of the 29 commands has a `skill/reference/<command>.md` flow | Manual diff of table vs directory (gap: no automated check) |
+| Method fidelity / NFR-7 | Given an evaluative command output, then the technique is named and evidence, interpretation, assumptions, and uncertainty are distinguishable | Manual sampled-session review (gap: no rubric yet — see REQUIREMENTS open questions) |
 
 ## Traceability contract
 
@@ -33,10 +35,13 @@ RedTeam verifies behavior through **automated smoke tests** for install and docs
 
 ## Evaluation against product goals
 
-- **Install under 5 minutes** — measured informally; `test:cli-install` guards the critical path
-- **Structured actionable output** — qualitative review of command transcripts and `.redteam/reviews/` samples
+These trace to PRODUCT.md "Evidence of success"; all are currently qualitative:
+
+- **Install under 5 minutes (NFR-1)** — measured informally; `test:cli-install` guards the critical path
+- **Method visible in the work** — sampled transcripts and `.redteam/reviews/` artifacts name the technique and separate evidence, interpretation, assumptions, and uncertainty
+- **Decision work materially changes** — saved artifacts record a changed assumption, option, risk response, or an explicit "challenge did not change it"
 - **Retrospective usefulness** — qualitative feedback on saved artifacts
-- **`ai-check` before high-stakes decisions** — usage observation in real workflows
+- **Accountability preserved (NFR-8)** — high-stakes outputs state uncertainties and name the human decision owner
 
 ## Running the tests
 

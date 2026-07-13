@@ -14,11 +14,7 @@ Engineering begins with the shared requirements contract in [`../REQUIREMENTS.md
 
 ## Supporting documentation
 
-Lifecycle detail lives in the files linked from [Lifecycle](#lifecycle) above. Add focused setup guides, runbooks, or API references here only when the project needs them.
-
-| Document | Description |
-|---|---|
-| _filename.md_ | _What it covers and who uses it_ |
+Lifecycle detail lives in the files linked from [Lifecycle](#lifecycle) above. Add focused setup guides, runbooks, or API references here only when the project needs them; none exist yet.
 
 ## Decision records
 

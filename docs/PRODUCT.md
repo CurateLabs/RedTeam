@@ -4,7 +4,9 @@ RedTeam is a skills-only AI plugin for **applied critical thinking**. It impleme
 
 ## Problem
 
-AI assistants default to agreement. Plans, strategies, and decisions ship without structured challenge. Teams lack accessible red teaming tools outside military training contexts.
+“Red teaming” is increasingly reduced to little more than a critical review: find flaws, list risks, and push back. That flattening leaves behind the structured tools and facilitation practices built to counter recurring failure modes exposed by consequential institutional disasters such as Challenger and the failures surrounding 9/11 — suppressed dissent, incomplete information, failures of imagination, untested assumptions, groupthink, and narrow framing. These are learnable methods, not simply a skeptical attitude.
+
+The most complete curriculum in this lineage, UFMCS's ***The Red Team Handbook*, Version 9.0**, is no longer maintained as a living program and is difficult for many people to discover and use. It also predates the widespread adoption of modern generative AI — the largest change in how analysis and decisions are produced since its publication. The available handbook is aging and not broadly accessible as a practical, current workflow. As a result, people and AI agents may perform generic critique while missing the techniques that make red teaming disciplined, repeatable, and useful.
 
 ## Audience
 
@@ -14,36 +16,52 @@ AI assistants default to agreement. Plans, strategies, and decisions ship withou
 
 ## Vision
 
-Applied critical thinking becomes as easy as `/redteam challenge` — in chat or anchored to a `.redteam/` project directory.
+Red teaming becomes a widely understood and practiced discipline again. People and AI use proven methods — not generic skepticism — to challenge assumptions, widen perspectives, and make better decisions before failure makes the lesson unavoidable.
 
 ## Goals
 
-- Handbook v10 command flows plus v10-native extensions (outside-view, incentives, ai-check, launch, rfc, record, …)
-- Work in pure chat with no setup
-- Support `.redteam/` for persistent CONTEXT.md and review artifacts
-- Install into Claude, Cursor, Codex, ChatGPT, and GitHub Copilot harnesses
+- Restore the tools, techniques, and facilitation practices that distinguish red teaming from ordinary critical review
+- Make those methods understandable and usable beyond specialist military training
+- Bring the handbook forward for modern decisions, including work shaped or produced by AI
+- Help people surface dissent, hidden assumptions, missing perspectives, and credible alternatives before commitment
+- Turn red teaming into a repeatable practice that individuals and teams can learn, apply, and improve over time
 
 ## Quality stance
 
-- **Behavior-driven traceability** — user outcomes in `experience/` become requirements, tests, and observability signals
-- **ADRs for durable choices** — significant architecture and product decisions live in `engineering/adrs/`
-- **Skills-only delivery** — no server or deterministic validator; quality depends on reference flows, install smoke tests, and manual review of command output
+- **Methods, not generic criticism** — every RedTeam experience should apply a suitable tool or structured practice, not merely produce skeptical commentary
+- **The whole discipline** — preserve applied critical thinking, groupthink mitigation, cultural empathy, and self-awareness as mutually reinforcing parts of red teaming
+- **Fit the method to the moment** — choose and sequence techniques for the decision, people, risks, stakes, and time available; explain why the approach fits
+- **Evidence before confidence** — distinguish observation from interpretation, make assumptions and uncertainty visible, seek disconfirming evidence, and never invent support
+- **Loyal opposition** — challenge the thinking in service of a better decision, while treating people, dissent, and affected stakeholders with respect
+- **Teach, do not just answer** — use plain language, show the method, and help people build a practice they can apply without depending on RedTeam
+- **Human judgment remains accountable** — AI can widen inquiry and apply techniques, but people remain responsible for consequential choices
+- **A living, traceable practice** — preserve the useful lineage of UFMCS v9 while testing, improving, and extending it for modern civilian and AI-assisted decisions
 
 ## Non-goals
 
-- Cybersecurity penetration testing or exploit development
-- Hosting the full Army handbook PDF
-- Deterministic rule engines or CLI scanners (skills-only)
+- Turning “red teaming” into a more elaborate label for criticism, risk listing, or contrarian performance
+- Replacing accountable decision-makers, group deliberation, subject-matter expertise, or evidence gathering
+- Promising a correct decision; the practice improves how people think and decide, but cannot remove uncertainty
+- Presenting Handbook v10 as official military doctrine, UFMCS certification, or an institutional continuation of the U.S. Army program
+- Preserving v9 as a frozen archive or reproducing the full handbook; v10 carries useful methods forward and changes them when modern use demands it
+- Providing cybersecurity penetration testing, exploit development, or adversarial security operations
 
-## Success Metrics
+## Evidence of success
 
-- Users can install and run a command in under 5 minutes
-- Reviews produce structured, actionable output (assumptions, verdict, follow-ups)
-- `.redteam/reviews/` artifacts are useful at retrospectives
-- AI-assisted sessions pass `ai-check` before high-stakes decisions
+- **People reach the right method** — given a real situation, users can find and apply a fitting technique without already knowing its name or military lineage
+- **The method is visible in the work** — sampled sessions correctly apply a named technique, show their reasoning, and distinguish evidence, interpretation, assumptions, and uncertainty
+- **Decision work materially changes** — a session produces a documented change to an assumption, option set, risk response, timing, or decision — or records why the challenge did not change it
+- **Dissent enters the record** — facilitated sessions capture contrary evidence and positions that participants say would otherwise have been omitted, without collapsing into debate theater
+- **People learn the practice** — repeat users can recognize and reuse techniques themselves instead of becoming dependent on a command or AI-generated answer
+- **Use extends beyond generic critique** — real sessions draw on groupthink mitigation, cultural empathy, and self-awareness as well as analytical challenge
+- **High-stakes use preserves accountability** — consequential outputs state important uncertainties, identify who owns the decision, and leave the final judgment with people
 
-## Stakeholders
+## Who the practice must serve
 
-- **Curate Labs** — publisher and maintainer of Handbook v10 and the RedTeam skill
-- **Primary users** — decision-makers, product leads, and AI power users who run structured reviews
-- **Harness platforms** — Cursor, Claude, Codex, ChatGPT, and Copilot as distribution surfaces for the skill
+| Stakeholder | What they need from RedTeam | What failure looks like for them |
+|-------------|-----------------------------|----------------------------------|
+| **Decision owners** | Better choices without surrendering authority or accountability | Analysis becomes ornamental, overwhelming, or a way to blame the tool |
+| **Participants and dissenters** | A fair process that makes disagreement safe, specific, and useful | The dominant view is legitimized while contrary knowledge is filtered out |
+| **People affected by the decision** | Their interests, risks, and missing perspectives considered even when they are not in the room | The review optimizes for the decision-maker and externalizes harm |
+| **Learners and practitioners** | Methods they can understand, facilitate, adapt, and teach | Red teaming remains specialist knowledge or becomes dependence on AI prompts |
+| **Handbook stewards** | A clear lineage, evidence of real-world usefulness, and permission to improve the practice responsibly | v10 either drifts into generic content or treats v9 as untouchable doctrine |

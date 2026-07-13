@@ -8,7 +8,7 @@ RedTeam has **no hosted runtime**, so observability focuses on **distribution he
 |---|---|---|---|---|
 | Users can install quickly (NFR-1) | `test:cli-install` pass rate | Local/CI run | 100% pass before release | Maintainers |
 | Docs remain navigable (FR-8) | `docs:site` + link check pass | GitHub Actions deploy workflow | Green on every `main` push | Maintainers |
-| Reviews are actionable (PRODUCT) | Qualitative review of command output and `.redteam/reviews/` samples | Manual review, GitHub issues | Structured sections present | Maintainers |
+| Method visible in output (NFR-7, PRODUCT evidence of success) | Qualitative review of command output and `.redteam/reviews/` samples | Manual review, GitHub issues | Technique named; evidence, assumptions, and uncertainty distinguishable | Maintainers |
 | Handbook/guide discoverability | Docs site availability | GitHub Pages | Site reachable at published URL | Maintainers |
 
 ## Service health

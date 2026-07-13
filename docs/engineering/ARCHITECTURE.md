@@ -1,6 +1,6 @@
 # Architecture
 
-RedTeam is a **skills-only** package: markdown instructions + small Node scripts for context loading. No server, no API, no model calls from code.
+RedTeam is a **skills-only** package: markdown instructions + small Node scripts for context loading and command pinning. No server, no API, no model calls from code.
 
 ## Context diagram
 
@@ -13,7 +13,7 @@ User → AI harness (Claude / Cursor / ChatGPT / Codex / Copilot)
          ↓ optional
        scripts/context.mjs → CONTEXT.md
          ↓ optional
-       .redteam/reviews/*.md (persisted output)
+       .redteam/reviews/*.md + .redteam/sessions/*.md (persisted output)
 ```
 
 ## Components
@@ -28,8 +28,11 @@ User → AI harness (Claude / Cursor / ChatGPT / Codex / Copilot)
 | `cli/bin/cli.js` | GitHub-backed `npx` installer | scripts/build.mjs |
 | `chatgpt/INSTRUCTIONS.md` | Custom GPT system prompt | — |
 | `.claude-plugin/` | Claude Code marketplace manifest | plugin/ |
-| `scripts/build.mjs` | Copy skill to provider directories | skill/ |
+| `scripts/build.mjs` | Copy skill to provider directories and `dist/` (incl. ChatGPT knowledge bundle) | skill/ |
 | `scripts/prepare-docs-site.mjs` | Stage `docs/` for Starlight | docs/ |
+| `scripts/check-docs-site.mjs` | Validate built docs site links | `npm run docs:site` |
+| `scripts/test-cli-install.mjs` | Smoke-test CLI install in a temp project | cli/bin/cli.js |
+| `src/content/docs/` | Starlight site content (guide, handbook, synced developer docs) | Astro / Starlight |
 
 ## Data model
 
@@ -40,10 +43,11 @@ RedTeam has no database. State lives in the user's project as markdown and JSON 
 | Decision context | `CONTEXT.md` or `.redteam/CONTEXT.md` | Background the model loads for anchored reviews |
 | Project config | `.redteam/config.json` | Shared settings; `config.local.json` is gitignored |
 | Review artifacts | `.redteam/reviews/<slug>-<command>.md` | Persisted command output for retrospectives |
+| Session notes | `.redteam/sessions/<date>-<slug>.md` | Facilitated session records (groupthink, ideate, converge) |
 | Command flows | `skill/reference/<command>.md` | Read-only technique instructions |
 | TTP catalog | `skill/reference/ttp-catalog.md` | Browseable technique index |
 
-Context resolution order: root `CONTEXT.md` → `.redteam/` → `docs/` → `$REDTEAM_CONTEXT_DIR`.
+Context resolution order: root `CONTEXT.md` → `.redteam/` → `.agents/context/` → `docs/` → `$REDTEAM_CONTEXT_DIR`.
 
 ## Domain language and boundaries
 
@@ -72,8 +76,8 @@ Context resolution order: root `CONTEXT.md` → `.redteam/` → `docs/` → `$RE
 
 ### Install
 
-1. `npx --yes github:CurateLabs/RedTeam install` → `build.mjs` copies skill to harness dirs
-2. Creates `.redteam/` scaffold if missing
+1. `npx --yes github:CurateLabs/RedTeam install` → `cli/bin/cli.js` runs `build.mjs`, detects harness dirs (`.cursor`, `.claude`, `.agents`, `.github`, `.gemini`) or honors `--providers=` / `--scope=global`, and copies the skill in
+2. Creates `.redteam/` scaffold (`reviews/`, `sessions/`, `config.json`, `CONTEXT.template.md`) if missing
 3. User reloads harness
 
 ## Cross-cutting concerns

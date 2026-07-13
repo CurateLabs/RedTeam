@@ -35,7 +35,7 @@ Context loads from the project; reviews save to `.redteam/reviews/` with predict
 
 - **Given** CONTEXT.md exists at the repo root or in `.redteam/`
 - **When** `context.mjs` runs
-- **Then** it resolves context in order: root `CONTEXT.md` → `.redteam/` → `docs/` → `$REDTEAM_CONTEXT_DIR`
+- **Then** it resolves context in order: root `CONTEXT.md` → `.redteam/` → `.agents/context/` → `docs/` → `$REDTEAM_CONTEXT_DIR`
 
 - **Given** a completed review command
 - **When** the user opens `.redteam/reviews/`
@@ -44,6 +44,7 @@ Context loads from the project; reviews save to `.redteam/reviews/` with predict
 ## Constraints and domain language
 
 - `.redteam/config.json` holds shared settings; `config.local.json` is gitignored
+- Facilitation commands (groupthink, ideate, converge) save session notes to `.redteam/sessions/<date>-<slug>.md`
 - Decision records may mirror ADRs in `engineering/adrs/` but `.redteam/reviews/` is the red-team source of truth
 
 ## Success signals and telemetry
@@ -57,6 +58,6 @@ Context loads from the project; reviews save to `.redteam/reviews/` with predict
 
 ## Related requirements, tests, architecture, and ADRs
 
-- Requirements: FR-3, FR-4, FR-5
+- Requirements: FR-3, FR-4, FR-5, FR-11
 - Architecture: [Project-anchored review flow](../engineering/ARCHITECTURE.md#project-anchored-review), [Data model](../engineering/ARCHITECTURE.md#data-model)
 - Tests: [`engineering/TESTING.md`](../engineering/TESTING.md)

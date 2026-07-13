@@ -11,7 +11,7 @@ next: false
 
 The technique catalog for Handbook v10. Most tools support **ACT**, **GTM**, or **both**. Tools are meant to **sequence**, not stand alone.
 
-Browse by category below. Each item has its own page in [`techniques/`](/RedTeam/handbook/techniques/) or [`concepts/`](/RedTeam/handbook/concepts/) for v10 commands.
+Browse by category below. Each item has its own page in [`techniques/`](/RedTeam/handbook/techniques/) or [`concepts/`](/RedTeam/handbook/concepts/).
 
 
 ### Facilitation
@@ -27,6 +27,7 @@ Browse by category below. Each item has its own page in [`techniques/`](/RedTeam
 - [Troika Consulting](/RedTeam/handbook/techniques/troika-consulting/) — Client presents; three consultants discuss while client listens.
 - [Gallery Walk](/RedTeam/handbook/techniques/gallery-walk/) — Post ideas; participants silently annotate and build on others' work.
 - [Dot Voting](/RedTeam/handbook/techniques/dot-voting/) — Allocate limited votes across options for quick prioritization.
+- [Sequence / Playbooks](/RedTeam/handbook/concepts/sequence/) — Chain `/redteam` commands for a decision type and the time available.
 
 ### Divergent
 
@@ -57,6 +58,12 @@ Browse by category below. Each item has its own page in [`techniques/`](/RedTeam
 - [Critical Variables (CVs)](/RedTeam/handbook/techniques/critical-variables/) — Dynamic factors that drive outcomes — often mapped to an Operating Landscape Map.
 - [Who Else?](/RedTeam/handbook/techniques/who-else/) — Whose perspective is missing from this analysis?
 - [Who Am I?](/RedTeam/handbook/concepts/who-am-i/) — Introspective identity/bias surfacing before engaging others.
+- [Outside View / Reference Class Forecasting](/RedTeam/handbook/concepts/outside-view/) — Use base rates from similar past attempts to test an inside-view forecast.
+- [Incentive & Goodhart Analysis](/RedTeam/handbook/concepts/incentives/) — Examine how metrics and incentives may be gamed or create perverse second-order effects.
+- [Ladder of Inference](/RedTeam/handbook/concepts/ladder/) — Separate observable data from interpretation and conclusion.
+- [Calibration](/RedTeam/handbook/concepts/calibrate/) — Grade claims as fact, inference, or guess; attach confidence and disconfirmers.
+- [RFC Review](/RedTeam/handbook/concepts/rfc/) — Review engineering decisions for options, reversibility, and operational consequences.
+- [Cognitive Bias Catalog](/RedTeam/handbook/concepts/cognitive-bias-catalog/) — Find biases and the counter-techniques or commands that address them.
 
 ### Adversarial
 
@@ -65,6 +72,9 @@ Browse by category below. Each item has its own page in [`techniques/`](/RedTeam
 - [Team A / Team B Analysis](/RedTeam/handbook/techniques/team-a-team-b-analysis/) — Two teams argue opposing options, then swap and defend the other side.
 - [BATNA](/RedTeam/handbook/techniques/batna/) — Best Alternative to a Negotiated Agreement — know your walk-away before negotiating.
 - [Divergence–Convergence](/RedTeam/handbook/techniques/divergence-convergence/) — Explicit separate phases for generating vs. narrowing options.
+- [Inversion](/RedTeam/handbook/concepts/invert/) — Ask what would guarantee failure, then turn the answers into avoidance rules.
+- [Steelman](/RedTeam/handbook/concepts/steelman/) — Build the strongest version of each side before debate or devil's advocacy.
+- [Misuse & Abuse Cases](/RedTeam/handbook/concepts/misuse/) — Examine how an artifact could be misused, gamed, or harm vulnerable users.
 
 ### Strategic
 
@@ -74,6 +84,8 @@ Browse by category below. Each item has its own page in [`techniques/`](/RedTeam
 - [SWOT Analysis](/RedTeam/handbook/techniques/swot-analysis/) — Strengths, Weaknesses, Opportunities, Threats for an option or entity.
 - [Stakeholder Mapping](/RedTeam/handbook/techniques/stakeholder-mapping/) — Who decides, who influences, who blocks, who suffers consequences.
 - [Shifting the Burden](/RedTeam/handbook/techniques/shifting-the-burden/) — Push past the obvious fix to ask who or what structurally bears the load.
+- [Launch Readiness](/RedTeam/handbook/concepts/launch/) — Check product go-live readiness across operations, communications, metrics, rollback, and misuse.
+- [Reversibility](/RedTeam/handbook/concepts/reversibility/) — Classify one-way and two-way doors, then match the decision process to the cost of reversal.
 
 ### Extension
 
@@ -94,27 +106,12 @@ Browse by category below. Each item has its own page in [`techniques/`](/RedTeam
 - [6 Empathetic Questions](/RedTeam/handbook/techniques/6-empathetic-questions/) — Questions that build understanding of another's frame without judgment.
 - [Deception Detection](/RedTeam/handbook/techniques/deception-detection/) — MOM-POP-EVE-MOSES checklist + ACH when active deception is plausible.
 - [TRIZ](/RedTeam/handbook/techniques/triz/) — Systematic inventive problem-solving from contradictions (Altshuller).
+- [Culture / Worldview Mapping](/RedTeam/handbook/concepts/culture/) — Map what stakeholders see, value, fear, and want to expose worldview collisions.
 
 ### Communication
 
 - [Storytelling](/RedTeam/handbook/techniques/storytelling/) — Narrative form to communicate findings and alternatives persuasively.
-
-### v10 commands {#v10-commands}
-
-- [Outside View / Reference Class Forecasting](/RedTeam/handbook/concepts/outside-view/) — Base-rate thinking: what happened in the reference class of similar past attempts?
-- [Inversion](/RedTeam/handbook/concepts/invert/) — Munger-style: what would guarantee failure? Flip into avoidance rules.
-- [Incentive & Goodhart Analysis](/RedTeam/handbook/concepts/incentives/) — How metrics and incentives get gamed; perverse second-order effects.
-- [Ladder of Inference](/RedTeam/handbook/concepts/ladder/) — Argyris: separate observable data from interpretation and conclusion.
-- [Steelman](/RedTeam/handbook/concepts/steelman/) — Strongest version of each side before debate or devil's advocacy.
-- [Calibration](/RedTeam/handbook/concepts/calibrate/) — Grade claims as fact/inference/guess; attach confidence and disconfirmers.
-- [Sequence / Playbooks](/RedTeam/handbook/concepts/sequence/) — Chained `/redteam` commands for decision types with time budgets.
-- [Culture / Worldview Mapping](/RedTeam/handbook/concepts/culture/) — Stakeholder see/value/fear/want map — cultural empathy in practice for teams and products.
-- [Launch Readiness](/RedTeam/handbook/concepts/launch/) — Product go-live checklist: ops, comms, metrics, rollback, misuse.
-- [RFC Review](/RedTeam/handbook/concepts/rfc/) — Engineering decision doc review — options, reversibility, operations.
-- [Misuse & Abuse Cases](/RedTeam/handbook/concepts/misuse/) — How artifact could be misused, gamed, or harm vulnerable users.
-- [Reversibility](/RedTeam/handbook/concepts/reversibility/) — One-way vs two-way doors (Bezos); match process to reversibility.
-- [Decision Record](/RedTeam/handbook/concepts/record/) — ADR-style artifact with assumptions, dissent, tripwires, review date.
-- [Cognitive Bias Catalog](/RedTeam/handbook/concepts/cognitive-bias-catalog/) — Index of biases mapped to counter-techniques and commands.
+- [Decision Record](/RedTeam/handbook/concepts/record/) — Capture the decision, assumptions, dissent, tripwires, and review date in an ADR-style artifact.
 
 
 ## RedTeam commands

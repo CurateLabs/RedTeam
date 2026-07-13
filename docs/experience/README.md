@@ -17,7 +17,7 @@ RedTeam is a skills product with no hosted runtime, so discovery is lightweight 
 - **Loyal opposition** — challenge to improve decisions, not to win arguments or perform cybersecurity
 - **Structured and actionable** — reviews surface assumptions, risks, verdicts, and follow-ups
 - **Project-anchored when needed** — `.redteam/` holds decision context and review artifacts without forcing setup
-- **Harness-agnostic** — same skill works across Claude, Cursor, Codex, ChatGPT, and Copilot
+- **Harness-agnostic** — same skill works across Claude, Cursor, Codex, ChatGPT, Copilot, and Gemini
 
 ## Primary users
 
@@ -37,6 +37,6 @@ evidence -> opportunity -> requirement -> architecture -> test -> release -> obs
 
 | Document | Kind | Status | What it informs |
 |---|---|---|---|
-| [`chat-only-review.md`](chat-only-review.md) | Journey / product slice | Validated | FR-1, FR-2, NFR-1 |
-| [`project-anchored-review.md`](project-anchored-review.md) | Journey / product slice | Validated | FR-3, FR-4, FR-5 |
-| [`install-and-run.md`](install-and-run.md) | Journey / product slice | Validated | FR-6, FR-7, NFR-2 |
+| [`chat-only-review.md`](chat-only-review.md) | Journey / product slice | Validated | FR-1, FR-2, NFR-1, NFR-7 |
+| [`project-anchored-review.md`](project-anchored-review.md) | Journey / product slice | Validated | FR-3, FR-4, FR-5, FR-11 |
+| [`install-and-run.md`](install-and-run.md) | Journey / product slice | Validated | FR-6, FR-7, FR-10, NFR-2 |
