@@ -1,27 +1,23 @@
 # Notice
 
-## U.S. Army Red Team Handbook
+## Attribution
 
-The techniques, terminology, and structured methods in this project are **derived from and inspired by** — but not limited to:
+RedTeam adapts structured critical-thinking techniques from *The Red Team Handbook* v9.0, developed by the University of Foreign Military and Cultural Studies (UFMCS) under TRADOC G-2. That work is U.S. Government material (17 U.S.C. § 105).
 
-**The Red Team Handbook**, Version 9.0  
-TRADOC G-2, University of Foreign Military and Cultural Studies (UFMCS)  
-U.S. Army Training and Doctrine Command
+**We are not affiliated with the U.S. Army, TRADOC, or UFMCS.** Product text uses civilian terminology; military names appear only for historical acknowledgment. Full lineage: [`docs/SOURCE.md`](docs/SOURCE.md).
 
-This is a work of the U.S. Government and is not subject to copyright protection in the United States (17 U.S.C. § 105).
-
-RedTeam **supersets, updates, and modifies** the handbook inventory. We do not reproduce the original text verbatim and we do not commit to staying faithful to the source over time. See [`docs/HANDBOOK.md`](docs/HANDBOOK.md) for our working concept map.
+RedTeam **supersets, updates, and modifies** the source material. See [`docs/HANDBOOK.md`](docs/HANDBOOK.md).
 
 ## Impeccable
 
-The skills/plugin architecture is modeled on [impeccable](https://github.com/pbakaus/impeccable) by Paul Bakaus. This project is an independent implementation for applied critical thinking, not affiliated with the U.S. Army, TRADOC, UFMCS, or the impeccable project.
+The skills/plugin architecture is modeled on [impeccable](https://github.com/pbakaus/impeccable) by Paul Bakaus. Not affiliated with the impeccable project.
 
 ## Disclaimer
 
-This skill provides structured critical thinking frameworks for decision support. It is not:
+This skill provides structured critical thinking for decision support. It is not:
 
-- Military doctrine or official Army guidance
+- Military doctrine or official government guidance
 - A substitute for professional legal, medical, or security advice
-- Instructions for penetration testing, deception operations, or social engineering
+- Penetration testing, deception operations, or social engineering instructions
 
 Users are responsible for how they apply these techniques.
