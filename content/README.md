@@ -36,4 +36,4 @@ No install? Paste a plan and invoke any `/redteam` command — chat-only mode wo
 
 ## Repository
 
-[GitHub — CurateLabs/RedTeam](https://github.com/CurateLabs/RedTeam)
+Maintained by [Curate Labs](https://github.com/CurateLabs). [GitHub — CurateLabs/RedTeam](https://github.com/CurateLabs/RedTeam)

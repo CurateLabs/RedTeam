@@ -1,6 +1,6 @@
 # Handbook documentation — Version 10
 
-*The Red Team Handbook, Version 10* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
+*The Red Team Handbook, Version 10* — maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
 
 ## Chapters
 
@@ -24,6 +24,7 @@ All technique pages: [`ttps/`](ttps/) (plus concepts cross-listed from other cha
 ## Quick links
 
 - [Full inventory](inventory.md)
+- [User guide](../../guide/)
 - [Source & lineage](../../developers/SOURCE.md)
 - [Skill implementation](../../../skill/reference/ttp-catalog.md)
 - [NOTICE](../../../NOTICE.md)

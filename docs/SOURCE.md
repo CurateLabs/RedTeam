@@ -2,7 +2,7 @@
 
 ## The Red Team Handbook — Version 10
 
-This repository maintains ***The Red Team Handbook*, Version 10** — a civilian successor to the UFMCS curriculum, published and updated by the **RedTeam** project.
+This repository maintains ***The Red Team Handbook*, Version 10** — a civilian successor to the UFMCS curriculum, published and updated by **Curate Labs**.
 
 | | |
 |---|---|
@@ -46,10 +46,10 @@ Handbook v10 acknowledges v9.0 as its predecessor. We carry forward the intent �
 ## How to cite
 
 **Handbook v10:**  
-*The Red Team Handbook, Version 10. RedTeam project.*
+*The Red Team Handbook, Version 10. Curate Labs.*
 
 **With predecessor credit:**  
-*The Red Team Handbook, Version 10 (RedTeam). Successor to v9.0 (TRADOC G-2, UFMCS).*
+*The Red Team Handbook, Version 10 (RedTeam, Curate Labs). Successor to v9.0 (TRADOC G-2, UFMCS).*
 
 **In docs:** Link here or [NOTICE.md](../NOTICE.md). Do not describe RedTeam outputs as military doctrine.
 

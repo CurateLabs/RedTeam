@@ -1,6 +1,6 @@
 # The Red Team Handbook — Version 10
 
-***The Red Team Handbook*, Version 10** — maintained by the **RedTeam** project. Successor to the defunct UFMCS v9.0 work. The `redteam` skill implements this handbook in AI harnesses.
+***The Red Team Handbook*, Version 10** — maintained by **Curate Labs**. Successor to the defunct UFMCS v9.0 work. The `redteam` skill implements this handbook in AI harnesses.
 
 This is a **living inventory** of red teaming concepts and techniques. We update, extend, and modify over time — not a verbatim reproduction of v9.
 
@@ -255,6 +255,6 @@ See [Chapter 8 expanded index](HANDBOOK/chapters/08-tools-techniques-practices.m
 
 ## Source & attribution
 
-*The Red Team Handbook*, Version 10 — maintained by RedTeam. Successor to UFMCS v9.0. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
+*The Red Team Handbook*, Version 10 — maintained by Curate Labs. Successor to UFMCS v9.0. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).
 
 Implementation: [`skill/reference/ttp-catalog.md`](../skill/reference/ttp-catalog.md) · [`skill/reference/extensions-catalog.md`](../skill/reference/extensions-catalog.md) · Commands: [`skill/SKILL.md`](../skill/SKILL.md)

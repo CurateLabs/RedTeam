@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const HANDBOOK = path.join(ROOT, 'content', 'handbook');
 const HANDBOOK_FULL = 'The Red Team Handbook, Version 10';
-const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../README.md), maintained by the RedTeam project — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
+const LINEAGE_FOOTER = `Part of [*${HANDBOOK_FULL}*](../README.md), maintained by Curate Labs — successor to the defunct UFMCS v9.0 work. See [SOURCE.md](../../developers/SOURCE.md) and [NOTICE.md](../../../NOTICE.md).`;
 const DEFAULT_REDTEAM_NOTE = 'Handbook v10 entry. RedTeam updates and extends the v9 lineage — not a verbatim reproduction.';
 
 function slug(name) {
@@ -1162,7 +1162,7 @@ writeDoc(
   'README.md',
   `# Handbook documentation — Version 10
 
-*${HANDBOOK_FULL}* — maintained by the RedTeam project. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
+*${HANDBOOK_FULL}* — maintained by Curate Labs. Successor to the defunct UFMCS v9.0 handbook. The **RedTeam** skill implements this corpus. See [SOURCE.md](../../developers/SOURCE.md).
 
 ## Chapters
 
