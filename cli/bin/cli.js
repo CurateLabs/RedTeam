@@ -8,7 +8,8 @@ import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PACKAGE_ROOT = path.resolve(__dirname, '..');
+const PACKAGE_ROOT = path.resolve(__dirname, '../..');
+const GITHUB_PACKAGE = 'github:CurateLabs/RedTeam';
 
 const ALL_PROVIDERS = ['cursor', 'claude', 'agents', 'github', 'gemini'];
 
@@ -79,6 +80,7 @@ function install(cwd, providers, scope) {
     fs.mkdirSync(path.join(redteamDir, 'reviews'), { recursive: true });
     fs.mkdirSync(path.join(redteamDir, 'sessions'), { recursive: true });
     if (fs.existsSync(templateConfig)) fs.copyFileSync(templateConfig, path.join(redteamDir, 'config.json'));
+    if (fs.existsSync(templateCtx)) fs.copyFileSync(templateCtx, path.join(redteamDir, 'CONTEXT.template.md'));
     console.log('✓ Created .redteam/ scaffold');
   }
 
@@ -90,15 +92,15 @@ function printHelp() {
 redteam — Applied critical thinking skills for AI agents
 
 Usage:
-  npx redteam install [--providers=cursor,claude,agents] [--scope=project|global]
-  npx redteam update   (alias for install)
+  npx --yes ${GITHUB_PACKAGE} install [--providers=cursor,claude,agents] [--scope=project|global]
+  npx --yes ${GITHUB_PACKAGE} update   (alias for install)
 
 Options:
   --providers   Comma-separated: cursor, claude, agents, github, gemini
   --scope       project (default) or global
 
 Claude Code plugin:
-  /plugin marketplace add <your-org>/redteam
+  /plugin marketplace add CurateLabs/RedTeam
 
 ChatGPT:
   See chatgpt/INSTRUCTIONS.md for Custom GPT setup

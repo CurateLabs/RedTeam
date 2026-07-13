@@ -5,7 +5,7 @@
   "author": {
     "name": "David Spencer"
   },
-  "homepage": "https://github.com/davidspencer/redteam",
-  "repository": "https://github.com/davidspencer/redteam",
+  "homepage": "https://github.com/CurateLabs/RedTeam",
+  "repository": "https://github.com/CurateLabs/RedTeam",
   "skills": "./plugin/skills/"
 }

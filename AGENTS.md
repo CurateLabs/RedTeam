@@ -9,7 +9,7 @@ This repository is **RedTeam** — applied critical thinking skills for AI agent
 - `.redteam/` — project decision context and review artifacts (analogous to `.impeccable/`)
 - `plugin/` — Claude Code plugin bundle
 - `chatgpt/` — Custom GPT instructions
-- `cli/` — `npx redteam install` installer
+- `cli/` — GitHub-backed `npx` installer
 
 ## Build
 

@@ -5,13 +5,13 @@ Get RedTeam running in a few minutes.
 ## 1. Install
 
 ```bash
-npx redteam install
+npx --yes github:CurateLabs/RedTeam install
 ```
 
 This detects harness folders (`.cursor`, `.claude`, `.agents`) and installs the skill. Customize with:
 
 ```bash
-npx redteam install --providers=cursor,claude,agents --scope=project
+npx --yes github:CurateLabs/RedTeam install --providers=cursor,claude,agents --scope=project
 ```
 
 ## 2. Reload

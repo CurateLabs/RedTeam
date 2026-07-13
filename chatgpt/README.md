@@ -17,7 +17,7 @@ For ChatGPT Custom GPTs or OpenAI-compatible agent harnesses.
 ### Codex / Agents skill
 
 ```bash
-npx redteam install --providers=agents
+npx --yes github:CurateLabs/RedTeam install --providers=agents
 ```
 
 Or copy manually:

@@ -25,7 +25,7 @@ User → AI harness (Claude / Cursor / ChatGPT / Codex)
 | `skill/scripts/context.mjs` | Load CONTEXT.md from project | Node 18+ |
 | `skill/scripts/pin.mjs` | Pin command shortcuts | Harness dirs |
 | `.redteam/` | Decision context and review artifacts | User project |
-| `cli/bin/cli.js` | `npx redteam install` | scripts/build.mjs |
+| `cli/bin/cli.js` | GitHub-backed `npx` installer | scripts/build.mjs |
 | `chatgpt/INSTRUCTIONS.md` | Custom GPT system prompt | — |
 | `.claude-plugin/` | Claude Code marketplace manifest | plugin/ |
 
@@ -45,7 +45,7 @@ User → AI harness (Claude / Cursor / ChatGPT / Codex)
 
 ### Install
 
-1. `npx redteam install` → build.mjs copies skill to harness dirs
+1. `npx --yes github:CurateLabs/RedTeam install` → build.mjs copies skill to harness dirs
 2. Creates `.redteam/` scaffold if missing
 3. User reloads harness
 

@@ -2,7 +2,7 @@
 
 **RedTeam** is the skill. ***The Red Team Handbook*, Version 10** is the handbook it implements.
 
-Handbook v10 is the RedTeam project's successor to the defunct **UFMCS *Red Team Handbook* v9.0** (TRADOC G-2, University of Foreign Military and Cultural Studies) — a U.S. Government work (17 U.S.C. § 105). We are not affiliated with the Army, TRADOC, or UFMCS.
+Handbook v10 is **Curate Labs'** successor to the defunct **UFMCS *Red Team Handbook* v9.0** (TRADOC G-2, University of Foreign Military and Cultural Studies) — a U.S. Government work (17 U.S.C. § 105). We are not affiliated with the Army, TRADOC, or UFMCS.
 
 ## History (brief)
 
@@ -22,6 +22,6 @@ RedTeam continues the curriculum as **Handbook v10**: updated for civilian, prod
 
 ## Full attribution
 
-Handbook: [`content/handbook/inventory.md`](../../content/handbook/inventory.md) · Source: [`docs/SOURCE.md`](../../docs/SOURCE.md) · Legal: [`NOTICE.md`](../../NOTICE.md)
+Handbook: [`content/handbook/README.md`](../../content/handbook/README.md) · Source: [`docs/SOURCE.md`](../../docs/SOURCE.md) · Legal: [`NOTICE.md`](../../NOTICE.md)
 
 **Do not** present RedTeam output as military doctrine.

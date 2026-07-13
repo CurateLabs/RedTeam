@@ -1,7 +1,7 @@
 {
   "name": "redteam",
   "version": "0.2.0",
-  "description": "Applied critical thinking and red teaming skills for AI agents, based on the U.S. Army Red Team Handbook v9",
+  "description": "Applied critical thinking skills for AI agents implementing The Red Team Handbook, Version 10",
   "keywords": [
     "red-team",
     "critical-thinking",
@@ -16,7 +16,7 @@
   "author": "David Spencer",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidspencer/redteam.git"
+    "url": "git+https://github.com/CurateLabs/RedTeam.git"
   },
   "type": "module",
   "bin": {
@@ -40,6 +40,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:dist": "node scripts/build.mjs dist",
+    "test:cli-install": "node scripts/test-cli-install.mjs",
     "docs:handbook": "node scripts/generate-handbook-docs.mjs",
     "docs:site": "npm run docs:handbook && node scripts/prepare-docs-site.mjs && docmd build"
   },

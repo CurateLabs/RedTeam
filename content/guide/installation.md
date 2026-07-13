@@ -3,20 +3,20 @@
 ## Option 1: CLI (recommended)
 
 ```bash
-npx redteam install
+npx --yes github:CurateLabs/RedTeam install
 ```
 
 Flags:
 
 | Flag | Values | Default |
 |------|--------|---------|
-| `--providers` | `cursor`, `claude`, `agents` (comma-separated) | auto-detect |
+| `--providers` | `cursor`, `claude`, `agents`, `github`, `gemini` (comma-separated) | auto-detect |
 | `--scope` | `project`, `global` | `project` |
 
 ## Option 2: Claude Code plugin
 
 ```
-/plugin marketplace add <your-org>/redteam
+/plugin marketplace add CurateLabs/RedTeam
 ```
 
 Then install from the plugin list.
@@ -48,7 +48,7 @@ Run `npm run build` in the repo first if installing from source.
 
 ```bash
 git submodule add https://github.com/CurateLabs/RedTeam .redteam-plugin
-npx redteam install --providers=claude,cursor
+node .redteam-plugin/cli/bin/cli.js install --providers=claude,cursor
 ```
 
 ## Requirements

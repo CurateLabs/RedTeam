@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "redteam",
   "metadata": {
-    "description": "Applied critical thinking for AI harnesses. 1 skill, 15 commands, grounded in the U.S. Army Red Team Handbook v9."
+    "description": "Applied critical thinking for AI harnesses. One skill and 29 commands implementing The Red Team Handbook, Version 10."
   },
   "owner": {
     "name": "David Spencer"
@@ -10,14 +10,14 @@
   "plugins": [
     {
       "name": "redteam",
-      "description": "Red teaming as applied critical thinking. Challenge assumptions, run premortems, ACH, devil's advocacy, and 48 Handbook v9 techniques via /redteam commands.",
+      "description": "Red teaming as applied critical thinking. Challenge assumptions, run premortems, ACH, devil's advocacy, and Handbook v10 techniques via /redteam commands.",
       "version": "0.2.0",
       "author": {
         "name": "David Spencer"
       },
       "source": "./plugin",
       "category": "productivity",
-      "homepage": "https://github.com/davidspencer/redteam",
+      "homepage": "https://github.com/CurateLabs/RedTeam",
       "tags": ["red-team", "critical-thinking", "decision-making", "strategy", "skills", "commands"]
     }
   ]
