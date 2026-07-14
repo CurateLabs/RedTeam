@@ -9,7 +9,7 @@ RedTeam verifies behavior through **automated smoke tests** for install and docs
 | Smoke / integration | CLI install creates expected skill and `.redteam/` scaffold | `scripts/test-cli-install.mjs` |
 | Build | Provider copies match `skill/` source | `npm run build`, manual diff |
 | Docs / behavior | Developer docs stage correctly; GitHub Pages links work under `/RedTeam/` | `npm run docs:site`, `scripts/check-docs-site.mjs` |
-| Manual / qualitative | Command output structure and handbook alignment | Harness spot-checks, issue feedback |
+| Manual / qualitative | Command output structure; handbook case narrative, cumulative learning, and reference paths | Harness spot-checks, editorial review, issue feedback |
 
 ## Behavior coverage
 
@@ -22,6 +22,8 @@ RedTeam verifies behavior through **automated smoke tests** for install and docs
 | Project-anchored / FR-5 | Given CONTEXT.md, when premortem runs, then review artifact is saved | Manual harness check (gap: no automated eval) |
 | Command coverage / FR-9 | Given the `skill/SKILL.md` command table, then each of the 29 commands has a `skill/reference/<command>.md` flow | Manual diff of table vs directory (gap: no automated check) |
 | Method fidelity / NFR-7 | Given an evaluative command output, then the technique is named and evidence, interpretation, assumptions, and uncertainty are distinguishable | Manual sampled-session review (gap: no rubric yet — see REQUIREMENTS open questions) |
+| Handbook learning model / FR-12 | Given any chapter, when an editor reviews it, then an unresolved decision case supplies stakes, incomplete information, competing perspectives, and a reason to apply the chapter's concepts and TTPs; the final chapter culminates in the full spell book | Manual editorial review (gap: chapter rubric and case corpus not yet implemented) |
+| Handbook entry paths / FR-13 | Given the handbook landing page, when a reader chooses how to enter, then both the sequential case journey and direct concept/TTP lookup are explicit and linked | `npm run docs:site` plus manual landing-page review |
 
 ## Traceability contract
 

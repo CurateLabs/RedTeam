@@ -18,12 +18,14 @@ RedTeam is a skills product with no hosted runtime, so discovery is lightweight 
 - **Structured and actionable** — reviews surface assumptions, risks, verdicts, and follow-ups
 - **Project-anchored when needed** — `.redteam/` holds decision context and review artifacts without forcing setup
 - **Harness-agnostic** — same skill works across Claude, Cursor, Codex, ChatGPT, Copilot, and Gemini
+- **Narrative or direct** — handbook readers can learn through a cumulative sequence of decision cases or jump directly to the concept or TTP their situation calls for
 
 ## Primary users
 
 - **Decision-makers and strategists** — stress-test plans before commitment. See [`chat-only-review.md`](chat-only-review.md).
 - **Product and engineering leads** — adversarial review of PRDs, RFCs, and launches. See [`project-anchored-review.md`](project-anchored-review.md).
 - **AI power users** — install the skill and run handbook commands in any harness. See [`install-and-run.md`](install-and-run.md).
+- **Handbook readers and developing practitioners** — learn by making decisions inside HBS-style chapter cases, then use the final spell book as an enduring concept and TTP reference.
 
 ## Traceability
 

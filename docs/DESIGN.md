@@ -10,6 +10,9 @@ RedTeam has no visual product UI. Design context governs **command output**, **r
 - **Civilian framing** — decision, product, and strategy language; not military doctrine or cybersecurity
 - **Structured output** — commands produce scannable sections (assumptions, risks, verdict, follow-ups)
 - **Teach, don't just answer** — plain language that helps users learn the method, not only receive its result
+- **Case before explanation** — handbook chapters begin with an HBS-style decision case so readers encounter uncertainty, stakes, and competing perspectives before abstract instruction
+- **Progressive repertoire** — each chapter adds concepts and TTPs in context; the final chapter culminates in the complete “spell book” readers can combine and adapt
+- **Two ways in** — invite readers to follow the cases from the beginning or jump directly to a concept or TTP without treating either path as secondary
 - **Skills over scanners** — guide model behavior through reference flows, not deterministic rule engines
 - **Attribution without reproduction** — summarize handbook techniques; link to v10 docs and [`strategy/source-lineage.md`](strategy/source-lineage.md)
 
@@ -23,7 +26,7 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 
 - **Tone:** Direct, skeptical-in-service-of-clarity, plain language; confident but not doctrinal
 - **Terminology:** "Applied critical thinking" and "red teaming" (civilian sense); "commands" and "techniques"; avoid "penetration testing", "exploits", and military operational framing unless quoting lineage
-- **Writing rules:** Use tables and headings for scanability; lead with the decision or plan under review; end reviews with explicit verdict and follow-ups
+- **Writing rules:** Handbook prose should invite curiosity, place the reader inside a decision, and delay tidy resolution long enough for independent judgment. Command output should use tables and headings for scanability, lead with the decision or plan under review, and end with an explicit verdict and follow-ups.
 
 ## Visual And Content Style
 
@@ -31,7 +34,7 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 - **Markdown structure:** Headings (`#`–`###`), tables, and code fences for commands in handbook and developer docs
 - **Spacing & layout:** One idea per section; numbered steps in flows; avoid wall-of-text reviews
 - **Iconography & imagery:** Handbook may use diagrams; skill output is text-first
-- **Content structure:** Command references follow per-command templates in `skill/reference/`; handbook chapters in `src/content/docs/handbook/`; developer docs follow docslime lifecycle in `docs/`
+- **Content structure:** Command references follow per-command templates in `skill/reference/`; handbook chapters in `src/content/docs/handbook/` follow case → decision point → concepts and TTPs in use → reflection → bridge to the next chapter; the final chapter then exposes the complete spell book as a browsable reference. Developer docs follow the docslime lifecycle in `docs/`.
 
 ## Interaction Patterns
 
@@ -47,6 +50,8 @@ Agents and contributors should load `PRODUCT.md` and this file before changing s
 | `/redteam <command>` router | All user-facing flows | `skill/SKILL.md` |
 | Per-command reference flow | Structured technique output | `skill/reference/<command>.md` |
 | TTP catalog | Browse handbook techniques | `skill/reference/ttp-catalog.md` |
+| Chapter case study | Teach chapter concepts and TTPs through an unresolved, consequential decision | `src/content/docs/handbook/chapters/` |
+| Final spell book | Browse and combine the complete repertoire after the cumulative chapter journey | `src/content/docs/handbook/chapters/tools-techniques-practices.md` |
 | Extensions catalog | Browse v10-native extensions | `skill/reference/extensions-catalog.md` |
 | CONTEXT.md | Project-anchored background | `.redteam/CONTEXT.template.md` |
 | Review artifact | Persisted command output | `.redteam/reviews/<slug>-<command>.md` |

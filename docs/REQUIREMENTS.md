@@ -17,6 +17,8 @@ These requirements cover the RedTeam skills package, CLI installer, provider bui
 | FR-9 | The system shall implement 29 handbook-aligned `/redteam` commands documented in the user guide. | PRODUCT goals | Given the command table in `skill/SKILL.md` and the user guide command list, when each command is invoked, then a corresponding reference flow exists in `skill/reference/`. |
 | FR-10 | The system shall support `pin` / `unpin` management commands so `$<command>` invokes `/redteam <command>` directly. | `skill/SKILL.md` pin flow | Given an installed skill, when the user runs `/redteam pin <command>`, then `pin.mjs` creates the shortcut in the harness directories and reports the result. |
 | FR-11 | The system shall persist facilitation session notes to `.redteam/sessions/<date>-<slug>.md`. | `experience/project-anchored-review.md`, `skill/SKILL.md` output conventions | Given project-anchored mode, when a facilitation command (groupthink, ideate, converge) completes, then a dated markdown artifact exists under `.redteam/sessions/`. |
+| FR-12 | Every handbook chapter shall teach through an HBS-style case-study narrative that places concepts and TTPs inside a consequential decision; the chapters shall build cumulatively and the final chapter shall culminate in the complete “spell book.” | PRODUCT handbook goal, DESIGN content structure | Given any chapter, when a reader enters it, then the chapter presents stakes, incomplete information, competing perspectives, and a decision before or alongside instruction; given the final chapter, then the accumulated concept and TTP repertoire is available as a browsable working reference. |
+| FR-13 | The handbook shall support both sequential reading and direct concept/TTP lookup. | PRODUCT handbook goal, DESIGN two-ways-in principle | Given the handbook landing page, when a reader arrives, then they are invited either to begin the cumulative case journey or to navigate directly to concepts and TTPs. |
 
 ## Non-functional requirements
 
@@ -41,6 +43,8 @@ These requirements cover the RedTeam skills package, CLI installer, provider bui
 | FR-8 | `docs/` tree complete | `npm run docs:site` | Build passes; `/RedTeam/`-prefixed links valid |
 | FR-10 | Skill installed | `/redteam pin premortem` | `$premortem` shortcut exists in harness dirs |
 | FR-11 | `.redteam/` exists | `/redteam groupthink <session>` | `.redteam/sessions/<date>-<slug>.md` saved |
+| FR-12 | Any handbook chapter | Reader follows the chapter | A decision case frames the concepts and TTPs; the final chapter exposes the full spell book |
+| FR-13 | Reader opens the handbook | Reader chooses an entry path | Sequential chapter and direct concept/TTP routes are both explicit and usable |
 | NFR-7 | Any evaluative command | Output reviewed | Technique named; evidence, interpretation, assumptions, and uncertainty distinguishable |
 
 ## Constraints & assumptions
